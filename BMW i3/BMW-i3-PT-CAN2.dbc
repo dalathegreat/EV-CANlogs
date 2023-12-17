@@ -183,7 +183,118 @@ BO_ 417 UnknownMsg1A1: 8 Vector__XXX
 BO_ 896 UnknownMsg380: 7 Vector__XXX
  SG_ VIN : 0|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 165 UnknownMsgA5: 8 Vector__XXX
+BO_ 165 UnknownMsg0A5: 8 Vector__XXX
+
+BO_ 704 UnknownMsg2C0: 8 Vector__XXX
+
+BO_ 168 UnknownMsg0A8: 8 Vector__XXX
+
+BO_ 205 UnknownMsg0CD: 8 Vector__XXX
+
+BO_ 667 UnknownMsg29B: 8 Vector__XXX
+
+BO_ 668 UnknownMsg29C: 8 Vector__XXX
+
+BO_ 669 UnknownMsg29D: 8 Vector__XXX
+
+BO_ 407 UnknownMsg197: 4 Vector__XXX
+ SG_ counter_197 : 8|4@1+ (1,0) [0|14] "" Vector__XXX
+
+BO_ 1290 UnknownMsg50A: 8 Vector__XXX
+
+BO_ 748 UnknownMsg2EC: 2 Vector__XXX
+
+BO_ 1289 UnknownMsg509: 8 Vector__XXX
+
+BO_ 1075 UnknownMsg433: 4 Vector__XXX
+
+BO_ 339 UnknownMsg153: 8 Vector__XXX
+
+BO_ 173 UnknownMsg0AD: 8 Vector__XXX
+
+BO_ 187 UnknownMsg0BB: 3 Vector__XXX
+
+BO_ 256 UnknownMsg100: 8 Vector__XXX
+
+BO_ 264 UnknownMsg108: 8 Vector__XXX
+
+BO_ 317 UnknownMsg13D: 8 Vector__XXX
+
+BO_ 267 UnknownMsg10B: 3 Vector__XXX
+
+BO_ 318 UnknownMsg13E: 8 Vector__XXX
+
+BO_ 402 UnknownMsg192: 8 Vector__XXX
+
+BO_ 695 UnknownMsg2B7: 8 Vector__XXX
+
+BO_ 738 UnknownMsg2E2: 8 Vector__XXX
+
+BO_ 744 UnknownMsg2E8: 8 Vector__XXX
+
+BO_ 815 UnknownMsg32F: 8 Vector__XXX
+
+BO_ 932 UnknownMsg3A4: 8 Vector__XXX
+
+BO_ 997 UnknownMsg3E5: 3 Vector__XXX
+
+BO_ 1004 UnknownMsg3EC: 8 Vector__XXX
+
+BO_ 1021 UnknownMsg3FD: 5 Vector__XXX
+
+BO_ 1065 UnknownMsg429: 3 Vector__XXX
+
+BO_ 1298 UnknownMsg512: 8 Vector__XXX
+
+BO_ 261 UnknownMsg105: 8 Vector__XXX
+
+BO_ 464 UnknownMsg1D0: 8 Vector__XXX
+
+BO_ 414 UnknownMsg19E: 8 Vector__XXX
+
+BO_ 1048 UnknownMsg418: 8 Vector__XXX
+
+BO_ 691 UnknownMsg2B3: 8 Vector__XXX
+
+BO_ 969 UnknownMsg3C9: 8 Vector__XXX
+
+BO_ 1019 UnknownMsg3FB: 6 Vector__XXX
+
+BO_ 1020 UnknownMsg3FC: 3 Vector__XXX
+
+BO_ 170 UnknownMsg0AA: 8 Vector__XXX
+
+BO_ 270 UnknownMsg10E: 8 Vector__XXX
+
+BO_ 336 UnknownMsg150: 8 Vector__XXX
+
+BO_ 426 UnknownMsg1AA: 8 Vector__XXX
+
+BO_ 529 UnknownMsg211: 7 Vector__XXX
+
+BO_ 702 UnknownMsg2BE: 8 Vector__XXX
+
+BO_ 714 UnknownMsg2CA: 2 Vector__XXX
+
+BO_ 739 UnknownMsg2E3: 8 Vector__XXX
+
+BO_ 806 UnknownMsg326: 8 Vector__XXX
+
+BO_ 935 UnknownMsg3A7: 7 Vector__XXX
+
+BO_ 970 UnknownMsg3CA: 8 Vector__XXX
+
+BO_ 976 UnknownMsg3D0: 2 Vector__XXX
+
+BO_ 1053 UnknownMsg41D: 4 Vector__XXX
+
+BO_ 1301 UnknownMsg515: 8 Vector__XXX
+
+BO_ 1306 UnknownMsg51A: 8 Vector__XXX
+
+BO_ 1374 UnknownMsg55E: 8 Vector__XXX
+
+BO_ 1434 UnknownMsg59A: 8 Vector__XXX
 
 
 
@@ -202,7 +313,7 @@ CM_ SG_ 3221225472 Frame_1_1EE "0xFC in logs";
 CM_ SG_ 3221225472 POSITION_1 "Steering angle";
 CM_ SG_ 3221225472 UnusedFF "Always 0xFF";
 CM_ BO_ 274 "10ms - BMS status";
-CM_ BO_ 1001 "200ms - Main LIM control
+CM_ BO_ 1001 "200ms - Main control for LIM
 ";
 CM_ BO_ 1073 "200ms - Battery info";
 CM_ BO_ 1074 "200ms - Battery SOC info";
@@ -210,26 +321,27 @@ CM_ BO_ 808 "1000ms - Counter";
 CM_ BO_ 303 "100ms - Wake up message";
 CM_ BO_ 1000 "1000ms";
 CM_ BO_ 816 "200ms - Range info";
-CM_ BO_ 1072 "Variable rate - Always brodcasted by 94Ah battery";
-CM_ BO_ 506 "1s - Always brodcasted by 94Ah battery";
-CM_ BO_ 1037 "1s - Always brodcasted by 94Ah battery";
-CM_ BO_ 767 "100ms - Always brodcasted by 94Ah battery";
-CM_ BO_ 569 "200ms - Always brodcasted by 94Ah battery 
-Data high voltage battery Unit 2";
-CM_ BO_ 701 "100ms - Always brodcasted by 94Ah battery";
-CM_ BO_ 757 "100ms - Always brodcasted by 94Ah battery";
+CM_ BO_ 1072 "Variable rate";
+CM_ BO_ 506 "1s";
+CM_ BO_ 1037 "1s";
+CM_ BO_ 767 "100ms";
+CM_ BO_ 569 "200ms - Data high voltage battery Unit 2";
+CM_ BO_ 701 "100ms";
+CM_ BO_ 757 "100ms";
 CM_ BO_ 962 "1s - 94AH (not on 60AH)";
-CM_ BO_ 1003 "1s - Always brodcasted by 94Ah battery";
-CM_ BO_ 867 "1s - Always brodcasted by 94Ah battery";
-CM_ BO_ 1287 "Always brodcasted by 94Ah battery";
-CM_ BO_ 1415 "5s - Always brodcasted by 94Ah battery";
-CM_ BO_ 1052 "1s - Always brodcasted by 94Ah battery";
+CM_ BO_ 1003 "1s";
+CM_ BO_ 867 "1s";
+CM_ BO_ 1287 "";
+CM_ BO_ 1415 "5s";
+CM_ BO_ 1052 "1s";
 CM_ SG_ 1052 Frame0_41C "Static 0xFF";
 CM_ SG_ 1052 Frame1_41C "Static 0xFC";
-CM_ BO_ 1543 "Always brodcasted by 94Ah battery";
+CM_ BO_ 1543 "Not periodically sent";
 CM_ BO_ 1017 "1s - Drivetrain gear selector (Also on K-CAN)";
 CM_ BO_ 417 "20ms - Vehicle speed";
 CM_ BO_ 896 "Nonperiodic - VIN";
+CM_ SG_ 407 counter_197 "0-E increments each message";
+CM_ BO_ 1289 "Stops after 5 messages sent";
 VAL_ 274 Battery_Status 5 "Normal" ;
 VAL_ 1001 Contactor_Con 0 "Open" 1 "OpenwithDiag" 2 "Close" 21 "Invalid" ;
 VAL_ 1001 Chg_Status_Info 0 "No_charge" 1 "Init" 2 "Charge_active" 3 "Charge_pause" 4 "Charge_complete" 5 "Charge_error" 15 "Invalid" ;

@@ -181,6 +181,18 @@ BO_ 896 UnknownMsg380: 7 Vector__XXX
 
 BO_ 165 UnknownMsgA5: 8 Vector__XXX
 
+BO_ 928 UnknownMsg3A0: 8 Vector__XXX
+
+BO_ 370 UnknownMsg172: 8 Vector__XXX
+
+BO_ 783 UnknownMsg30F: 8 Vector__XXX
+
+BO_ 708 UnknownMsg2C4: 8 Vector__XXX
+
+BO_ 967 UnknownMsg3C7: 8 Vector__XXX
+
+BO_ 411 UnknownMsg19B: 8 Vector__XXX
+
 
 
 CM_ BU_ LIM "Charging communication unit";
@@ -222,6 +234,12 @@ CM_ SG_ 470 frame0_1d6 "0xF0 in logs
 CM_ SG_ 470 frame1_1d6 "0xCC -> 0xC0 in logs";
 CM_ BO_ 417 "20ms - Vehicle speed";
 CM_ BO_ 896 "Nonperiodic - VIN";
+CM_ BO_ 928 "xxx - Vehicle status";
+CM_ BO_ 370 "xxxms - Acknowledgment request combination";
+CM_ BO_ 783 "- Status Service Call TeleX";
+CM_ BO_ 708 "status of engine fuel consumption";
+CM_ BO_ 967 "forecast route destination";
+CM_ BO_ 411 "- control crash";
 VAL_ 670 Weld_Det_En 0 "Charger_does_not_support_the_EV" 1 "Charger_supports_the_EV_relay_weld" 3 "Signal_unavail" ;
 VAL_ 670 internal_charger_status 0 "Not_ready" 1 "Ready" 2 "Switch_off_charger" 3 "Interruption" 4 "Pre_charge" 5 "insulation_monitor" 6 "estop" 7 "Malfunction" 19 "reserved" 20 "reserved" 21 "signal_invalid" ;
 VAL_ 670 Iso_Status 0 "invalid" 1 "valid" 2 "error" 3 "invalid_signal" ;

@@ -102,6 +102,7 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ FC_SOC : 56|8@1+ (0.5,0) [0|100] "%" Vector__XXX
  SG_ CHG_I_Lim : 16|8@1+ (1,0) [0|254] "Amps" Vector__XXX
  SG_ CHG_V_Lim : 0|14@1- (0.1,0) [0|1000] "Volts" Vector__XXX
+ SG_ BatteryVoltage : 16|12@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 274 BMSMsg112: 8 SME
  SG_ Battery_Volts : 16|16@1+ (0.1,0) [0|500] "Volts" Vector__XXX
@@ -142,10 +143,12 @@ BO_ 303 UnknownMsg12f: 8 EDME
 BO_ 1000 UnknownMsg3e8: 2 EDME
  SG_ RQ_Diag : 2|2@1+ (1,0) [0|4] "" Vector__XXX
 
-BO_ 816 UnknownMsg330: 8 EDME
+BO_ 816 OdometerMsg330: 8 EDME
  SG_ Odometer : 0|24@1+ (1,0) [0|16777200] "km" Vector__XXX
 
 BO_ 1072 BMSMsg430: 8 SME
+ SG_ UnknownMaybeMaxVoltage : 0|12@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UnknownMaybeMinVoltage : 16|12@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 506 BMSMsg1FA: 8 SME
 
@@ -154,10 +157,15 @@ BO_ 1037 BMSMsg40D: 8 SME
 BO_ 767 BMSMsg2FF: 6 SME
 
 BO_ 569 BMSMsg239: 8 SME
+ SG_ TemperatureMaxMaybe : 16|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 701 BMSMsg2BD: 8 SME
 
 BO_ 757 BMSMsg2F5: 8 SME
+ SG_ MaxChargingVoltage : 0|12@1+ (0.1,0) [0|410] "V+1" Vector__XXX
+ SG_ MaxDischargeVoltage : 32|12@1+ (0.1,0) [0|410] "V+1" Vector__XXX
+ SG_ MaxChargeWattMaybe : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxDischargeWattMaybe : 48|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 962 BMSMsg3C2: 8 SME
 
@@ -178,9 +186,9 @@ BO_ 1543 BMSMsg607: 8 SME
 BO_ 1017 UnknownMsg3f9: 8 Vector__XXX
  SG_ GEAR : 48|8@1+ (1,0) [0|255] "" Vector__XXX
 
-BO_ 417 UnknownMsg1A1: 8 Vector__XXX
+BO_ 417 UnknownMsg1A1: 5 Vector__XXX
 
-BO_ 896 UnknownMsg380: 7 Vector__XXX
+BO_ 896 VINMsg380: 7 EDME
  SG_ VIN : 0|56@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 165 UnknownMsg0A5: 8 Vector__XXX
@@ -197,7 +205,7 @@ BO_ 668 UnknownMsg29C: 8 Vector__XXX
 
 BO_ 669 UnknownMsg29D: 8 Vector__XXX
 
-BO_ 407 UnknownMsg197: 4 Vector__XXX
+BO_ 407 UnknownMsg197: 4 EDME
  SG_ counter_197 : 8|4@1+ (1,0) [0|14] "" Vector__XXX
 
 BO_ 1290 UnknownMsg50A: 8 Vector__XXX
@@ -206,7 +214,7 @@ BO_ 748 UnknownMsg2EC: 2 Vector__XXX
 
 BO_ 1289 UnknownMsg509: 8 Vector__XXX
 
-BO_ 1075 UnknownMsg433: 4 Vector__XXX
+BO_ 1075 UnknownMsg433: 4 EDME
 
 BO_ 339 UnknownMsg153: 8 Vector__XXX
 
@@ -216,7 +224,7 @@ BO_ 187 UnknownMsg0BB: 3 Vector__XXX
 
 BO_ 256 UnknownMsg100: 8 Vector__XXX
 
-BO_ 264 UnknownMsg108: 8 Vector__XXX
+BO_ 264 UnknownMsg108: 8 EDME
 
 BO_ 317 UnknownMsg13D: 8 Vector__XXX
 
@@ -250,7 +258,7 @@ BO_ 261 UnknownMsg105: 8 Vector__XXX
 
 BO_ 464 UnknownMsg1D0: 8 Vector__XXX
 
-BO_ 414 UnknownMsg19E: 8 Vector__XXX
+BO_ 414 UnknownMsg19E: 8 EDME
 
 BO_ 1048 UnknownMsg418: 8 Vector__XXX
 
@@ -298,12 +306,12 @@ BO_ 1434 UnknownMsg59A: 8 Vector__XXX
 
 
 
-CM_ BU_ SME "BMS inside battery";
-CM_ BU_ EDME "Vehicle Control Unit";
+CM_ BU_ SME "Battery Management Electronics";
+CM_ BU_ EDME "Electrical Digital Motor Electronics";
 CM_ BU_ REME "Range Extender Electrical Machine Electronics";
-CM_ BU_ KLE "Onboard charging unit";
-CM_ BU_ GWS "Gear Selector Switch";
-CM_ BU_ RDME "Ramge Extender Digital Engine Electronics";
+CM_ BU_ KLE "Convenience Charging Electronics";
+CM_ BU_ GWS "Electronic Gear Selector Switch";
+CM_ BU_ RDME "Range Extender Digital Engine Electronics";
 CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
 CM_ SG_ 3221225472 Frame0_1D6 "0xF0 in logs";
 CM_ SG_ 3221225472 Frame1_1D6 "0xC0 in logs";
@@ -314,28 +322,36 @@ CM_ SG_ 3221225472 Frame_0_1EE "0x00 in logs";
 CM_ SG_ 3221225472 Frame_1_1EE "0xFC in logs";
 CM_ SG_ 3221225472 POSITION_1 "Steering angle";
 CM_ SG_ 3221225472 UnusedFF "Always 0xFF";
-CM_ BO_ 274 "10ms - BMS status";
+CM_ BO_ 274 "10ms - Status Of High-Voltage Battery 2";
 CM_ BO_ 1001 "200ms - Main control for LIM
 ";
-CM_ BO_ 1073 "200ms - Battery info";
+CM_ BO_ 1073 "200ms - Data High-Voltage Battery Unit";
 CM_ BO_ 1074 "200ms - Battery SOC info";
-CM_ BO_ 808 "1000ms - Counter";
-CM_ BO_ 303 "100ms - Wake up message";
+CM_ BO_ 808 "1000ms - Counter (Relayed from KOMBI)";
+CM_ BO_ 303 "100ms - Wake up message (Relayed from BDC)";
 CM_ BO_ 1000 "1000ms";
 CM_ BO_ 816 "200ms - Range info";
 CM_ BO_ 1072 "1s (Non periodic)";
-CM_ BO_ 506 "1s";
+CM_ SG_ 1072 UnknownMaybeMaxVoltage "3943 in 60AH log (394,3V?) Dala guessing";
+CM_ SG_ 1072 UnknownMaybeMinVoltage "3383 in 60Ah log (338,3V) Dala guessing";
+CM_ BO_ 506 "1s - Status Of High-Voltage Battery 1";
 CM_ BO_ 1037 "1s";
 CM_ BO_ 767 "100ms";
 CM_ BO_ 569 "200ms - Data high voltage battery Unit 2";
+CM_ SG_ 569 TemperatureMaxMaybe "Temperature might reside here";
 CM_ BO_ 701 "100ms";
-CM_ BO_ 757 "100ms";
+CM_ BO_ 757 "100ms - High-Voltage BatteryUnit Charge/Discharge Limitation";
+CM_ SG_ 757 MaxChargingVoltage "60AH = 3936 , 94AH = 3964
+";
+CM_ SG_ 757 MaxDischargeVoltage "60AH = 2594 , 94AH = 2607";
+CM_ SG_ 757 MaxChargeWattMaybe "99% 60AH 8280 , 48% 94AH 12072";
+CM_ SG_ 757 MaxDischargeWattMaybe "99% 60AH 4102 , 48% 94AH 4429";
 CM_ BO_ 962 "1s - 94AH (not on 60AH)";
 CM_ BO_ 1003 "1s";
 CM_ BO_ 867 "1s";
 CM_ BO_ 1287 "Stops after 5 messages sent (640ms)";
 CM_ BO_ 1415 "5s";
-CM_ BO_ 1052 "1s";
+CM_ BO_ 1052 "1s - Status Of Operating Mode Of Hybrid 2";
 CM_ SG_ 1052 Frame0_41C "Static 0xFF";
 CM_ SG_ 1052 Frame1_41C "Static 0xFC";
 CM_ BO_ 1543 "100ms (Non periodic)";
@@ -349,17 +365,17 @@ CM_ BO_ 205 "10ms";
 CM_ BO_ 667 "100ms";
 CM_ BO_ 668 "100ms";
 CM_ BO_ 669 "100ms";
-CM_ BO_ 407 "30ms";
+CM_ BO_ 407 "30ms - Status gear selector switch (Relayed from GWS on i8)";
 CM_ SG_ 407 counter_197 "0-E increments each message";
 CM_ BO_ 1290 "650ms";
 CM_ BO_ 748 "2s";
 CM_ BO_ 1289 "Stops after 5 messages sent (640ms)";
-CM_ BO_ 1075 "1s";
+CM_ BO_ 1075 "1s - Predefine high-voltage battery (Relayed from EME on i8)";
 CM_ BO_ 339 "20ms";
 CM_ BO_ 173 "10ms ";
 CM_ BO_ 187 "10ms ";
 CM_ BO_ 256 "10ms";
-CM_ BO_ 264 "100ms";
+CM_ BO_ 264 "100ms - Actual Charging Electronics Data (Relayed from EME)";
 CM_ BO_ 317 "10ms ";
 CM_ BO_ 267 "20ms";
 CM_ BO_ 318 "1s";
@@ -376,7 +392,7 @@ CM_ BO_ 1065 "50ms";
 CM_ BO_ 1298 "640ms";
 CM_ BO_ 261 "10ms ";
 CM_ BO_ 464 "1s";
-CM_ BO_ 414 "500ms";
+CM_ BO_ 414 "500ms (Relayed from EME)";
 CM_ BO_ 1048 "1s";
 CM_ BO_ 691 "100ms";
 CM_ BO_ 969 "1s (Non periodic)";
@@ -388,7 +404,7 @@ CM_ BO_ 336 "10ms";
 CM_ BO_ 426 "50ms";
 CM_ BO_ 529 "100ms";
 CM_ BO_ 702 "100ms";
-CM_ BO_ 714 "1s";
+CM_ BO_ 714 "1s - On F10/F11 BMW this is (outside air temperature (Relayed from KOMBI))";
 CM_ BO_ 739 "100ms";
 CM_ BO_ 806 "500ms";
 CM_ BO_ 935 "1s";

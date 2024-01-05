@@ -1,0 +1,102 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 255 Unknown_FF: 8 Vector__XXX
+
+BO_ 954 BMS_3BA: 8 Vector__XXX
+
+BO_ 533 BMS_215: 8 Vector__XXX
+
+BO_ 565 BMS_235: 8 Vector__XXX
+
+BO_ 762 BMS_2FA: 8 Vector__XXX
+
+BO_ 336 BMS_150: 8 Vector__XXX
+
+BO_ 501 BMS_1F5: 8 Vector__XXX
+
+BO_ 602 BMA_25A: 8 Vector__XXX
+
+BO_ 805 BMS_325: 8 Vector__XXX
+
+BO_ 816 BMS_330: 8 Vector__XXX
+
+BO_ 821 BMS_335: 8 Vector__XXX
+
+BO_ 864 BMS_360: 8 Vector__XXX
+
+BO_ 869 BMS_365: 8 Vector__XXX
+
+BO_ 85 BMS_55: 8 Vector__XXX
+
+BO_ 581 BMS_245: 8 Vector__XXX
+
+BO_ 629 BMS_275: 8 Vector__XXX
+
+BO_ 538 BMS_21A: 8 Vector__XXX
+
+BO_ 1013 BMS_3F5: 8 Vector__XXX
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "CANFD_BRS" "0";
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_ "BusType" "CAN FD";
+BA_ "VFrameFormat" BO_ 255 0;
+BA_ "VFrameFormat" BO_ 954 0;
+BA_ "VFrameFormat" BO_ 533 0;
+BA_ "VFrameFormat" BO_ 565 0;
+BA_ "VFrameFormat" BO_ 762 0;
+BA_ "VFrameFormat" BO_ 336 0;
+BA_ "VFrameFormat" BO_ 501 0;
+BA_ "VFrameFormat" BO_ 602 0;
+BA_ "VFrameFormat" BO_ 805 0;
+BA_ "VFrameFormat" BO_ 816 0;
+BA_ "VFrameFormat" BO_ 821 0;
+BA_ "VFrameFormat" BO_ 864 0;
+BA_ "VFrameFormat" BO_ 869 0;
+BA_ "VFrameFormat" BO_ 85 0;
+BA_ "VFrameFormat" BO_ 581 0;
+BA_ "VFrameFormat" BO_ 629 0;
+BA_ "VFrameFormat" BO_ 538 0;
+BA_ "VFrameFormat" BO_ 1013 0;
+

@@ -103,6 +103,8 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ CHG_I_Lim : 16|8@1+ (1,0) [0|254] "Amps" Vector__XXX
  SG_ CHG_V_Lim : 0|14@1- (0.1,0) [0|1000] "Volts" Vector__XXX
  SG_ BatteryVoltage : 16|12@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Total_Battery : 40|12@1+ (0.02,0) [0|82] "kWh" Vector__XXX
+ SG_ TemperatureMaxMaybe : 16|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 274 BMSMsg112: 8 SME
  SG_ Battery_Volts : 16|16@1+ (0.1,0) [0|500] "Volts" Vector__XXX
@@ -124,8 +126,13 @@ BO_ 1001 UnknownMsg3E9: 8 EDME
  SG_ Charging_Pwr : 28|12@1+ (25,0) [0|102350] "Watts" Vector__XXX
 
 BO_ 1073 BMSMsg431: 7 SME
- SG_ Serv_Dis_Status : 0|2@1+ (1,0) [0|1] "" Vector__XXX
- SG_ Total_Battery : 40|12@1+ (0.02,0) [0|82] "kWh" Vector__XXX
+ SG_ ST_SER_DSCO_PLG : 0|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ ST_MEASMT_ISL : 2|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ RQ_ABRT_CHGNG : 4|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PRD_DUR_CHGNG : 16|16@1+ (1,0) [0|65532] "minutes" Vector__XXX
+ SG_ PRD_T_EOCHG : 32|8@1+ (1,0) [0|1270] "minutes" Vector__XXX
+ SG_ ENC_HVSTO_MAX : 40|12@1+ (0.02,0) [0|81.88] "kWh" Vector__XXX
+ SG_ ST_CHGRDI_HVSTO : 52|4@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1074 BMSMsg432: 5 SME
  SG_ Voltage_Setpoint : 4|12@1+ (0.1,0) [0|410] "Volts" Vector__XXX
@@ -141,7 +148,8 @@ BO_ 303 UnknownMsg12f: 8 EDME
  SG_ ST_KL : 16|4@1+ (1,0) [0|15] "" Vector__XXX
 
 BO_ 1000 UnknownMsg3e8: 2 EDME
- SG_ RQ_Diag : 2|2@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ RQ_MIL_DIAG_OBD_ENGMG_EL : 0|2@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ RQ_RST_OBD_DIAG : 2|2@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 816 OdometerMsg330: 8 EDME
  SG_ Odometer : 0|24@1+ (1,0) [0|16777200] "km" Vector__XXX
@@ -157,7 +165,10 @@ BO_ 1037 BMSMsg40D: 8 SME
 BO_ 767 BMSMsg2FF: 6 SME
 
 BO_ 569 BMSMsg239: 8 SME
- SG_ TemperatureMaxMaybe : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SYNCN_DT_HVSTO_2 : 0|4@1+ (1,0) [0|14] "" Vector__XXX
+ SG_ MUX_DT_HVSTO_2 : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PRD_ENERG_CHCOND_2_COS : 8|16@1+ (1,0) [0|65534] "Wh" Vector__XXX
+ SG_ PRD_ENERG_CHGTAR_2_HVSTO : 24|16@1+ (0.02,0) [0|1310.64] "kWh" Vector__XXX
 
 BO_ 701 BMSMsg2BD: 8 SME
 
@@ -183,8 +194,21 @@ BO_ 1052 BMSMsg41C: 2 SME
 
 BO_ 1543 BMSMsg607: 8 SME
 
-BO_ 1017 UnknownMsg3f9: 8 Vector__XXX
- SG_ GEAR : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+BO_ 1017 EDMEMsg3f9: 8 EDME
+ SG_ CRC8_3F9 : 0|8@1+ (1,0) [0|255] "CRC" Vector__XXX
+ SG_ ALIV_DT_PT_2 : 8|4@1+ (1,0) [0|16] "counter" Vector__XXX
+ SG_ ST_MOD_DRV : 12|4@1+ (1,0) [0|16] "status" Vector__XXX
+ SG_ ST_DRV_VEH : 16|8@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ ST_ENG_RUN_DRV : 24|2@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ ST_SW_CLT_DRV : 26|2@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ ST_ILK_STRT_DRV : 28|2@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ ST_IDLG_ENG_DRV : 30|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TEMP_ENG_DRV : 32|8@1+ (1,-48) [-48|144] "" Vector__XXX
+ SG_ TEMP_EOI_DRV : 40|8@1+ (1,-48) [-48|170] "" Vector__XXX
+ SG_ ST_GRSEL_DRV : 48|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RLS_ENGSTA : 52|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RDUC_DOCTR_RPM_DRV_2 : 54|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RPM_ENG_MAX_ALW : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 417 UnknownMsg1A1: 5 Vector__XXX
 
@@ -229,6 +253,7 @@ BO_ 264 UnknownMsg108: 8 EDME
 BO_ 317 UnknownMsg13D: 8 Vector__XXX
 
 BO_ 267 UnknownMsg10B: 3 Vector__XXX
+ SG_ CRC_10B : 0|8@1+ (1,0) [0|0] "255" Vector__XXX
 
 BO_ 318 UnknownMsg13E: 8 Vector__XXX
 
@@ -249,14 +274,28 @@ BO_ 997 UnknownMsg3E5: 3 Vector__XXX
 BO_ 1004 UnknownMsg3EC: 8 Vector__XXX
 
 BO_ 1021 UnknownMsg3FD: 5 Vector__XXX
+ SG_ CRC_3FD : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ALIV_DT_DISP_GRDT : 8|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DISP_GR_GRB : 12|4@1+ (1,0) [0|15] "status" Vector__XXX
+ SG_ DISP_PRG_GRB : 16|3@1+ (1,0) [0|7] "status" Vector__XXX
+ SG_ DISP_PO_IDC_GRB : 19|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ DISP_PO_GRB : 21|3@1+ (1,0) [0|7] "status" Vector__XXX
+ SG_ DISP_SSC_IDC_GRB : 24|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ GEN_IDLI : 26|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ DISP_RQ_GR_GRB : 28|4@1+ (1,0) [0|15] "status" Vector__XXX
+ SG_ DISP_DRVLG_GRB : 32|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DISP_FRM_DRVLG_GRB : 36|4@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1065 UnknownMsg429: 3 Vector__XXX
 
 BO_ 1298 UnknownMsg512: 8 Vector__XXX
 
 BO_ 261 UnknownMsg105: 8 Vector__XXX
+ SG_ CRC8_105 : 0|8@1+ (1,0) [0|255] "CRC" Vector__XXX
 
-BO_ 464 UnknownMsg1D0: 8 Vector__XXX
+BO_ 464 EDMEMsg1D0: 8 EDME
+ SG_ CRC_1D0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ALIV_SAFG_PT : 8|4@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 414 UnknownMsg19E: 8 EDME
 
@@ -266,9 +305,28 @@ BO_ 691 UnknownMsg2B3: 8 Vector__XXX
 
 BO_ 969 UnknownMsg3C9: 8 Vector__XXX
 
-BO_ 1019 UnknownMsg3FB: 6 Vector__XXX
+BO_ 1019 EDMEMsg3FB: 6 EDME
+ SG_ AIP_ENG_DRV : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TAR_RPM_IDLG_DRV : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ST_SW_WAUP_D : 16|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RDUC_DOCTR_RPM_D : 18|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RQ_SHPA_GRB_REGE_P : 20|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SLCTN_BUS_COMM_ENG_ : 22|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RQ_STASS_ENGMG : 24|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CTR_SLCK_DRV : 28|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ST_RTIR_DRV : 30|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ST_INFS_DRV : 32|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RQ_SHPA_GRB_CHGB_LC : 34|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ST_CAT_HT : 36|2@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ ST_RDI_DRVG : 38|2@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ TAR_RPM_IDLG_DRV_EXT : 40|8@1+ (10,0) [0|0] "l/min" Vector__XXX
 
-BO_ 1020 UnknownMsg3FC: 3 Vector__XXX
+BO_ 1020 EDMEMsg3FC: 3 EDME
+ SG_ ALIV_DT_PT_3 : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TRNRAO_BAX : 4|12@1+ (0.002,0) [0|8.188] "ratio" Vector__XXX
+ SG_ QU_TRNRAO_BAX : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RLS_PLK_VRFD : 20|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ EXH_INSP_TST : 22|2@1+ (1,0) [0|3] "status" Vector__XXX
 
 BO_ 170 UnknownMsg0AA: 8 Vector__XXX
 
@@ -322,14 +380,23 @@ CM_ SG_ 3221225472 Frame_0_1EE "0x00 in logs";
 CM_ SG_ 3221225472 Frame_1_1EE "0xFC in logs";
 CM_ SG_ 3221225472 POSITION_1 "Steering angle";
 CM_ SG_ 3221225472 UnusedFF "Always 0xFF";
+CM_ SG_ 3221225472 TemperatureMaxMaybe "Temperature might reside here";
 CM_ BO_ 274 "10ms - Status Of High-Voltage Battery 2";
 CM_ BO_ 1001 "200ms - Main control for LIM
 ";
 CM_ BO_ 1073 "200ms - Data High-Voltage Battery Unit";
+CM_ SG_ 1073 ST_SER_DSCO_PLG "status_service_disconnection_plug";
+CM_ SG_ 1073 ST_MEASMT_ISL "status_measurement_isolation";
+CM_ SG_ 1073 RQ_ABRT_CHGNG "request_abort_charging";
+CM_ SG_ 1073 PRD_DUR_CHGNG "prediction_duration_charging FFFF = signal unavailable";
+CM_ SG_ 1073 PRD_T_EOCHG "prediction_time_end-of-charging";
+CM_ SG_ 1073 ENC_HVSTO_MAX "energy-content_high-voltage-storage_maximum";
 CM_ BO_ 1074 "200ms - Battery SOC info";
 CM_ BO_ 808 "1000ms - Counter (Relayed from KOMBI)";
 CM_ BO_ 303 "100ms - Wake up message (Relayed from BDC)";
 CM_ BO_ 1000 "1000ms";
+CM_ SG_ 1000 RQ_MIL_DIAG_OBD_ENGMG_EL "request_MIL_diagnosis_OBD_engine-management-system_electric";
+CM_ SG_ 1000 RQ_RST_OBD_DIAG "request_reset_OBD_diagnosis";
 CM_ BO_ 816 "200ms - Range info";
 CM_ BO_ 1072 "1s (Non periodic)";
 CM_ SG_ 1072 UnknownMaybeMaxVoltage "3943 in 60AH log (394,3V?) Dala guessing";
@@ -338,7 +405,13 @@ CM_ BO_ 506 "1s - Status Of High-Voltage Battery 1";
 CM_ BO_ 1037 "1s";
 CM_ BO_ 767 "100ms";
 CM_ BO_ 569 "200ms - Data high voltage battery Unit 2";
-CM_ SG_ 569 TemperatureMaxMaybe "Temperature might reside here";
+CM_ SG_ 569 SYNCN_DT_HVSTO_2 "synchronization_data_high-voltage-storage_2 DTS Mapping:None;
+Synchronization as feedback from HV storage (enumerating).
+This signal is not sent by plug-in hybrids in SP2009";
+CM_ SG_ 569 MUX_DT_HVSTO_2 "multiplexer_data_high-voltage-storage_2 DTS Mapping:None;
+This signal is not sent by plug-in hybrids in SP2009.";
+CM_ SG_ 569 PRD_ENERG_CHCOND_2_COS "prediction_Energy_charging-condition_2_consumer";
+CM_ SG_ 569 PRD_ENERG_CHGTAR_2_HVSTO "prediction_Energy_charging-target_2_high-voltage-storage";
 CM_ BO_ 701 "100ms";
 CM_ BO_ 757 "100ms - High-Voltage BatteryUnit Charge/Discharge Limitation";
 CM_ SG_ 757 MaxChargingVoltage "60AH = 3936 , 94AH = 3964
@@ -355,7 +428,19 @@ CM_ BO_ 1052 "1s - Status Of Operating Mode Of Hybrid 2";
 CM_ SG_ 1052 Frame0_41C "Static 0xFF";
 CM_ SG_ 1052 Frame1_41C "Static 0xFC";
 CM_ BO_ 1543 "100ms (Non periodic)";
-CM_ BO_ 1017 "1s - Drivetrain gear selector (Also on K-CAN)";
+CM_ BO_ 1017 "1s - Data drive train 2 (Also on K-CAN)";
+CM_ SG_ 1017 ALIV_DT_PT_2 "alive_data_power-train_2 (counter 0...E) F=signal invalid";
+CM_ SG_ 1017 ST_MOD_DRV "status_mode_drive";
+CM_ SG_ 1017 ST_DRV_VEH "status_drive_vehicle - A possible definition of driving readiness in hybrid vehicles is via bit 7, bit 0 and bit 1 (If Bit 7 = 0, this means that an electric motor is installed and the vehicle is always ready to drive). A possible definition of driving readiness arises from vehicles with exclusively combustion engines via bit 0 and bit 1 (bit 7 is always at 1)";
+CM_ SG_ 1017 ST_ENG_RUN_DRV "status_engine_run_drive";
+CM_ SG_ 1017 ST_SW_CLT_DRV "status_switch_clutch_drive";
+CM_ SG_ 1017 ST_ILK_STRT_DRV "status_interlock_starter_drive";
+CM_ SG_ 1017 ST_IDLG_ENG_DRV "";
+CM_ SG_ 1017 TEMP_ENG_DRV "temperature_engine_drive";
+CM_ SG_ 1017 TEMP_EOI_DRV "temperature_engine-oil_drive";
+CM_ SG_ 1017 ST_GRSEL_DRV "For manual transmissions, 1111b is usually sent in this signal and from use of the
+For modular motors, this signal is provided with valid values ??0010b (= reverse gear) or 0000b (= no
+reverse gear), or sent with 1111b if an error is diagnosed.";
 CM_ BO_ 417 "20ms - Vehicle speed";
 CM_ BO_ 896 "Stops after 3 messages on startup - VIN";
 CM_ BO_ 165 "10ms ";
@@ -378,6 +463,7 @@ CM_ BO_ 256 "10ms";
 CM_ BO_ 264 "100ms - Actual Charging Electronics Data (Relayed from EME)";
 CM_ BO_ 317 "10ms ";
 CM_ BO_ 267 "20ms";
+CM_ SG_ 267 CRC_10B "CRC8_SAE_J1850_ZER0 formula, 0x1D Poly, initial value 0x3F, Final XOR value 0x0";
 CM_ BO_ 318 "1s";
 CM_ BO_ 402 "1s";
 CM_ BO_ 695 "100ms";
@@ -387,17 +473,32 @@ CM_ BO_ 815 "200ms";
 CM_ BO_ 932 "1s (Non periodic)";
 CM_ BO_ 997 "10s";
 CM_ BO_ 1004 "1s";
-CM_ BO_ 1021 "100ms";
+CM_ BO_ 1021 "100ms - Transmission data display";
+CM_ SG_ 1021 ALIV_DT_DISP_GRDT "alive_data_display_gearbox-drive-train";
+CM_ SG_ 1021 DISP_GR_GRB "display_gear_gearbox";
+CM_ SG_ 1021 DISP_PRG_GRB "display_program_gearbox";
+CM_ SG_ 1021 DISP_PO_IDC_GRB "display_position_indicate-direction_gearbox";
+CM_ SG_ 1021 DISP_PO_GRB "display_position_gearbox";
+CM_ SG_ 1021 DISP_SSC_IDC_GRB "display_shift-scheme_indicate-direction_gearbox";
+CM_ SG_ 1021 GEN_IDLI "generator_indicator-light";
+CM_ SG_ 1021 DISP_RQ_GR_GRB "display_request_gear_gearbox";
 CM_ BO_ 1065 "50ms";
 CM_ BO_ 1298 "640ms";
 CM_ BO_ 261 "10ms ";
-CM_ BO_ 464 "1s";
+CM_ SG_ 261 CRC8_105 "CRC8_SAE_J1850_ZER0 formula, 0x1D Poly, initial value 0x73 , Final XOR value 0x0";
+CM_ BO_ 464 "1s - Drivetrain protection";
 CM_ BO_ 414 "500ms (Relayed from EME)";
 CM_ BO_ 1048 "1s";
 CM_ BO_ 691 "100ms";
 CM_ BO_ 969 "1s (Non periodic)";
 CM_ BO_ 1019 "1s";
-CM_ BO_ 1020 "5s";
+CM_ SG_ 1019 ST_CAT_HT "status_CAT_heating";
+CM_ SG_ 1019 ST_RDI_DRVG "status_readiness_driving";
+CM_ SG_ 1019 TAR_RPM_IDLG_DRV_EXT "target_RPM_idling_drive_extended 0 ... 2540 1/min";
+CM_ BO_ 1020 "5s - Data drive train 3";
+CM_ SG_ 1020 TRNRAO_BAX "transmission-ratio_back-axle";
+CM_ SG_ 1020 RLS_PLK_VRFD "release_park-lock_verified";
+CM_ SG_ 1020 EXH_INSP_TST "exhaust_inspection_test";
 CM_ BO_ 170 "10ms ";
 CM_ BO_ 270 "20ms";
 CM_ BO_ 336 "10ms";
@@ -420,6 +521,23 @@ VAL_ 1001 Contactor_Con 0 "Open" 1 "OpenwithDiag" 2 "Close" 21 "Invalid" ;
 VAL_ 1001 Chg_Status_Info 0 "No_charge" 1 "Init" 2 "Charge_active" 3 "Charge_pause" 4 "Charge_complete" 5 "Charge_error" 15 "Invalid" ;
 VAL_ 1001 Chg_Readiness 0 "Not_Ready" 1 "Ready" 3 "Unavailable" ;
 VAL_ 1001 Charge_Req 0 "No_Charge" 1 "PlugCharge" 2 "Timer" ;
+VAL_ 1073 ST_SER_DSCO_PLG 1 "Service disconnect open" 2 "Service disconnect mounted" 3 "Signal invalid" ;
+VAL_ 1073 ST_MEASMT_ISL 1 "Insulation measurement is not running" 2 "Insulation measurement is running" 3 "Signal invalid" ;
+VAL_ 1073 RQ_ABRT_CHGNG 0 "No request" 1 "Request to interrupt charging" 2 "No charging possible, cooling requested" 3 "Signal invalid" ;
 VAL_ 303 ST_KL 0 "No Description" ;
-VAL_ 1000 RQ_Diag 0 "No_Reset" 2 "Reset" ;
+VAL_ 1000 RQ_MIL_DIAG_OBD_ENGMG_EL 0 "No_Reset" 2 "Reset" ;
+VAL_ 1000 RQ_RST_OBD_DIAG 0 "No request for reset OBD_diagnosis" 2 "Request Reset OBD_Diagnosis" 3 "Signal invalid" ;
+VAL_ 569 MUX_DT_HVSTO_2 3 "Komfort" 4 "Sport" 5 "Sport +" 7 "ECO Pro" 8 "ECO Pro+" 15 "signal invalid" ;
+VAL_ 1017 ST_MOD_DRV 0 "Standard" 1 "Sport" 2 "Eco" 3 "Komfort" 4 "EV" 13 "Reserved" 14 "Reserved" 16 "Signal Invalid" ;
+VAL_ 1021 DISP_GR_GRB 0 "Darkswitching" 1 "1st gear" 2 "2nd gear" 3 "3rd gear" 4 "4th gear" 5 "5th gear" 6 "6th gear" 7 "7th gear" 8 "8th gear" 9 "9th gear" 15 "Invalid value" ;
+VAL_ 1021 DISP_PRG_GRB 0 "darkswitching" 1 "Sport Mode" 2 "M-Program" 3 "L-program" 4 "City-program" 6 "Signal invalid" ;
+VAL_ 1021 DISP_PO_IDC_GRB 0 "Not flashing" 1 "Flashing" 3 "Signal invalid" ;
+VAL_ 1021 DISP_PO_GRB 0 "Darkswitch (off)" 1 "P" 2 "R" 3 "N" 4 "D" 6 "Signal Invalid" ;
+VAL_ 1021 DISP_SSC_IDC_GRB 0 "Not flashing" 1 "Flashing" 3 "Signal invalid" ;
+VAL_ 1021 GEN_IDLI 0 "Inactive" 1 "Active" 3 "Signal Invalid" ;
+VAL_ 1021 DISP_RQ_GR_GRB 0 "Darkswitching" 1 "1st" 2 "2nd" 3 "3rd" 4 "4th" 5 "5th" 6 "6th" 7 "7th" 8 "8th" 9 "9th" 13 "Reserved" 14 "Reserved" 15 "Signal invalid" ;
+VAL_ 1019 ST_CAT_HT 0 "Cat does not heat actively" 1 "Cat heater with traction active" 2 "Cat heaters with friction-free operation necessary/active" 3 "Invalid value" ;
+VAL_ 1019 ST_RDI_DRVG 0 "Not ready to drive" 1 "Ready to drive" 3 "Value not valid" ;
+VAL_ 1020 RLS_PLK_VRFD 0 "No statement" 1 "Release not granted" 2 "Release granted" 3 "Signal invalid" ;
+VAL_ 1020 EXH_INSP_TST 0 "Test not active" 1 "Test active" 3 "Signal invalid" ;
 

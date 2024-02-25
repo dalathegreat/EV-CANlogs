@@ -107,6 +107,7 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ TemperatureMaxMaybe : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ NewSignal_0033 : 24|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ NewSignal_0035 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0039 : 8|2@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 274 BMSMsg112: 8 SME
  SG_ Battery_Volts : 16|16@1+ (0.1,0) [0|819] "Volts" Vector__XXX
@@ -187,6 +188,10 @@ BO_ 506 BMSMsg1FA: 8 SME
  SG_ AVL_TEMP_HVSTO_MAX : 56|8@1+ (1,-50) [-50|202] "C" Vector__XXX
 
 BO_ 1037 BMSMsg40D: 8 SME
+ SG_ AVLB_PWR_SRT_CHG_HVSTO : 0|16@1+ (3,0) [0|196596] "W" Vector__XXX
+ SG_ AVLB_PWR_SRT_DCHG_HVSTO : 16|16@1+ (3,0) [0|196596] "W" Vector__XXX
+ SG_ AVLB_PWR_LT_CHG_HVSTO : 32|16@1+ (3,0) [0|196596] "W" Vector__XXX
+ SG_ AVLB_PWR_LT_DCHG_HVSTO : 48|16@1+ (3,0) [0|196596] "W" Vector__XXX
 
 BO_ 767 BMSMsg2FF: 6 SME
  SG_ AVL_PWR_HT_HVSTO : 4|12@1+ (1,0) [0|4094] "W" Vector__XXX
@@ -210,18 +215,17 @@ BO_ 757 BMSMsg2F5: 8 SME
  SG_ I_DYN_MAX_DCHG_HVSTO : 48|16@1+ (0.1,-819.2) [-819.2|819] "A" Vector__XXX
 
 BO_ 962 BMSMsg3C2: 8 SME
- SG_ NewSignal_0037 : 0|4@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0038 : 4|4@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0039 : 8|2@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0040 : 10|6@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0041 : 16|6@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0042 : 22|6@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0043 : 28|6@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0044 : 34|6@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0045 : 40|6@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0046 : 46|6@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0047 : 52|6@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0048 : 58|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ALIV_ST_DIAG_OBD_2_PT : 0|4@1+ (1,0) [0|15] "counter" Vector__XXX
+ SG_ ST_DIAG_OBD_2_PT_MAX_MUX : 4|6@1+ (1,0) [4|60] "mux" Vector__XXX
+ SG_ ST_DIAG_OBD_2_PT_IMME_MUX : 10|6@1+ (1,0) [4|60] "mux" Vector__XXX
+ SG_ DIAG_ST_OBD_2_PT_1 : 16|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIAG_ST_OBD_2_PT_2 : 22|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIAG_ST_OBD_2_PT_3 : 28|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIAG_ST_OBD_2_PT_4 : 34|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIAG_ST_OBD_2_PT_5 : 40|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIAG_ST_OBD_2_PT_6 : 46|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIAG_ST_OBD_2_PT_7 : 52|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIAG_ST_OBD_2_PT_8 : 58|6@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1003 BMSMsg3EB: 8 SME
  SG_ BEV_AVLB_PWR_SRT_CHG_HVSTO : 0|16@1+ (3,0) [0|196602] "W" Vector__XXX
@@ -233,12 +237,17 @@ BO_ 867 BMSMsg363: 8 SME
  SG_ IDENT_HVSTO : 0|32@1+ (1,0) [0|4294967295] "serial" Vector__XXX
 
 BO_ 1287 BMSMsg507: 8 SME
+ SG_ NM2_AUTOSAR_RES_ACAN : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NM2_USR_DT_ACAN : 32|32@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1415 BMSMsg587: 8 SME
+ SG_ ID2 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DT_Dynamic : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1052 BMSMsg41C: 2 SME
- SG_ Frame0_41C : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Frame1_41C : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ T_OPN_DCSW_HVSTO : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ST_COOL_HVSTO : 8|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ AVL_U_SRTC_HVSTO : 10|6@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1543 BMSMsg607: 8 SME
 
@@ -296,7 +305,13 @@ BO_ 187 UnknownMsg0BB: 3 Vector__XXX
 
 BO_ 256 UnknownMsg100: 8 Vector__XXX
 
-BO_ 264 UnknownMsg108: 8 EDME
+BO_ 264 AEMsg108: 8 EDME
+ SG_ AVL_U_CHGE_ALTC_WR_1 : 0|8@1+ (1,0) [0|254] "V" Vector__XXX
+ SG_ RPM_CTRL_MOT_TRCT : 8|8@1+ (2.025,-255) [-255|255] "Nm" Vector__XXX
+ SG_ AVL_I_CHGE : 24|12@1+ (0.1,-204.7) [-204.7|204.7] "A" Vector__XXX
+ SG_ ST_AC_CHGNG_EPRG : 36|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ RQ_I_DYNMC_LIM : 38|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ AVL_OPMO_CHGE : 40|4@1+ (1,0) [0|15] "status" Vector__XXX
 
 BO_ 317 UnknownMsg13D: 8 Vector__XXX
 
@@ -334,7 +349,9 @@ BO_ 1021 UnknownMsg3FD: 5 Vector__XXX
  SG_ DISP_DRVLG_GRB : 32|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ DISP_FRM_DRVLG_GRB : 36|4@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1065 UnknownMsg429: 3 Vector__XXX
+BO_ 1065 AEMsg429: 3 Vector__XXX
+ SG_ AVL_I_HV_DCDC : 0|12@1+ (0.05,-102.4) [-102.4|102.3] "A" Vector__XXX
+ SG_ ST_CHGNG_HV_PWMG : 16|8@1+ (1,0) [0|255] "status" Vector__XXX
 
 BO_ 1298 UnknownMsg512: 8 Vector__XXX
 
@@ -400,7 +417,10 @@ BO_ 970 UnknownMsg3CA: 8 Vector__XXX
 
 BO_ 976 UnknownMsg3D0: 2 Vector__XXX
 
-BO_ 1053 UnknownMsg41D: 4 Vector__XXX
+BO_ 1053 EDMEMsg41D: 4 EDME
+ SG_ INQY_LOWLIM_TORQ : 0|12@1+ (0.5,-1023.5) [-1023.5|1023.5] "Nm" Vector__XXX
+ SG_ INQY_UPLIM_TORQ : 12|12@1+ (0.5,-1023.5) [-1023.5|1023.5] "Nm" Vector__XXX
+ SG_ ACTVN_OBD_LIM_TORQ : 24|2@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1301 UnknownMsg515: 8 Vector__XXX
 
@@ -481,7 +501,16 @@ CM_ SG_ 506 AVL_TEMP_HVSTO "actual-value_temperature_high-voltage-storage";
 CM_ SG_ 506 AVL_TEMP_HTEX_HVSTO "actual-value_temperature_heat-exchanger_high-voltage-storage";
 CM_ SG_ 506 AVL_TEMP_HVSTO_MIN "actual-value_temperature_high-voltage-storage_minimum";
 CM_ SG_ 506 AVL_TEMP_HVSTO_MAX "actual-value_temperature_high-voltage-storage_maximum";
-CM_ BO_ 1037 "1s";
+CM_ BO_ 1037 "1s - Charging status of high-voltage storage 1";
+CM_ SG_ 1037 AVLB_PWR_SRT_CHG_HVSTO "available_power_short-term_charge_high-voltage-storage Available electrical charging power of the high-voltage storage device, which is constant over a period of one second
+can be recorded taking into account the charging current and charging voltage limits";
+CM_ SG_ 1037 AVLB_PWR_SRT_DCHG_HVSTO "available_power_short-term_discharge_high-voltage-storage Available electrical discharge power of the high-voltage battery, which is constant over a period of one
+Second can be delivered taking into account the discharge current and discharge voltage limits";
+CM_ SG_ 1037 AVLB_PWR_LT_CHG_HVSTO "available_power_long-term_charge_high-voltage-storag Available electrical charging power of the high-voltage storage unit, which is constant over a period of five
+Seconds can be recorded taking into account the charging current and charging voltage limits";
+CM_ SG_ 1037 AVLB_PWR_LT_DCHG_HVSTO "available_power_long-term_discharge_high-voltage-storage Available electrical discharge power of the high-voltage battery, which is constant over a period of five
+Seconds can be delivered taking into account the discharge current and discharge voltage limits
+";
 CM_ BO_ 767 "100ms - Status Heating High-Voltage Battery";
 CM_ SG_ 767 AVL_PWR_HT_HVSTO "actual-value_power_heating_high-voltage-storage";
 CM_ BO_ 569 "200ms - Data high voltage battery Unit 2";
@@ -507,6 +536,36 @@ CM_ SG_ 757 I_DYN_MAX_CHG_HVSTO "current_dynamic_maximum_charge_high-voltage-sto
 CM_ SG_ 757 I_DYN_MAX_DCHG_HVSTO "current_dynamic_maximum_discharge_high-voltage-storage 
 99% 60AH 4102 , 48% 94AH 4429";
 CM_ BO_ 962 "1s - Status diagnostics OBD 2 powertrain 94AH (not on 60AH)";
+CM_ SG_ 962 ALIV_ST_DIAG_OBD_2_PT "alive_status_diagnosis_OBD_2_power-train";
+CM_ SG_ 962 ST_DIAG_OBD_2_PT_MAX_MUX "status_diagnosis_OBD_2_power-train_maximum_multiplexer All diagnostic statuses of an ECU are summarized in one message. If more than 8 diagnosis
+statuses are present, this content is multiplexed in the message.
+This signal corresponds to the maximum value in the signal ST_DIAG_OBD_2_PT_IMME_MUX (between 4 and
+60 possible values).";
+CM_ SG_ 962 ST_DIAG_OBD_2_PT_IMME_MUX "status_diagnosis_OBD_2_power-train_immediate_multiplexer";
+CM_ SG_ 962 DIAG_ST_OBD_2_PT_1 "diagnosis_status_OBD_2_power-train_1 Diagnostic status to transmit the status of the OBD error, Cal-ID, or CVN.
+The content of the signal is transmitted via the signal Status_Diagnose_OBD_2_Antriebsstrang _Multiplexer_Aktuell
+defined (multiplexing)";
+CM_ SG_ 962 DIAG_ST_OBD_2_PT_2 "diagnosis_status_OBD_2_power-train_2 Diagnostic status to transmit the status of the OBD error, Cal-ID, or CVN.
+The content of the signal is transmitted via the signal Status_Diagnose_OBD_2_Antriebsstrang _Multiplexer_Aktuell
+defined (multiplexing)";
+CM_ SG_ 962 DIAG_ST_OBD_2_PT_3 "diagnosis_status_OBD_2_power-train_3 Diagnostic status to transmit the status of the OBD error, Cal-ID, or CVN.
+The content of the signal is transmitted via the signal Status_Diagnose_OBD_2_Antriebsstrang _Multiplexer_Aktuell
+defined (multiplexing)";
+CM_ SG_ 962 DIAG_ST_OBD_2_PT_4 "diagnosis_status_OBD_2_power-train_4 Diagnostic status to transmit the status of the OBD error, Cal-ID, or CVN.
+The content of the signal is transmitted via the signal Status_Diagnose_OBD_2_Antriebsstrang _Multiplexer_Aktuell
+defined (multiplexing)";
+CM_ SG_ 962 DIAG_ST_OBD_2_PT_5 "diagnosis_status_OBD_2_power-train_5 Diagnostic status to transmit the status of the OBD error, Cal-ID, or CVN.
+The content of the signal is transmitted via the signal Status_Diagnose_OBD_2_Antriebsstrang _Multiplexer_Aktuell
+defined (multiplexing)";
+CM_ SG_ 962 DIAG_ST_OBD_2_PT_6 "diagnosis_status_OBD_2_power-train_6 Diagnostic status to transmit the status of the OBD error, Cal-ID, or CVN.
+The content of the signal is transmitted via the signal Status_Diagnose_OBD_2_Antriebsstrang _Multiplexer_Aktuell
+defined (multiplexing)";
+CM_ SG_ 962 DIAG_ST_OBD_2_PT_7 "diagnosis_status_OBD_2_power-train_7 Diagnostic status to transmit the status of the OBD error, Cal-ID, or CVN.
+The content of the signal is transmitted via the signal Status_Diagnose_OBD_2_Antriebsstrang _Multiplexer_Aktuell
+defined (multiplexing)";
+CM_ SG_ 962 DIAG_ST_OBD_2_PT_8 "diagnosis_status_OBD_2_power-train_8 Diagnostic status to transmit the status of the OBD error, Cal-ID, or CVN.
+The content of the signal is transmitted via the signal Status_Diagnose_OBD_2_Antriebsstrang _Multiplexer_Aktuell
+defined (multiplexing)";
 CM_ BO_ 1003 "1s - Status of charging high-voltage storage 3";
 CM_ SG_ 1003 BEV_AVLB_PWR_SRT_CHG_HVSTO "BEV_available_power_short-term_charge_high-voltage-storag";
 CM_ SG_ 1003 BEV_AVLB_PWR_SRT_DCHG_HVST0 "BEV_available_power_short-term_discharge_high-voltage-storage";
@@ -514,11 +573,30 @@ CM_ SG_ 1003 BEV_AVLB_PWR_LT_CHG_HVSTO "BEV_available_power_long-term_charge_hig
 CM_ SG_ 1003 BEV_AVLB_PWR_LT_DCHG_HVSTO "BEV_available_power_long-term_discharge_high-voltage-storage";
 CM_ BO_ 867 "1s - Identification High-Voltage Battery";
 CM_ SG_ 867 IDENT_HVSTO "dentification_high-voltage-storage";
-CM_ BO_ 1287 "Stops after 5 messages sent (640ms)";
-CM_ BO_ 1415 "5s";
+CM_ BO_ 1287 "Stops after 5 messages sent (640ms) - Network management-2
+
+This message is sent on the bus for sleep coordination purposes. If sent, falling asleep will occur
+of the bus is delayed by the next 2 seconds";
+CM_ SG_ 1287 NM2_AUTOSAR_RES_ACAN "NM2_AUTOSAR_reserved_A-CAN AUTOSAR - Warning. To be assigned a value of 00000000h.";
+CM_ SG_ 1287 NM2_USR_DT_ACAN "NM2_user_data_A-CAN Contains additional user information that is important for diagnostic purposes.
+Byte 7 must contain the diagnostic address of the control unit.
+Byte 6 must contain 0x00 (reserved).
+Byte 5 must contain the \"Most Significant Byte\" of the address of the function that keeps the bus awake.
+Byte 4 must contain the \"Least Significant Byte\" of the address of the function that keeps the bus awake.
+";
+CM_ BO_ 1415 "5s - Services
+
+The service message can be sent by several control devices and is a multiplex message.
+To ensure that different identifiers are used, a \"base ID\" of 580h is used
+(10110000000b) on the K-CAN and on the PT-CAN - the control unit address of the respective transmitter is added.
+A 7-digit control unit address is used uniformly on the K-CAN and the PT-CAN.
+The value transmitted in ID2 indicates which service is being transmitted. like bytes 1-7 too
+are to be interpreted.
+The triggering conditions (including debounce times) always refer to the ID2, not to the bus ID";
 CM_ BO_ 1052 "1s - Status Of Operating Mode Of Hybrid 2";
-CM_ SG_ 1052 Frame0_41C "Static 0xFF";
-CM_ SG_ 1052 Frame1_41C "Static 0xFC";
+CM_ SG_ 1052 T_OPN_DCSW_HVSTO "Not used on i3";
+CM_ SG_ 1052 ST_COOL_HVSTO "status_cooling_high-voltage-storage";
+CM_ SG_ 1052 AVL_U_SRTC_HVSTO "Not used on i3";
 CM_ BO_ 1543 "100ms (Non periodic)";
 CM_ BO_ 1017 "1s - Data drive train 2 (Also on K-CAN)";
 CM_ SG_ 1017 ALIV_DT_PT_2 "alive_data_power-train_2 (counter 0...E) F=signal invalid";
@@ -553,6 +631,12 @@ CM_ BO_ 173 "10ms ";
 CM_ BO_ 187 "10ms ";
 CM_ BO_ 256 "10ms";
 CM_ BO_ 264 "100ms - Actual Charging Electronics Data (Relayed from EME)";
+CM_ SG_ 264 AVL_U_CHGE_ALTC_WR_1 "actual-value_voltage_charging-electronic_alternating-current_wire_1";
+CM_ SG_ 264 RPM_CTRL_MOT_TRCT "RPM_controller_motor_traction";
+CM_ SG_ 264 AVL_I_CHGE "actual-value_current_charging-electronic";
+CM_ SG_ 264 ST_AC_CHGNG_EPRG "status_aircon_charging_emergency-program";
+CM_ SG_ 264 RQ_I_DYNMC_LIM "request_current_dynamics_limit";
+CM_ SG_ 264 AVL_OPMO_CHGE "actual-value_operating-mode_charging-electronic";
 CM_ BO_ 317 "10ms ";
 CM_ BO_ 267 "20ms";
 CM_ SG_ 267 CRC_10B "CRC8_SAE_J1850_ZER0 formula, 0x1D Poly, initial value 0x3F, Final XOR value 0x0";
@@ -574,7 +658,18 @@ CM_ SG_ 1021 DISP_PO_GRB "display_position_gearbox";
 CM_ SG_ 1021 DISP_SSC_IDC_GRB "display_shift-scheme_indicate-direction_gearbox";
 CM_ SG_ 1021 GEN_IDLI "generator_indicator-light";
 CM_ SG_ 1021 DISP_RQ_GR_GRB "display_request_gear_gearbox";
-CM_ BO_ 1065 "50ms";
+CM_ BO_ 1065 "50ms - Status DC/DC converter";
+CM_ SG_ 1065 AVL_I_HV_DCDC "actual-value_current_high-voltage_DC/DC Instantaneous HV current of the DC/DC converter.
+In Buck mode the current value is positive, in Boost mode it is negative.";
+CM_ SG_ 1065 ST_CHGNG_HV_PWMG "status_charging_high-voltage_power-mangement
+0000 0000 no request
+0--- ---1 Lack of energy in the high-voltage storage
+0--- --1- Aborted due to HV error
+0--- -1-- Aborted due to DCDC failure
+0--- 1--- Cyclic reloading ended by loading
+0-10 ---- next cyclic charging possible
+0-11 ---- next cyclic charging process no longer possible
+1111 1111 Signal invalid";
 CM_ BO_ 1298 "640ms";
 CM_ BO_ 261 "10ms ";
 CM_ SG_ 261 CRC8_105 "CRC8_SAE_J1850_ZER0 formula, 0x1D Poly, initial value 0x73 , Final XOR value 0x0";
@@ -603,7 +698,10 @@ CM_ BO_ 806 "500ms";
 CM_ BO_ 935 "1s";
 CM_ BO_ 970 "1s";
 CM_ BO_ 976 "1s";
-CM_ BO_ 1053 "1s";
+CM_ BO_ 1053 "1s - OBD request limitation torque";
+CM_ SG_ 1053 INQY_LOWLIM_TORQ "inquiry_lower-limit_torque Lower torque limit of the desired loading torque. The signal is not used for OBD purposes";
+CM_ SG_ 1053 INQY_UPLIM_TORQ "inquiry_upper-limit_torque Upper torque limit of the desired loading torque. The signal is not used for OBD purposes";
+CM_ SG_ 1053 ACTVN_OBD_LIM_TORQ "Not used on i3";
 CM_ BO_ 1301 "Stops after 5 messages sent (640ms)";
 CM_ BO_ 1306 "640ms";
 CM_ BO_ 1374 "Stops after 5 messages sent (640ms)";
@@ -672,7 +770,11 @@ VAL_ 506 ST_WARN_ISL_BN_HV 0 "no statement possible" 1 "not active" 2 "active" 3
 VAL_ 506 ST_CSOV_HVSTO 0 "OK" 1 "Short circuit to ground" 2 "Short circuit to U_Bat" 3 "Line break" 6 "Driver error Only used in Gen2.0" 12 "Valve cannot be opened (stuck) Only operated in Gen2.0" 11 "Valve cannot be closed (stuck) Only operated in Gen2.0" 15 "Signal invalid" ;
 VAL_ 569 MUX_DT_HVSTO_2 3 "Komfort" 4 "Sport" 5 "Sport +" 7 "ECO Pro" 8 "ECO Pro+" 15 "signal invalid" ;
 VAL_ 701 ST_DIAG_HV_ECU_1 0 "HV diagnosis OK" 1 "HV protection function error" 2 "Diagnosis not yet expired" 13 "Reserved Note: Reserved for functional identifier signal tag" 14 "Reserved Note: Reserved for functional identifier signal tag" 15 "Signal_unfilled Transmission function not in operation" ;
+VAL_ 1052 ST_COOL_HVSTO 0 "No statement possible" 1 "Cooling works" 2 "Cooling does not start despite request" 3 "Signal invalid" ;
 VAL_ 1017 ST_MOD_DRV 0 "Standard" 1 "Sport" 2 "Eco" 3 "Komfort" 4 "EV" 13 "Reserved" 14 "Reserved" 16 "Signal Invalid" ;
+VAL_ 264 ST_AC_CHGNG_EPRG 0 "disabled" 1 "activates emergency charging active, 12V on-board network is protected by emergency charging power supply in AE" 3 "Signal invalid" ;
+VAL_ 264 RQ_I_DYNMC_LIM 0 "no dynamic limitation requested" 1 "Dynamic limitation requested" 3 "Signal invalid" ;
+VAL_ 264 AVL_OPMO_CHGE 1 "standby" 2 "DC HV charging" 3 "Derating" 4 "charging interruption" 5 "errors" 6 "Crash" 7 "operating mode change" 8 "Load initialization" 9 "Load initialization completed" 13 "Function_interface_is_not_available Send function in operation, values ??not available" 14 "Function_reports_error Sending function in operation, reports error" 15 "Signal_unfilled Transmission function not in operation" ;
 VAL_ 1021 DISP_GR_GRB 0 "Darkswitching" 1 "1st gear" 2 "2nd gear" 3 "3rd gear" 4 "4th gear" 5 "5th gear" 6 "6th gear" 7 "7th gear" 8 "8th gear" 9 "9th gear" 15 "Invalid value" ;
 VAL_ 1021 DISP_PRG_GRB 0 "darkswitching" 1 "Sport Mode" 2 "M-Program" 3 "L-program" 4 "City-program" 6 "Signal invalid" ;
 VAL_ 1021 DISP_PO_IDC_GRB 0 "Not flashing" 1 "Flashing" 3 "Signal invalid" ;

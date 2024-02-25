@@ -105,13 +105,19 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ BatteryVoltage : 16|12@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Total_Battery : 40|12@1+ (0.02,0) [0|82] "kWh" Vector__XXX
  SG_ TemperatureMaxMaybe : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0033 : 24|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0035 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 274 BMSMsg112: 8 SME
- SG_ Battery_Volts : 16|16@1+ (0.1,0) [0|500] "Volts" Vector__XXX
- SG_ DC_link : 56|8@1+ (4,0) [0|1000] "Volts" Vector__XXX
- SG_ Battery_Status : 48|4@1+ (1,0) [0|16] "" Vector__XXX
+ SG_ Battery_Volts : 16|16@1+ (0.1,0) [0|819] "Volts" Vector__XXX
+ SG_ DC_link : 56|8@1+ (4,0) [0|820] "Volts" Vector__XXX
+ SG_ RQ_OPN_DCSW_HVSTO_ILY : 48|2@1+ (1,0) [0|16] "" Vector__XXX
  SG_ Battery_Current : 0|16@1+ (0.1,-819.2) [0|819] "Amps" Vector__XXX
  SG_ HVBatt_SOC : 32|12@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ LDST_HVSTO : 44|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RQ_OPC_CHG_HVSTO : 46|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RQ_OPN_DCSW_HVSTO_FAST : 50|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ CHGCOND_HVSTO_DELTA : 52|4@1+ (0.00834,0) [0|0.1] "%" Vector__XXX
 
 BO_ 1001 UnknownMsg3E9: 8 EDME
  SG_ FC_Current_Command : 40|10@1- (1,0) [-500|500] "Amps" Vector__XXX
@@ -135,10 +141,11 @@ BO_ 1073 BMSMsg431: 7 SME
  SG_ ST_CHGRDI_HVSTO : 52|4@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1074 BMSMsg432: 5 SME
- SG_ Voltage_Setpoint : 4|12@1+ (0.1,0) [0|410] "Volts" Vector__XXX
- SG_ Low_SOC : 16|8@1+ (0.5,0) [0|100] "%" Vector__XXX
- SG_ High_SOC : 24|8@1+ (0.5,0) [0|100] "%" Vector__XXX
- SG_ Display_SOC : 32|8@1+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ REQ_OPMO_HYM_HVSTO : 0|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ TARGET_VOLTAGE_VC_MODE : 4|12@1+ (0.1,0) [0|409.4] "V" Vector__XXX
+ SG_ REQ_CHGCOND_HVSTO_MIN : 16|8@1+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ REQ_CHGCOND_HVSTO_MAX : 24|8@1+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ DISPLAY_ACTUALVAL_CHGCOND_HVSTO : 32|8@1+ (0.5,0) [0|100] "%" Vector__XXX
 
 BO_ 808 UnknownMsg328: 6 EDME
  SG_ Seconds_ctr : 0|32@1+ (1,0) [0|2704] "S" Vector__XXX
@@ -155,14 +162,34 @@ BO_ 816 OdometerMsg330: 8 EDME
  SG_ Odometer : 0|24@1+ (1,0) [0|16777200] "km" Vector__XXX
 
 BO_ 1072 BMSMsg430: 8 SME
- SG_ UnknownMaybeMaxVoltage : 0|12@1+ (1,0) [0|0] "" Vector__XXX
- SG_ UnknownMaybeMinVoltage : 16|12@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PRD_U_SRT_CHG_HVSTO : 0|16@1+ (1,0.1) [0|819] "V" Vector__XXX
+ SG_ PRD_U_SRT_DCHG_HVSTO : 16|16@1+ (1,0.1) [0|819] "V" Vector__XXX
+ SG_ PRD_U_LT_CHG_HVSTO : 32|16@1+ (1,0.1) [0|819] "V" Vector__XXX
+ SG_ PRD_U_LT_DCHG_HVSTO : 48|16@1+ (1,0.1) [0|819] "V" Vector__XXX
 
 BO_ 506 BMSMsg1FA: 8 SME
+ SG_ ST_ERR_ISL_EXTN_BN_HV : 0|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ ST_ERR_ISL_INTL_BN_HV : 2|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ RQ_COOL_HVSTO : 4|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ ST_VA_COOL_HVSTO : 6|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ ST_ERR_LOKG_HVSTO : 8|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ ST_PRCHRG_LOKD_HVSTO : 10|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ ST_DCSW_HVSTO : 12|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ ST_EMMOD_HVSTO : 14|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ RQ_SER_HVSTO : 16|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ ERR_EMMOD_HVSTO : 18|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ ST_ERR_DCSW_HVSTO : 20|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ ST_WARN_ISL_BN_HV : 22|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ ST_CSOV_HVSTO : 24|4@1+ (1,0) [0|15] "status" Vector__XXX
+ SG_ AVL_TEMP_HVSTO : 32|8@1+ (1,-50) [-50|204] "C" Vector__XXX
+ SG_ AVL_TEMP_HTEX_HVSTO : 40|8@1+ (1,-50) [-50|204] "C" Vector__XXX
+ SG_ AVL_TEMP_HVSTO_MIN : 48|8@1+ (1,-50) [-50|202] "C" Vector__XXX
+ SG_ AVL_TEMP_HVSTO_MAX : 56|8@1+ (1,-50) [-50|202] "C" Vector__XXX
 
 BO_ 1037 BMSMsg40D: 8 SME
 
 BO_ 767 BMSMsg2FF: 6 SME
+ SG_ AVL_PWR_HT_HVSTO : 4|12@1+ (1,0) [0|4094] "W" Vector__XXX
 
 BO_ 569 BMSMsg239: 8 SME
  SG_ SYNCN_DT_HVSTO_2 : 0|4@1+ (1,0) [0|14] "" Vector__XXX
@@ -171,18 +198,39 @@ BO_ 569 BMSMsg239: 8 SME
  SG_ PRD_ENERG_CHGTAR_2_HVSTO : 24|16@1+ (0.02,0) [0|1310.64] "kWh" Vector__XXX
 
 BO_ 701 BMSMsg2BD: 8 SME
+ SG_ CRC_2BD : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ALIV_ST_DIAG_HV_1 : 8|4@1+ (1,0) [0|15] "counter" Vector__XXX
+ SG_ CHL_ST_DIAG_HV_1 : 12|4@1+ (1,0) [0|15] "counter" Vector__XXX
+ SG_ ST_DIAG_HV_ECU_1 : 16|4@1+ (1,0) [0|15] "status" Vector__XXX
 
 BO_ 757 BMSMsg2F5: 8 SME
- SG_ MaxChargingVoltage : 0|12@1+ (0.1,0) [0|410] "V+1" Vector__XXX
- SG_ MaxDischargeVoltage : 32|12@1+ (0.1,0) [0|410] "V+1" Vector__XXX
- SG_ MaxChargeWattMaybe : 16|16@1+ (1,0) [0|0] "" Vector__XXX
- SG_ MaxDischargeWattMaybe : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ U_MAX_CHG_HVSTO : 0|16@1+ (0.1,0) [0|819] "V" Vector__XXX
+ SG_ U_MIN_DCHG_HVSTO : 32|16@1+ (0.1,0) [0|819] "V" Vector__XXX
+ SG_ I_DYN_MAX_CHG_HVSTO : 16|16@1+ (0.1,-819.2) [-819.2|819] "A" Vector__XXX
+ SG_ I_DYN_MAX_DCHG_HVSTO : 48|16@1+ (0.1,-819.2) [-819.2|819] "A" Vector__XXX
 
 BO_ 962 BMSMsg3C2: 8 SME
+ SG_ NewSignal_0037 : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0038 : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0039 : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0040 : 10|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0041 : 16|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0042 : 22|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0043 : 28|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0044 : 34|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0045 : 40|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0046 : 46|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0047 : 52|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0048 : 58|6@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1003 BMSMsg3EB: 8 SME
+ SG_ BEV_AVLB_PWR_SRT_CHG_HVSTO : 0|16@1+ (3,0) [0|196602] "W" Vector__XXX
+ SG_ BEV_AVLB_PWR_SRT_DCHG_HVST0 : 16|16@1+ (3,0) [0|196602] "W" Vector__XXX
+ SG_ BEV_AVLB_PWR_LT_CHG_HVSTO : 32|16@1+ (3,0) [0|196602] "W" Vector__XXX
+ SG_ BEV_AVLB_PWR_LT_DCHG_HVSTO : 48|16@1+ (3,0) [0|196602] "W" Vector__XXX
 
 BO_ 867 BMSMsg363: 8 SME
+ SG_ IDENT_HVSTO : 0|32@1+ (1,0) [0|4294967295] "serial" Vector__XXX
 
 BO_ 1287 BMSMsg507: 8 SME
 
@@ -382,6 +430,13 @@ CM_ SG_ 3221225472 POSITION_1 "Steering angle";
 CM_ SG_ 3221225472 UnusedFF "Always 0xFF";
 CM_ SG_ 3221225472 TemperatureMaxMaybe "Temperature might reside here";
 CM_ BO_ 274 "10ms - Status Of High-Voltage Battery 2";
+CM_ SG_ 274 DC_link "actual-value_voltage_Link";
+CM_ SG_ 274 RQ_OPN_DCSW_HVSTO_ILY "request_open_disconnecting-switch_high-voltage-storage_instantl";
+CM_ SG_ 274 HVBatt_SOC "charging-condition_high-voltage-storage";
+CM_ SG_ 274 LDST_HVSTO "Not used";
+CM_ SG_ 274 RQ_OPC_CHG_HVSTO "request_open_disconnecting-switch_high-voltage-storage_instantly";
+CM_ SG_ 274 RQ_OPN_DCSW_HVSTO_FAST "request_open_disconnecting-switch_high-voltage-storage_fas";
+CM_ SG_ 274 CHGCOND_HVSTO_DELTA "charging-condition_high-voltage-storage_delta - The signal describes the delta between two SOC steps in the previous SOC signal";
 CM_ BO_ 1001 "200ms - Main control for LIM
 ";
 CM_ BO_ 1073 "200ms - Data High-Voltage Battery Unit";
@@ -392,18 +447,43 @@ CM_ SG_ 1073 PRD_DUR_CHGNG "prediction_duration_charging FFFF = signal unavailab
 CM_ SG_ 1073 PRD_T_EOCHG "prediction_time_end-of-charging";
 CM_ SG_ 1073 ENC_HVSTO_MAX "energy-content_high-voltage-storage_maximum";
 CM_ BO_ 1074 "200ms - Battery SOC info";
+CM_ SG_ 1074 REQ_OPMO_HYM_HVSTO "request_operating-mode_hybrid-master_high-voltage-storage";
+CM_ SG_ 1074 TARGET_VOLTAGE_VC_MODE "target_voltage_voltage-controlled_mode - Target voltage specification to be adjusted in voltage-controlled mode";
+CM_ SG_ 1074 REQ_CHGCOND_HVSTO_MIN "request_charging-condition_high-voltage-storage_minimum";
+CM_ SG_ 1074 REQ_CHGCOND_HVSTO_MAX "request_charging-condition_high-voltage-storage_maximum";
+CM_ SG_ 1074 DISPLAY_ACTUALVAL_CHGCOND_HVSTO "display_actual-value_charging-condition_high-voltage-storage";
 CM_ BO_ 808 "1000ms - Counter (Relayed from KOMBI)";
 CM_ BO_ 303 "100ms - Wake up message (Relayed from BDC)";
 CM_ BO_ 1000 "1000ms";
 CM_ SG_ 1000 RQ_MIL_DIAG_OBD_ENGMG_EL "request_MIL_diagnosis_OBD_engine-management-system_electric";
 CM_ SG_ 1000 RQ_RST_OBD_DIAG "request_reset_OBD_diagnosis";
 CM_ BO_ 816 "200ms - Range info";
-CM_ BO_ 1072 "1s (Non periodic)";
-CM_ SG_ 1072 UnknownMaybeMaxVoltage "3943 in 60AH log (394,3V?) Dala guessing";
-CM_ SG_ 1072 UnknownMaybeMinVoltage "3383 in 60Ah log (338,3V) Dala guessing";
+CM_ BO_ 1072 "1s (Non periodic) - Charging status of high-voltage battery 2";
+CM_ SG_ 1072 PRD_U_SRT_CHG_HVSTO "prediction_voltage_short-term_charge_high-voltage-storage";
+CM_ SG_ 1072 PRD_U_SRT_DCHG_HVSTO "prediction_voltage_short-term_discharge_high-voltage-storage";
+CM_ SG_ 1072 PRD_U_LT_CHG_HVSTO "prediction_voltage_long-term_charge_high-voltage-storage";
+CM_ SG_ 1072 PRD_U_LT_DCHG_HVSTO "prediction_voltage_long-term_discharge_high-voltage-storage";
 CM_ BO_ 506 "1s - Status Of High-Voltage Battery 1";
+CM_ SG_ 506 ST_ERR_ISL_EXTN_BN_HV "status_error_isolation_external_Bordnetz_high-voltage";
+CM_ SG_ 506 ST_ERR_ISL_INTL_BN_HV "status_error_isolation_internal_Bordnetz_high-voltage";
+CM_ SG_ 506 RQ_COOL_HVSTO "request_cooling_high-voltage-storage";
+CM_ SG_ 506 ST_VA_COOL_HVSTO "status_valve_cooling_high-voltage-storage";
+CM_ SG_ 506 ST_ERR_LOKG_HVSTO "status_error_locking_high-voltage-storage";
+CM_ SG_ 506 ST_PRCHRG_LOKD_HVSTO "status_precharge_locked_high-voltage-storage";
+CM_ SG_ 506 ST_DCSW_HVSTO "status_disconnecting-switch_high-voltage-storage";
+CM_ SG_ 506 ST_EMMOD_HVSTO "status_emergency-mode_high-voltage-storage";
+CM_ SG_ 506 RQ_SER_HVSTO "request_service_high-voltage-storage";
+CM_ SG_ 506 ERR_EMMOD_HVSTO "error_emergency-mode_high-voltage-storage";
+CM_ SG_ 506 ST_ERR_DCSW_HVSTO "status_error_disconnecting-switch_high-voltage-storage";
+CM_ SG_ 506 ST_WARN_ISL_BN_HV "status_warning_isolation_Bordnetz_high-voltage";
+CM_ SG_ 506 ST_CSOV_HVSTO "status_cold-shut-off-valve_high-voltage-storage";
+CM_ SG_ 506 AVL_TEMP_HVSTO "actual-value_temperature_high-voltage-storage";
+CM_ SG_ 506 AVL_TEMP_HTEX_HVSTO "actual-value_temperature_heat-exchanger_high-voltage-storage";
+CM_ SG_ 506 AVL_TEMP_HVSTO_MIN "actual-value_temperature_high-voltage-storage_minimum";
+CM_ SG_ 506 AVL_TEMP_HVSTO_MAX "actual-value_temperature_high-voltage-storage_maximum";
 CM_ BO_ 1037 "1s";
-CM_ BO_ 767 "100ms";
+CM_ BO_ 767 "100ms - Status Heating High-Voltage Battery";
+CM_ SG_ 767 AVL_PWR_HT_HVSTO "actual-value_power_heating_high-voltage-storage";
 CM_ BO_ 569 "200ms - Data high voltage battery Unit 2";
 CM_ SG_ 569 SYNCN_DT_HVSTO_2 "synchronization_data_high-voltage-storage_2 DTS Mapping:None;
 Synchronization as feedback from HV storage (enumerating).
@@ -412,16 +492,28 @@ CM_ SG_ 569 MUX_DT_HVSTO_2 "multiplexer_data_high-voltage-storage_2 DTS Mapping:
 This signal is not sent by plug-in hybrids in SP2009.";
 CM_ SG_ 569 PRD_ENERG_CHCOND_2_COS "prediction_Energy_charging-condition_2_consumer";
 CM_ SG_ 569 PRD_ENERG_CHGTAR_2_HVSTO "prediction_Energy_charging-target_2_high-voltage-storage";
-CM_ BO_ 701 "100ms";
-CM_ BO_ 757 "100ms - High-Voltage BatteryUnit Charge/Discharge Limitation";
-CM_ SG_ 757 MaxChargingVoltage "60AH = 3936 , 94AH = 3964
+CM_ BO_ 701 "100ms - Status diagnosis high voltage 1";
+CM_ SG_ 701 ALIV_ST_DIAG_HV_1 "alive_status_diagnosis_high-voltage_1 - counter 0...14";
+CM_ SG_ 701 CHL_ST_DIAG_HV_1 "CHL_status_diagnosis_high-voltage_1 - counter 0...14";
+CM_ SG_ 701 ST_DIAG_HV_ECU_1 "status_diagnosis_high-voltage_ECU_1";
+CM_ BO_ 757 "100ms - High-Voltage Battery Charge/Discharge Limitations";
+CM_ SG_ 757 U_MAX_CHG_HVSTO "voltage_maximum_charge_high-voltage-storage
+60AH = 3936 , 94AH = 3964
 ";
-CM_ SG_ 757 MaxDischargeVoltage "60AH = 2594 , 94AH = 2607";
-CM_ SG_ 757 MaxChargeWattMaybe "99% 60AH 8280 , 48% 94AH 12072";
-CM_ SG_ 757 MaxDischargeWattMaybe "99% 60AH 4102 , 48% 94AH 4429";
-CM_ BO_ 962 "1s - 94AH (not on 60AH)";
-CM_ BO_ 1003 "1s";
-CM_ BO_ 867 "1s";
+CM_ SG_ 757 U_MIN_DCHG_HVSTO "voltage_minimum_discharge_high-voltage-storage
+60AH = 2594 , 94AH = 2607";
+CM_ SG_ 757 I_DYN_MAX_CHG_HVSTO "current_dynamic_maximum_charge_high-voltage-storage
+99% 60AH 8280 , 48% 94AH 12072";
+CM_ SG_ 757 I_DYN_MAX_DCHG_HVSTO "current_dynamic_maximum_discharge_high-voltage-storage 
+99% 60AH 4102 , 48% 94AH 4429";
+CM_ BO_ 962 "1s - Status diagnostics OBD 2 powertrain 94AH (not on 60AH)";
+CM_ BO_ 1003 "1s - Status of charging high-voltage storage 3";
+CM_ SG_ 1003 BEV_AVLB_PWR_SRT_CHG_HVSTO "BEV_available_power_short-term_charge_high-voltage-storag";
+CM_ SG_ 1003 BEV_AVLB_PWR_SRT_DCHG_HVST0 "BEV_available_power_short-term_discharge_high-voltage-storage";
+CM_ SG_ 1003 BEV_AVLB_PWR_LT_CHG_HVSTO "BEV_available_power_long-term_charge_high-voltage-storage";
+CM_ SG_ 1003 BEV_AVLB_PWR_LT_DCHG_HVSTO "BEV_available_power_long-term_discharge_high-voltage-storage";
+CM_ BO_ 867 "1s - Identification High-Voltage Battery";
+CM_ SG_ 867 IDENT_HVSTO "dentification_high-voltage-storage";
 CM_ BO_ 1287 "Stops after 5 messages sent (640ms)";
 CM_ BO_ 1415 "5s";
 CM_ BO_ 1052 "1s - Status Of Operating Mode Of Hybrid 2";
@@ -516,7 +608,9 @@ CM_ BO_ 1301 "Stops after 5 messages sent (640ms)";
 CM_ BO_ 1306 "640ms";
 CM_ BO_ 1374 "Stops after 5 messages sent (640ms)";
 CM_ BO_ 1434 "100ms (Non periodic)";
-VAL_ 274 Battery_Status 5 "Normal" ;
+VAL_ 274 RQ_OPN_DCSW_HVSTO_ILY 0 "No statement possible" 1 "not active" 2 "active" 3 "Signal invalid" ;
+VAL_ 274 RQ_OPC_CHG_HVSTO 0 "No statement possible. Diagnosis not yet completed" 1 "not active" 2 "active" 3 "Signal invalid" ;
+VAL_ 274 RQ_OPN_DCSW_HVSTO_FAST 0 "No statement possible. Diagnosis not yet completed" 1 "not active" 2 "active" 3 "Signal invalid" ;
 VAL_ 1001 Contactor_Con 0 "Open" 1 "OpenwithDiag" 2 "Close" 21 "Invalid" ;
 VAL_ 1001 Chg_Status_Info 0 "No_charge" 1 "Init" 2 "Charge_active" 3 "Charge_pause" 4 "Charge_complete" 5 "Charge_error" 15 "Invalid" ;
 VAL_ 1001 Chg_Readiness 0 "Not_Ready" 1 "Ready" 3 "Unavailable" ;
@@ -524,10 +618,60 @@ VAL_ 1001 Charge_Req 0 "No_Charge" 1 "PlugCharge" 2 "Timer" ;
 VAL_ 1073 ST_SER_DSCO_PLG 1 "Service disconnect open" 2 "Service disconnect mounted" 3 "Signal invalid" ;
 VAL_ 1073 ST_MEASMT_ISL 1 "Insulation measurement is not running" 2 "Insulation measurement is running" 3 "Signal invalid" ;
 VAL_ 1073 RQ_ABRT_CHGNG 0 "No request" 1 "Request to interrupt charging" 2 "No charging possible, cooling requested" 3 "Signal invalid" ;
+VAL_ 1074 REQ_OPMO_HYM_HVSTO 0 "No requirement" 1 "Adjust SoC" 2 "voltage mode" 3 "Signal invalid
+
+Ikon för Verifierad av gruppen
+Feedback
+
+Google Översätt
+Google
+https://translate.google.fi ? ...
+12
+Med Googles kostnadsfria tjänst kan du översätta ord, fraser och webbsidor från engelska till fler än 100 andra språk direkt.
+
+Google Translate
+Google Translate
+https://translate.google.com ? tr...
+·
+Översätt den här sidan
+14
+Vi har ingen information att visa om den här sidan.
+Läs mer om varför detta händer
+
+Google Translate - Apps on Google Play
+Google Play
+https://play.google.com ? details
+·
+Översätt den här sidan
+14
+14 feb. 2024 ? Text translation: Translate between 108 languages by typing ? Tap to Translate: Copy text in any app and tap the Google Translate icon to ...
+Betyg: 4,2 · ? 8 830 509 röster · ? Gratis · ? Android · ? Verktyg och hjälpmedel   
+
+Google Translate on the App Store
+Apple
+https://apps.apple.com ? app ? google-translate
+7
+This application provides users with tools to translate between languages and they now include an image option; users take a p" ;
 VAL_ 303 ST_KL 0 "No Description" ;
 VAL_ 1000 RQ_MIL_DIAG_OBD_ENGMG_EL 0 "No_Reset" 2 "Reset" ;
 VAL_ 1000 RQ_RST_OBD_DIAG 0 "No request for reset OBD_diagnosis" 2 "Request Reset OBD_Diagnosis" 3 "Signal invalid" ;
+VAL_ 506 ST_ERR_ISL_EXTN_BN_HV 0 "No statement possible. Diagnosis not yet completed" 1 "not active" 2 "active" 3 "Signal invalid" ;
+VAL_ 506 ST_ERR_ISL_INTL_BN_HV 0 "No statement possible. Diagnosis not yet completed" 1 "not active" 2 "active" 3 "Signal invalid" ;
+VAL_ 506 RQ_COOL_HVSTO 0 "no cooling requested Cell temperature is within normal operating range" 1 "Cooling requested SME requests release to open the refrigerant shut-off valve" 2 "Cooling urgent
+ necessary SME urgently requests clearance to open the refrigerant shut-off valve
+at" 3 "Signal invalid" ;
+VAL_ 506 ST_VA_COOL_HVSTO 0 "No statement possible. Diagnosis not yet completed" 1 "not active Cooling valve closed" 2 "active cooling valve open" 3 "Signal invalid" ;
+VAL_ 506 ST_ERR_LOKG_HVSTO 0 "No statement possible. Diagnosis not yet completed" 1 "not active No interlock error" 2 "active interlock error" 3 "Signal invalid" ;
+VAL_ 506 ST_PRCHRG_LOKD_HVSTO 0 "No statement possible" 1 "not active Subpoena not blocked" 2 "active summons temporarily blocked" 3 "Signal invalid" ;
+VAL_ 506 ST_DCSW_HVSTO 0 "Circuit breaker open OPN" 1 "Circuit breaker on pre-charge PRECHRG" 2 "circuit breaker closed CLS" 3 "Signal invalid SNA" ;
+VAL_ 506 ST_EMMOD_HVSTO 0 "No statement possible. Diagnosis not yet completed" 1 "not active" 2 "active" 3 "Signal invalid" ;
+VAL_ 506 RQ_SER_HVSTO 0 "No statement possible. Diagnosis not yet completed" 1 "not active" 2 "active" 3 "Signal invalid" ;
+VAL_ 506 ERR_EMMOD_HVSTO 0 "No statement possible. Diagnosis not yet completed" 1 "not active" 2 "active" 3 "Signal invalid" ;
+VAL_ 506 ST_ERR_DCSW_HVSTO 0 "no switching contact sticks" 1 "a switching contact sticks" 2 "stick two switching contacts" 3 "Signal invalid" ;
+VAL_ 506 ST_WARN_ISL_BN_HV 0 "no statement possible" 1 "not active" 2 "active" 3 "Signal invalid" ;
+VAL_ 506 ST_CSOV_HVSTO 0 "OK" 1 "Short circuit to ground" 2 "Short circuit to U_Bat" 3 "Line break" 6 "Driver error Only used in Gen2.0" 12 "Valve cannot be opened (stuck) Only operated in Gen2.0" 11 "Valve cannot be closed (stuck) Only operated in Gen2.0" 15 "Signal invalid" ;
 VAL_ 569 MUX_DT_HVSTO_2 3 "Komfort" 4 "Sport" 5 "Sport +" 7 "ECO Pro" 8 "ECO Pro+" 15 "signal invalid" ;
+VAL_ 701 ST_DIAG_HV_ECU_1 0 "HV diagnosis OK" 1 "HV protection function error" 2 "Diagnosis not yet expired" 13 "Reserved Note: Reserved for functional identifier signal tag" 14 "Reserved Note: Reserved for functional identifier signal tag" 15 "Signal_unfilled Transmission function not in operation" ;
 VAL_ 1017 ST_MOD_DRV 0 "Standard" 1 "Sport" 2 "Eco" 3 "Komfort" 4 "EV" 13 "Reserved" 14 "Reserved" 16 "Signal Invalid" ;
 VAL_ 1021 DISP_GR_GRB 0 "Darkswitching" 1 "1st gear" 2 "2nd gear" 3 "3rd gear" 4 "4th gear" 5 "5th gear" 6 "6th gear" 7 "7th gear" 8 "8th gear" 9 "9th gear" 15 "Invalid value" ;
 VAL_ 1021 DISP_PRG_GRB 0 "darkswitching" 1 "Sport Mode" 2 "M-Program" 3 "L-program" 4 "City-program" 6 "Signal invalid" ;

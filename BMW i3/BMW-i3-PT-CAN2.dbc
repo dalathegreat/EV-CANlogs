@@ -148,12 +148,29 @@ BO_ 1074 BMSMsg432: 5 SME
  SG_ REQ_CHGCOND_HVSTO_MAX : 24|8@1+ (0.5,0) [0|100] "%" Vector__XXX
  SG_ DISPLAY_ACTUALVAL_CHGCOND_HVSTO : 32|8@1+ (0.5,0) [0|100] "%" Vector__XXX
 
-BO_ 808 UnknownMsg328: 6 EDME
+BO_ 808 EDMEMsg328: 6 EDME
  SG_ Seconds_ctr : 0|32@1+ (1,0) [0|2704] "S" Vector__XXX
  SG_ Day_ctr : 32|16@1+ (1,0) [0|65534] "Days" Vector__XXX
 
-BO_ 303 UnknownMsg12f: 8 EDME
- SG_ ST_KL : 16|4@1+ (1,0) [0|15] "" Vector__XXX
+BO_ 303 EDMEMsg12f: 8 EDME
+ SG_ CRC_12F : 0|8@1+ (1,0) [0|255] "CRC" Vector__XXX
+ SG_ ALIVE_COUNTER_KL : 8|4@1+ (1,0) [0|14] "counter" Vector__XXX
+ SG_ ST_VEH_CON : 12|4@1+ (1,0) [0|15] "status" Vector__XXX
+ SG_ ST_KL : 16|4@1+ (1,0) [0|15] "status" Vector__XXX
+ SG_ ST_KL_DIV : 20|4@1+ (1,0) [0|15] "status" Vector__XXX
+ SG_ ST_KL_30B : 24|4@1+ (1,0) [0|15] "status" Vector__XXX
+ SG_ ST_KL_15N : 28|4@1+ (1,0) [0|15] "status" Vector__XXX
+ SG_ ST_KL_KEY_VLD : 32|4@1+ (1,0) [0|15] "status" Vector__XXX
+ SG_ ST_PLK : 36|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ CON_CLT_SW : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTR_ENG_STOP : 40|2@1+ (1,0) [0|3] "counter" Vector__XXX
+ SG_ ST_STCD_PENG : 42|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ ST_OP_MSA : 44|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ ST_SSP : 46|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ RWDT_BLS : 48|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ST_KL_50_MSA : 52|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ RQ_DRVG_RDI : 54|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ST_KL_DBG : 56|8@1+ (1,0) [0|255] "status" Vector__XXX
 
 BO_ 1000 UnknownMsg3e8: 2 EDME
  SG_ RQ_MIL_DIAG_OBD_ENGMG_EL : 0|2@1+ (1,0) [0|4] "" Vector__XXX
@@ -315,8 +332,11 @@ BO_ 264 AEMsg108: 8 EDME
 
 BO_ 317 UnknownMsg13D: 8 Vector__XXX
 
-BO_ 267 UnknownMsg10B: 3 Vector__XXX
+BO_ 267 AEMsg10B: 3 Vector__XXX
  SG_ CRC_10B : 0|8@1+ (1,0) [0|0] "255" Vector__XXX
+ SG_ ALIV_SPEC_DCSW_HVSTO : 8|4@1+ (1,0) [0|14] "counter" Vector__XXX
+ SG_ RQ_DCSW_HVSTO_CLO : 12|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ ST_DCHG_LINK_2 : 16|2@1+ (1,0) [0|3] "status" Vector__XXX
 
 BO_ 318 UnknownMsg13E: 8 Vector__XXX
 
@@ -474,6 +494,11 @@ CM_ SG_ 1074 REQ_CHGCOND_HVSTO_MAX "request_charging-condition_high-voltage-stor
 CM_ SG_ 1074 DISPLAY_ACTUALVAL_CHGCOND_HVSTO "display_actual-value_charging-condition_high-voltage-storage";
 CM_ BO_ 808 "1000ms - Counter (Relayed from KOMBI)";
 CM_ BO_ 303 "100ms - Wake up message (Relayed from BDC)";
+CM_ SG_ 303 ST_VEH_CON "status_vehicle_condition";
+CM_ SG_ 303 ST_KL "status_klemme";
+CM_ SG_ 303 ST_KL_DIV "status_klemme_diversified";
+CM_ SG_ 303 ST_KL_30B "status_klemme_30b";
+CM_ SG_ 303 ST_KL_15N "status_klemme_15n";
 CM_ BO_ 1000 "1000ms";
 CM_ SG_ 1000 RQ_MIL_DIAG_OBD_ENGMG_EL "request_MIL_diagnosis_OBD_engine-management-system_electric";
 CM_ SG_ 1000 RQ_RST_OBD_DIAG "request_reset_OBD_diagnosis";
@@ -638,8 +663,11 @@ CM_ SG_ 264 ST_AC_CHGNG_EPRG "status_aircon_charging_emergency-program";
 CM_ SG_ 264 RQ_I_DYNMC_LIM "request_current_dynamics_limit";
 CM_ SG_ 264 AVL_OPMO_CHGE "actual-value_operating-mode_charging-electronic";
 CM_ BO_ 317 "10ms ";
-CM_ BO_ 267 "20ms";
+CM_ BO_ 267 "20ms - High-voltage storage circuit breaker";
 CM_ SG_ 267 CRC_10B "CRC8_SAE_J1850_ZER0 formula, 0x1D Poly, initial value 0x3F, Final XOR value 0x0";
+CM_ SG_ 267 ALIV_SPEC_DCSW_HVSTO "alive_specification_disconnecting-switch_high-voltage-storag - counter 0..E , F used to signal error";
+CM_ SG_ 267 RQ_DCSW_HVSTO_CLO "request_disconnecting-switch_high-voltage-storage_close";
+CM_ SG_ 267 ST_DCHG_LINK_2 "status_discharge_Link_2 - This signal is not sent when the ST_DCHG_LINK signal is sent.";
 CM_ BO_ 318 "1s";
 CM_ BO_ 402 "1s";
 CM_ BO_ 695 "100ms";
@@ -716,41 +744,12 @@ VAL_ 1001 Charge_Req 0 "No_Charge" 1 "PlugCharge" 2 "Timer" ;
 VAL_ 1073 ST_SER_DSCO_PLG 1 "Service disconnect open" 2 "Service disconnect mounted" 3 "Signal invalid" ;
 VAL_ 1073 ST_MEASMT_ISL 1 "Insulation measurement is not running" 2 "Insulation measurement is running" 3 "Signal invalid" ;
 VAL_ 1073 RQ_ABRT_CHGNG 0 "No request" 1 "Request to interrupt charging" 2 "No charging possible, cooling requested" 3 "Signal invalid" ;
-VAL_ 1074 REQ_OPMO_HYM_HVSTO 0 "No requirement" 1 "Adjust SoC" 2 "voltage mode" 3 "Signal invalid
-
-Ikon för Verifierad av gruppen
-Feedback
-
-Google Översätt
-Google
-https://translate.google.fi ? ...
-12
-Med Googles kostnadsfria tjänst kan du översätta ord, fraser och webbsidor från engelska till fler än 100 andra språk direkt.
-
-Google Translate
-Google Translate
-https://translate.google.com ? tr...
-·
-Översätt den här sidan
-14
-Vi har ingen information att visa om den här sidan.
-Läs mer om varför detta händer
-
-Google Translate - Apps on Google Play
-Google Play
-https://play.google.com ? details
-·
-Översätt den här sidan
-14
-14 feb. 2024 ? Text translation: Translate between 108 languages by typing ? Tap to Translate: Copy text in any app and tap the Google Translate icon to ...
-Betyg: 4,2 · ? 8 830 509 röster · ? Gratis · ? Android · ? Verktyg och hjälpmedel   
-
-Google Translate on the App Store
-Apple
-https://apps.apple.com ? app ? google-translate
-7
-This application provides users with tools to translate between languages and they now include an image option; users take a p" ;
-VAL_ 303 ST_KL 0 "No Description" ;
+VAL_ 1074 REQ_OPMO_HYM_HVSTO 0 "No requirement" 1 "Adjust SoC" 2 "Voltage mode" 3 "Signal invalid" ;
+VAL_ 303 CRC_12F 0 "No Description" ;
+VAL_ 303 ST_VEH_CON 0 "Initial" 1 "Standby, driver absent" 2 "Basis operation, driver present" 3 "Basis operation, vehicle coasting" 4 "Engine postru" 5 "Ignition On" 6 "Ignition On, vehicle coasting" 7 "Engine On, vehicle not coasting" 8 "Driving " 9 "Impending start of engine" 10 "Impending start of engine, vehicle coasting" 11 "Start engine" 12 "Start engine, vehicle coasting" 13 "Car wash operation" 14 "Error" 15 "Signal invalid" ;
+VAL_ 303 ST_KL 0 "Init" 1 "Reserve" 2 "KL30" 3 "KL30F-Change" 4 "KL30F-A" 5 "KL30B-Change" 6 "KL30B-A" 7 "KLR-Change" 8 "KLR-A" 9 "KL15-Change" 10 "KL15-A" 11 "KL50-Delay" 12 "KL50-Change" 13 "KL50-A" 14 "Mistake" 15 "Signal invalid" ;
+VAL_ 303 ST_KL_DIV 0 "KL_DIV_INIT" 1 "KL_DIV_IDLE" 2 "KL_DIV_REQUEST" 3 "KL_DIV_RELEASED" 4 "KL_DIV_SAVED" 5 "KL_DIV_WAIT_NVM" 6 "KL_DIV_WAIT_VALID" 7 "KL_DIV_RELEASE_TRIG" 8 "KL_DIV_VALID_IDLE" 9 "KL_DIV_BLOCKED" 10 "KL_DIV_FAILURE_CP" 11 "KL_DIV_TIMEOUT_CP" 12 "KL_DIV_INVALID_CP" 13 "KL_DIV_TIMEOUT" 14 "KL_DIV_FAILURE" 15 "KL_DIV_INVALID" ;
+VAL_ 303 ST_KL_30B 0 "init value" 1 "KL30BAus" 2 "Overrun greater than 0s and less than or equal to 1 s" 3 "Overrun greater than 1s and less than or equal to 5 s" 4 "Overrun greater than 5s and less than or equal to 10 s" 5 "Overrun greater than 10s and less than or equal to 20 s" 6 "Overrun greater than 20s and less than or equal to 30 s" 7 "Overrun greater than 30s and less than or equal to 40 s" 8 "Overrun greater than 40s and less than or equal to 50 s" 9 "Overrun greater than 50s and less than or equal to 1 min" 10 "Overrun greater than 1 minute and less than or equal to 5 minutes" 11 "Overrun greater than 5 minutes and less than or equal to 10 minutes" 12 "Overrun greater than 10min" 13 "KL30B permanent on" 14 "error" 15 "signal invalid" ;
 VAL_ 1000 RQ_MIL_DIAG_OBD_ENGMG_EL 0 "No_Reset" 2 "Reset" ;
 VAL_ 1000 RQ_RST_OBD_DIAG 0 "No request for reset OBD_diagnosis" 2 "Request Reset OBD_Diagnosis" 3 "Signal invalid" ;
 VAL_ 506 ST_ERR_ISL_EXTN_BN_HV 0 "No statement possible. Diagnosis not yet completed" 1 "not active" 2 "active" 3 "Signal invalid" ;
@@ -775,6 +774,8 @@ VAL_ 1017 ST_MOD_DRV 0 "Standard" 1 "Sport" 2 "Eco" 3 "Komfort" 4 "EV" 13 "Reser
 VAL_ 264 ST_AC_CHGNG_EPRG 0 "disabled" 1 "activates emergency charging active, 12V on-board network is protected by emergency charging power supply in AE" 3 "Signal invalid" ;
 VAL_ 264 RQ_I_DYNMC_LIM 0 "no dynamic limitation requested" 1 "Dynamic limitation requested" 3 "Signal invalid" ;
 VAL_ 264 AVL_OPMO_CHGE 1 "standby" 2 "DC HV charging" 3 "Derating" 4 "charging interruption" 5 "errors" 6 "Crash" 7 "operating mode change" 8 "Load initialization" 9 "Load initialization completed" 13 "Function_interface_is_not_available Send function in operation, values ??not available" 14 "Function_reports_error Sending function in operation, reports error" 15 "Signal_unfilled Transmission function not in operation" ;
+VAL_ 267 RQ_DCSW_HVSTO_CLO 0 "No request" 1 "Request ON" 3 "Signal invalid" ;
+VAL_ 267 ST_DCHG_LINK_2 0 "Not active, no discharge" 1 "Active, discharge in progress" 3 "Signal Invalid" ;
 VAL_ 1021 DISP_GR_GRB 0 "Darkswitching" 1 "1st gear" 2 "2nd gear" 3 "3rd gear" 4 "4th gear" 5 "5th gear" 6 "6th gear" 7 "7th gear" 8 "8th gear" 9 "9th gear" 15 "Invalid value" ;
 VAL_ 1021 DISP_PRG_GRB 0 "darkswitching" 1 "Sport Mode" 2 "M-Program" 3 "L-program" 4 "City-program" 6 "Signal invalid" ;
 VAL_ 1021 DISP_PO_IDC_GRB 0 "Not flashing" 1 "Flashing" 3 "Signal invalid" ;

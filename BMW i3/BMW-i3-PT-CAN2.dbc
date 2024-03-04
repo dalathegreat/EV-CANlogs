@@ -120,7 +120,7 @@ BO_ 274 BMSMsg112: 8 SME
  SG_ RQ_OPN_DCSW_HVSTO_FAST : 50|2@1+ (1,0) [0|3] "status" Vector__XXX
  SG_ CHGCOND_HVSTO_DELTA : 52|4@1+ (0.00834,0) [0|0.1] "%" Vector__XXX
 
-BO_ 1001 UnknownMsg3E9: 8 EDME
+BO_ 1001 AEMsg3E9: 8 EDME
  SG_ FC_Current_Command : 40|10@1- (1,0) [-500|500] "Amps" Vector__XXX
  SG_ Contactor_Con : 52|4@1+ (1,0) [0|16] "" Vector__XXX
  SG_ EndOfChg_Time : 56|8@1+ (1,0) [0|255] "Mins" Vector__XXX
@@ -172,7 +172,7 @@ BO_ 303 EDMEMsg12f: 8 EDME
  SG_ RQ_DRVG_RDI : 54|2@1+ (1,0) [0|3] "" Vector__XXX
  SG_ ST_KL_DBG : 56|8@1+ (1,0) [0|255] "status" Vector__XXX
 
-BO_ 1000 UnknownMsg3e8: 2 EDME
+BO_ 1000 AEMsg3e8: 2 EDME
  SG_ RQ_MIL_DIAG_OBD_ENGMG_EL : 0|2@1+ (1,0) [0|4] "" Vector__XXX
  SG_ RQ_RST_OBD_DIAG : 2|2@1+ (1,0) [0|0] "" Vector__XXX
 
@@ -284,20 +284,37 @@ BO_ 1017 EDMEMsg3f9: 8 EDME
  SG_ RDUC_DOCTR_RPM_DRV_2 : 54|2@1+ (1,0) [0|0] "" Vector__XXX
  SG_ RPM_ENG_MAX_ALW : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 417 UnknownMsg1A1: 5 Vector__XXX
+BO_ 417 DSCMsg1A1: 5 Vector__XXX
+ SG_ CRC_1A1 : 0|8@1+ (1,0) [0|255] "CRCV" Vector__XXX
+ SG_ ALIV_V_VEH : 8|4@1+ (1,0) [0|15] "counter" Vector__XXX
+ SG_ ST_V_VEH_NSS : 12|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ V_VEH_COG : 16|16@1+ (0.015625,0) [0|350] "km/h" Vector__XXX
+ SG_ QU_V_VEH_COG : 32|4@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ DVCO_VEH : 36|3@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 896 VINMsg380: 7 EDME
  SG_ VIN : 0|56@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 165 UnknownMsg0A5: 8 Vector__XXX
+BO_ 704 RDMEMsg2C0: 8 REME
+ SG_ TORQ_MAX_CENG : 0|12@1+ (0.5,-1023.5) [-1023.5|1022.5] "Nm" Vector__XXX
+ SG_ TORQ_MIN_CENG : 12|12@1+ (0.5,-1023.5) [-1023.5|1022.5] "Nm" Vector__XXX
+ SG_ RPM_MAX_CENG : 24|8@1+ (40,0) [0|10000] "rpm" Vector__XXX
+ SG_ ST_INFO_CENG_REX : 32|8@1+ (1,0) [0|255] "status" Vector__XXX
+ SG_ AVL_TEMP_CENG_REX : 48|8@1+ (1,-48) [-48|204] "C" Vector__XXX
+ SG_ DELTA_SOC_DYN : 40|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 704 UnknownMsg2C0: 8 Vector__XXX
+BO_ 165 UnknownMsg0A5: 8 Vector__XXX
 
 BO_ 168 UnknownMsg0A8: 8 Vector__XXX
 
 BO_ 205 UnknownMsg0CD: 8 Vector__XXX
 
-BO_ 667 UnknownMsg29B: 8 Vector__XXX
+BO_ 667 REMEMsg29B: 8 REME
+ SG_ ST_ERR_MOT_1 : 0|16@1+ (1,0) [0|65535] "status" Vector__XXX
+ SG_ ST_INFO_MOT_1 : 16|12@1+ (1,0) [0|4095] "status" Vector__XXX
+ SG_ RPM_MAX_MOT_1 : 28|12@1+ (5,0) [0|20460] "rpm" Vector__XXX
+ SG_ ST_MSA_MOT_1 : 40|8@1+ (1,0) [0|255] "status" Vector__XXX
+ SG_ ST_INFO_DER_INVE_1 : 48|16@1+ (1,0) [0|65535] "status" Vector__XXX
 
 BO_ 668 UnknownMsg29C: 8 Vector__XXX
 
@@ -499,7 +516,7 @@ CM_ SG_ 303 ST_KL "status_klemme";
 CM_ SG_ 303 ST_KL_DIV "status_klemme_diversified";
 CM_ SG_ 303 ST_KL_30B "status_klemme_30b";
 CM_ SG_ 303 ST_KL_15N "status_klemme_15n";
-CM_ BO_ 1000 "1000ms";
+CM_ BO_ 1000 "1000ms - Diagnosis OBD engine control electrical";
 CM_ SG_ 1000 RQ_MIL_DIAG_OBD_ENGMG_EL "request_MIL_diagnosis_OBD_engine-management-system_electric";
 CM_ SG_ 1000 RQ_RST_OBD_DIAG "request_reset_OBD_diagnosis";
 CM_ BO_ 816 "200ms - Range info";
@@ -637,12 +654,135 @@ CM_ SG_ 1017 ST_GRSEL_DRV "For manual transmissions, 1111b is usually sent in th
 For modular motors, this signal is provided with valid values ??0010b (= reverse gear) or 0000b (= no
 reverse gear), or sent with 1111b if an error is diagnosed.";
 CM_ BO_ 417 "20ms - Vehicle speed";
+CM_ SG_ 417 ALIV_V_VEH "alive_speed_vehicle - Counter 0...14";
+CM_ SG_ 417 ST_V_VEH_NSS "Not used on i3";
+CM_ SG_ 417 V_VEH_COG "speed_vehicle_centre-of-gravity";
+CM_ SG_ 417 QU_V_VEH_COG "Qualifier_speed_vehicle_centre-of-gravity
+
+1000 Initialization Occurs during the initialization phase until actual value is available
+(Pre-filling). Useful signal is permanently filled with use value 0.
+0001
+Signal value is valid and
+secured and
+plausibility checked
+1001 Reserved
+0010 Reserved
+1010 signal value is valid,
+Condition/status temporary
+FUSI: A quantity necessary for calculating the speed is missing
+(e.g. longitudinal acceleration, wheel speed,...). Signal quality at unstable
+Travel restricted. (Applicability of the for safety-relevant functions
+Check signal.)
+0011 Reserved
+1011
+Signal quality or
+surveillance
+restricted,
+Condition/status temporary
+FUSI: More than one necessary for calculating speed
+Size is missing (e.g. longitudinal acceleration, wheel speed,...). signal quality
+limited by unstable driving. (For safety-related functions
+Check applicability of signal.)
+0100 Reserved
+1100 Reserved
+0110 Reserved
+1110 Signal value is invalid,
+Condition/status temporary
+No wheel speeds available, speed calculation not
+possible. The associated useful signal is permanently connected to the
+Invalidity identifier filled.
+0111 Reserved
+1111 Signal invalid Can only be set by the gateway";
+CM_ SG_ 417 DVCO_VEH "Not used on i3";
 CM_ BO_ 896 "Stops after 3 messages on startup - VIN";
-CM_ BO_ 165 "10ms ";
-CM_ BO_ 704 "100ms";
+CM_ BO_ 704 "100ms - Status information combustion engine";
+CM_ SG_ 704 TORQ_MAX_CENG "torque_maximum_combustion-engine";
+CM_ SG_ 704 TORQ_MIN_CENG "torque_minimum_combustion-engine";
+CM_ SG_ 704 RPM_MAX_CENG "RPM_maximum_combustion-engine";
+CM_ SG_ 704 ST_INFO_CENG_REX "status_information_combustion-engine_range-extender
+
+0--- ---1 Diagnostic routine is still running or not yet running
+(Class 1)
+0--- --1- Diagnostic routine is still running or not yet running
+(2nd grade)
+0--- -1-- Adaptation is still running or not yet running
+0--- 1--- High AKF loading
+0--1 ---- Cat heater required/active
+0-1- ---- Exhaust gas temperature too high
+1111
+1110 Function interface_is_not_available Send function in operation, values ??not
+available
+1111
+1101 Function_reports_error Sending function in operation, reports error
+1111
+1111 Signal_unfilled Transmission function not in operation";
+CM_ SG_ 704 AVL_TEMP_CENG_REX "actual-value_temperature_combustion-engine_range-extender";
+CM_ SG_ 704 DELTA_SOC_DYN "Not used on i3";
+CM_ BO_ 165 "10ms";
 CM_ BO_ 168 "10ms";
 CM_ BO_ 205 "10ms";
-CM_ BO_ 667 "100ms";
+CM_ BO_ 667 "100ms - Information about electric motor 1";
+CM_ SG_ 667 ST_ERR_MOT_1 "status_error_motor_1
+
+0000 0000 0000 0000 Normal operation
+0--- ---- ---- ---1 Error-related AKS
+141
+0--- ---- ---- --1- Error-related freewheeling
+0--- ---- ---- -1-- Error-related 0 torque control
+0--- ---- ---- 1--- Limp Home
+0--- ---- ---1 ---- Violation of memory limits (U_DC, I_DC)
+0--- ---- --1- ---- Torque deviation EM
+0--- ---- -1-- ---- Temperature error EM
+0--- ---- 1--- ---- Interlock / crash clamp / emergency stop
+0--- ---1 ---- ---- AC power error
+0--- --1- ---- ---- Resolver error
+0--- -1-- ---- ---- CAN signal failure
+0--- 1--- ---- ---- Signal failure internal measured variables
+0--1 ---- ---- ---- EWS error
+0-1- ---- ---- ---- HW-related error LE
+01-- ---- ---- ---- Temperature error LE
+1111 1111 1111 1101 Signal not available
+1111 1111 1111 1110 Error
+1111 1111 1111 1111 Signal invalid";
+CM_ SG_ 667 ST_INFO_MOT_1 "status_information_motor_1
+0000 0000 0000 Normal operation
+0--- ---- ---1 derating torque due to HV-DC voltage limit (motor mode)
+0--- ---- --1- derating torque due to HV-DC voltage limit (generator mode)
+0--- ---- -1-- derating torque due to speed (motor mode)
+0--- ---- 1--- derating torque due to speed (generator mode)
+0--- ---1 ---- derating torque due to HV-DC current limit (motor mode)
+0--- --1- ---- derating torque due to HV-DC current limit (generator mode)
+0--- -1-- ---- derating torque due to temperature electric machine
+0--- 1--- ---- Info: derating torque due to inverter limit (motor/generator mode)
+0--1 ---- ---- Info: Resolver offset not adjusted
+0-1- ---- ---- Info: critical temperature end windings
+01-- ---- ---- Info: critical temperature rotor
+1111 1111 1101 Signal not available
+1111 1111 1110 Error
+1111 1111 1111 Signal invalid";
+CM_ SG_ 667 RPM_MAX_MOT_1 "RPM_maximum_motor_1";
+CM_ SG_ 667 ST_MSA_MOT_1 "status_MSA_motor_1";
+CM_ SG_ 667 ST_INFO_DER_INVE_1 "status_information_derating_inverter_1
+
+0000 0000 0000 0000 Normal operation
+0--- ---- ---- ---1 Derating due to overtemperature IGBT/diode
+0--- ---- ---- --1- Derating due to temperature spread NTC to IGBT/diode
+0--- ---- ---- -1-- Derating due to overtemperature NTC
+0--- ---- ---- 1--- Derating due to coolant overtemperature
+0--- ---- ---1 ---- Derating due to switching overvoltage due to U_DC level
+0--- ---- --1- ---- Derating due to speed range
+0--- ---- -1-- ---- Derating due to current criterion/current-time area
+143
+0--- ---- 1--- ---- Derating due to temperature gradient violation
+0--- ---1 ---- ---- Info: Short circuit UVW highside
+0--- --1- ---- ---- Info: Short circuit UVW lowside
+0--- -1-- ---- ---- Info: UVW switch open
+0--- 1--- ---- ---- Info: Controller active
+0--1 ---- ---- ---- Info: Id controller in anti-windup
+0-1- ---- ---- ---- Info: Iq controller in anti-windup
+1111 1111 1111 1101 Signal not available
+1111 1111 1111 1110 Error
+1111 1111 1111 1111 Signal invalid";
 CM_ BO_ 668 "100ms";
 CM_ BO_ 669 "100ms";
 CM_ BO_ 407 "30ms - Status gear selector switch (Relayed from GWS on i8)";
@@ -771,6 +911,7 @@ VAL_ 569 MUX_DT_HVSTO_2 3 "Komfort" 4 "Sport" 5 "Sport +" 7 "ECO Pro" 8 "ECO Pro
 VAL_ 701 ST_DIAG_HV_ECU_1 0 "HV diagnosis OK" 1 "HV protection function error" 2 "Diagnosis not yet expired" 13 "Reserved Note: Reserved for functional identifier signal tag" 14 "Reserved Note: Reserved for functional identifier signal tag" 15 "Signal_unfilled Transmission function not in operation" ;
 VAL_ 1052 ST_COOL_HVSTO 0 "No statement possible" 1 "Cooling works" 2 "Cooling does not start despite request" 3 "Signal invalid" ;
 VAL_ 1017 ST_MOD_DRV 0 "Standard" 1 "Sport" 2 "Eco" 3 "Komfort" 4 "EV" 13 "Reserved" 14 "Reserved" 16 "Signal Invalid" ;
+VAL_ 667 ST_MSA_MOT_1 253 "signal not available" 254 "error" 255 "signal invalid" ;
 VAL_ 264 ST_AC_CHGNG_EPRG 0 "disabled" 1 "activates emergency charging active, 12V on-board network is protected by emergency charging power supply in AE" 3 "Signal invalid" ;
 VAL_ 264 RQ_I_DYNMC_LIM 0 "no dynamic limitation requested" 1 "Dynamic limitation requested" 3 "Signal invalid" ;
 VAL_ 264 AVL_OPMO_CHGE 1 "standby" 2 "DC HV charging" 3 "Derating" 4 "charging interruption" 5 "errors" 6 "Crash" 7 "operating mode change" 8 "Load initialization" 9 "Load initialization completed" 13 "Function_interface_is_not_available Send function in operation, values ??not available" 14 "Function_reports_error Sending function in operation, reports error" 15 "Signal_unfilled Transmission function not in operation" ;

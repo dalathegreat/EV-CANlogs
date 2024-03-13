@@ -329,7 +329,10 @@ BO_ 748 UnknownMsg2EC: 2 Vector__XXX
 
 BO_ 1289 UnknownMsg509: 8 Vector__XXX
 
-BO_ 1075 UnknownMsg433: 4 EDME
+BO_ 1075 AEMsg433: 4 EDME
+ SG_ CTR_MEASMT_ISL : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ST_HT_HVSTO : 10|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ RQ_EMMOD_HYB_HVSTO : 20|4@1+ (1,0) [0|15] "status" Vector__XXX
 
 BO_ 339 UnknownMsg153: 8 Vector__XXX
 
@@ -369,9 +372,17 @@ BO_ 815 UnknownMsg32F: 8 Vector__XXX
 
 BO_ 932 UnknownMsg3A4: 8 Vector__XXX
 
-BO_ 997 UnknownMsg3E5: 3 Vector__XXX
+BO_ 997 AEMsg3E5: 3 Vector__XXX
+ SG_ ST_HV_RDI : 0|2@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1004 UnknownMsg3EC: 8 Vector__XXX
+BO_ 1004 AEMsg3EC: 8 Vector__XXX
+ SG_ CRC_3EC : 0|8@1+ (1,0) [0|255] "CRC" Vector__XXX
+ SG_ ALIV_ST_PSBTY_ENGSTA_ENGSTP : 8|4@1+ (1,0) [0|15] "counter" Vector__XXX
+ SG_ ENERG_BN_RDI_DRVG : 12|4@1+ (1,0) [0|15] "status" Vector__XXX
+ SG_ ST_PSBTY_ENGSTA_ENGSTP : 16|16@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ V_VEH_MAX : 32|16@1+ (0.015625,0) [0|350] "km/h" Vector__XXX
+ SG_ TAR_OPMO_GRB_2 : 52|4@1+ (1,0) [0|15] "status" Vector__XXX
+ SG_ SPEC_DYNMC_GRB_2 : 56|2@1+ (1,0) [0|3] "status" Vector__XXX
 
 BO_ 1021 UnknownMsg3FD: 5 Vector__XXX
  SG_ CRC_3FD : 0|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -396,12 +407,22 @@ BO_ 261 UnknownMsg105: 8 Vector__XXX
  SG_ CRC8_105 : 0|8@1+ (1,0) [0|255] "CRC" Vector__XXX
 
 BO_ 464 EDMEMsg1D0: 8 EDME
- SG_ CRC_1D0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ALIV_SAFG_PT : 8|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CRC_1D0 : 0|8@1+ (1,0) [0|255] "CRC" Vector__XXX
+ SG_ ALIV_SAFG_PT : 8|4@1+ (1,0) [0|14] "counter" Vector__XXX
+ SG_ RQ_REX_PWRD : 16|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VRFD_RDI_DRVG : 20|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RQ_EAX_ABM_ENGMG : 22|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DV_AVAI : 24|2@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 414 UnknownMsg19E: 8 EDME
 
-BO_ 1048 UnknownMsg418: 8 Vector__XXX
+BO_ 1048 EDMEMsg418: 8 EDME
+ SG_ ST_RSTA_DRV : 8|2@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ CON_EWS_ENB : 14|2@1+ (1,0) [0|0] "condition" Vector__XXX
+ SG_ RQ_EMMOD_HYB_DME_2 : 24|8@1+ (1,0) [0|0] "request" Vector__XXX
+ SG_ TAR_OPMO_MOT_TRCT : 32|4@1+ (1,0) [0|0] "target" Vector__XXX
+ SG_ TAR_DIRRT_MOT_TRCT : 36|2@1+ (1,0) [0|0] "target" Vector__XXX
+ SG_ ST_OPR_RDI : 44|4@1+ (1,0) [0|0] "status" Vector__XXX
 
 BO_ 691 UnknownMsg2B3: 8 Vector__XXX
 
@@ -424,7 +445,7 @@ BO_ 1019 EDMEMsg3FB: 6 EDME
  SG_ TAR_RPM_IDLG_DRV_EXT : 40|8@1+ (10,0) [0|0] "l/min" Vector__XXX
 
 BO_ 1020 EDMEMsg3FC: 3 EDME
- SG_ ALIV_DT_PT_3 : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ALIV_DT_PT_3 : 0|4@1+ (1,0) [0|15] "counter" Vector__XXX
  SG_ TRNRAO_BAX : 4|12@1+ (0.002,0) [0|8.188] "ratio" Vector__XXX
  SG_ QU_TRNRAO_BAX : 16|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ RLS_PLK_VRFD : 20|2@1+ (1,0) [0|3] "status" Vector__XXX
@@ -448,9 +469,15 @@ BO_ 739 UnknownMsg2E3: 8 Vector__XXX
 
 BO_ 806 UnknownMsg326: 8 Vector__XXX
 
-BO_ 935 UnknownMsg3A7: 7 Vector__XXX
+BO_ 935 DSCMsg3A7: 7 Vector__XXX
+ SG_ CRC_3A7 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ALIV_SU_SW_DRDY : 8|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RQ_SU_SW_DRDY : 16|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 970 UnknownMsg3CA: 8 Vector__XXX
+BO_ 970 KombiMsg3CA: 8 Vector__XXX
+ SG_ FRC_AVR_HVSTO_PWR : 0|12@1+ (0.05,0) [0|204.7] "kW" Vector__XXX
+ SG_ SYNCN_FRC_RD_INFO : 40|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MUX_FRC_RD_INFO : 44|4@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 976 UnknownMsg3D0: 2 Vector__XXX
 
@@ -466,6 +493,28 @@ BO_ 1306 UnknownMsg51A: 8 Vector__XXX
 BO_ 1374 UnknownMsg55E: 8 Vector__XXX
 
 BO_ 1434 UnknownMsg59A: 8 Vector__XXX
+
+BO_ 891 IHKAMsg37B: 6 Vector__XXX
+ SG_ RLS_COOL_HVSTO : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RQ_PAIC : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RQ_CSOV_HVSTO : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ST_FRT_AC : 6|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ AVL_I_EKK : 40|8@1+ (0.2,0) [0|50.8] "A" Vector__XXX
+
+BO_ 996 IHKAMsg3E4: 8 Vector__XXX
+ SG_ AVL_I_EL_GEY : 8|8@1+ (0.2,0) [0|0] "50.8" Vector__XXX
+
+BO_ 1528 IHKAMsg5F8: 8 Vector__XXX
+
+BO_ 411 ACSMMsg19B: 8 Vector__XXX
+ SG_ CRC_19B : 0|8@1+ (1,0) [0|255] "CRC" Vector__XXX
+ SG_ ALIV_CTR_CR : 8|4@1+ (1,0) [0|14] "counter" Vector__XXX
+ SG_ ST_EXCE_ACLN_THRV : 12|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CTR_PHTR_CR : 14|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CTR_PCSH_MST : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CTR_HAZW_CR : 20|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CTR_SWO_EKP_CR : 22|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CTR_CLSY_CR : 24|2@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
@@ -491,7 +540,7 @@ CM_ SG_ 274 DC_link "actual-value_voltage_Link";
 CM_ SG_ 274 RQ_OPN_DCSW_HVSTO_ILY "request_open_disconnecting-switch_high-voltage-storage_instantl";
 CM_ SG_ 274 HVBatt_SOC "charging-condition_high-voltage-storage";
 CM_ SG_ 274 LDST_HVSTO "Not used";
-CM_ SG_ 274 RQ_OPC_CHG_HVSTO "request_open_disconnecting-switch_high-voltage-storage_instantly";
+CM_ SG_ 274 RQ_OPC_CHG_HVSTO "request_open-circuit_charge_high-voltage-storage";
 CM_ SG_ 274 RQ_OPN_DCSW_HVSTO_FAST "request_open_disconnecting-switch_high-voltage-storage_fas";
 CM_ SG_ 274 CHGCOND_HVSTO_DELTA "charging-condition_high-voltage-storage_delta - The signal describes the delta between two SOC steps in the previous SOC signal";
 CM_ BO_ 1001 "200ms - Main control for LIM
@@ -503,6 +552,7 @@ CM_ SG_ 1073 RQ_ABRT_CHGNG "request_abort_charging";
 CM_ SG_ 1073 PRD_DUR_CHGNG "prediction_duration_charging FFFF = signal unavailable";
 CM_ SG_ 1073 PRD_T_EOCHG "prediction_time_end-of-charging";
 CM_ SG_ 1073 ENC_HVSTO_MAX "energy-content_high-voltage-storage_maximum";
+CM_ SG_ 1073 ST_CHGRDI_HVSTO "not used on i3";
 CM_ BO_ 1074 "200ms - Battery SOC info";
 CM_ SG_ 1074 REQ_OPMO_HYM_HVSTO "request_operating-mode_hybrid-master_high-voltage-storage";
 CM_ SG_ 1074 TARGET_VOLTAGE_VC_MODE "target_voltage_voltage-controlled_mode - Target voltage specification to be adjusted in voltage-controlled mode";
@@ -688,11 +738,7 @@ Check applicability of signal.)
 0110 Reserved
 1110 Signal value is invalid,
 Condition/status temporary
-No wheel speeds available, speed calculation not
-possible. The associated useful signal is permanently connected to the
-Invalidity identifier filled.
-0111 Reserved
-1111 Signal invalid Can only be set by the gateway";
+No wheel";
 CM_ SG_ 417 DVCO_VEH "Not used on i3";
 CM_ BO_ 896 "Stops after 3 messages on startup - VIN";
 CM_ BO_ 704 "100ms - Status information combustion engine";
@@ -790,7 +836,23 @@ CM_ SG_ 407 counter_197 "0-E increments each message";
 CM_ BO_ 1290 "650ms";
 CM_ BO_ 748 "2s";
 CM_ BO_ 1289 "Stops after 5 messages sent (640ms)";
-CM_ BO_ 1075 "1s - Predefine high-voltage battery (Relayed from EME on i8)";
+CM_ BO_ 1075 "1s - High-voltage storage specification (Relayed from EME on i8)";
+CM_ SG_ 1075 CTR_MEASMT_ISL "control_measurement_isolation";
+CM_ SG_ 1075 ST_HT_HVSTO "status_heating_high-voltage-storage
+
+00 Not defined
+01 Battery heating not active
+10 Battery heating active
+11 Signal invalid";
+CM_ SG_ 1075 RQ_EMMOD_HYB_HVSTO "request_emergency-mode_hybrid_high-voltage-storage
+
+0000 no response (normal operation) no error or replacement response request
+0--1 Reduction SOC-Min Reduction of the SOC minimum limit
+0-1- Disable diagnoses due to
+battery-free operation
+01-- Emergency running reaction 3 Emergency charging active, 12V on-board network is connected via emergency charging power supply
+Power electronics protected
+1111 Signal invalid";
 CM_ BO_ 339 "20ms";
 CM_ BO_ 173 "10ms ";
 CM_ BO_ 187 "10ms ";
@@ -815,8 +877,38 @@ CM_ BO_ 738 "1s (changes rate often)";
 CM_ BO_ 744 "100ms";
 CM_ BO_ 815 "200ms";
 CM_ BO_ 932 "1s (Non periodic)";
-CM_ BO_ 997 "10s";
-CM_ BO_ 1004 "1s";
+CM_ BO_ 997 "10s Control of electric water heaters";
+CM_ SG_ 997 ST_HV_RDI "status_high-voltage_readiness
+
+0 High-voltage system not ready
+1 high-voltage system ready and active
+3 Signal invalid";
+CM_ BO_ 1004 "1s - Possibility of engine start and engine stop";
+CM_ SG_ 1004 ALIV_ST_PSBTY_ENGSTA_ENGSTP "alive_status_possibility_engine-start_engine-stop";
+CM_ SG_ 1004 ENERG_BN_RDI_DRVG "Energy_Bordnetz_readiness_driving
+
+0 No HV release
+1 HV release (and no charging plug is inserted)
+2 HV release and charging plug is inserted
+3 HV release and charging plug unknown
+4 No HV release and charging plug plugged in
+5 No HV release and charging plug unknown
+15 Signal invalid";
+CM_ SG_ 1004 ST_PSBTY_ENGSTA_ENGSTP "status_possibility_engine-start_engine-stop";
+CM_ SG_ 1004 V_VEH_MAX "speed_vehicle_maximum";
+CM_ SG_ 1004 TAR_OPMO_GRB_2 "target_operating-mode_gearbox_2
+
+0--1 No load requirement
+0-1- Speed ??control request
+1101 Signal not available
+1110 error
+1111 Signal invalid";
+CM_ SG_ 1004 SPEC_DYNMC_GRB_2 "specification_dynamics_gearbox_2
+
+0 Smooth (default)
+1 Normal
+2 Agressive
+3 Signal invalid";
 CM_ BO_ 1021 "100ms - Transmission data display";
 CM_ SG_ 1021 ALIV_DT_DISP_GRDT "alive_data_display_gearbox-drive-train";
 CM_ SG_ 1021 DISP_GR_GRB "display_gear_gearbox";
@@ -842,15 +934,117 @@ CM_ BO_ 1298 "640ms";
 CM_ BO_ 261 "10ms ";
 CM_ SG_ 261 CRC8_105 "CRC8_SAE_J1850_ZER0 formula, 0x1D Poly, initial value 0x73 , Final XOR value 0x0";
 CM_ BO_ 464 "1s - Drivetrain protection";
+CM_ SG_ 464 RQ_REX_PWRD "request_range-extender_power-down
+
+00 INIT
+01 Do not allow torque build-up No REX operation permitted
+10 Allow torque build-up REX operation permitted
+11 Signal invalid";
+CM_ SG_ 464 VRFD_RDI_DRVG "verified_readiness_driving
+
+00 INIT
+01 Torque build-up/cl. 50 not allowed
+10 torque build-up/cl. 50 allow
+11 Signal invalid";
+CM_ SG_ 464 RQ_EAX_ABM_ENGMG "request_e-axis_absence-of-moments_engine-management-system
+
+00 INIT
+01 Do not allow moment build-up
+10 Allow moment buildup
+11 Signal invalid";
+CM_ SG_ 464 DV_AVAI "driver_availibility
+
+000 drivers present
+001 Driver presence unknown
+010 Driver absent
+100 INIT
+101 drivers present virtually
+111 Signal invalid";
 CM_ BO_ 414 "500ms (Relayed from EME)";
-CM_ BO_ 1048 "1s";
+CM_ BO_ 1048 "1s - Status Hybrid 2";
+CM_ SG_ 1048 ST_RSTA_DRV "status_race-start_drive
+
+00 no race start active
+01 Race start active
+10 Not defined
+11 Signal invalid";
+CM_ SG_ 1048 CON_EWS_ENB "condition_EWS_enable
+
+00 IMOB_LOCKED Ignition/injection locked
+01 IMOB_UNLOCKED Ignition/injection released
+10 IMOB_UNLOCKED_RETRY Ignition/injection released, authentication confirmation time
+expired
+11 Signal invalid";
+CM_ SG_ 1048 RQ_EMMOD_HYB_DME_2 "request_emergency-mode_hybrid_DME_2
+
+0000
+0000 no reaction (normal operation) no error or
+Substitute response request
+0--- ---1 Transmission FID_EKK_RED
+0--- --1- Transmission FID_EKK_DEAK
+0--- -1-- Transmission FID_EGS_NMAX_LOW
+0--- 1--- Transmission FID_EGS_NMAX_HIGH
+00-1 ---
+-
+Transmission not ready to drive as requested
+driver
+001- ---
+-
+Cancel traction of gearbox 2 when exceeded
+maximum electrical speed
+0111 ---
+- Do not cancel the traction of gearbox 2";
+CM_ SG_ 1048 TAR_OPMO_MOT_TRCT "target_operating-mode_motor_traction
+
+0 Standby can be interpreted as freewheeling or AKS on the part of the electric motor
+become
+1 torque control
+3 EM voltage regulation
+5 speed control with
+Torque precontrol
+6 HV battery current control
+8 AKS Active short circuit
+A Freewheel
+D Reserved Value held for extended signal tag.
+E Reserved Value held for extended signal tag.
+F Signal invalid When converting the signal tag, this code is started with \"Signal
+\"is unfilled\".";
+CM_ SG_ 1048 TAR_DIRRT_MOT_TRCT "target_direction-of-rotation_motor_traction
+
+0 no (target) direction of rotation
+1 (target) direction of rotation forward
+2 (setpoint) direction of rotation backwards Signal invalid/error
+3 Signal invalid";
+CM_ SG_ 1048 ST_OPR_RDI "status_operating_readiness
+
+0--0 Electric machine 1 not ready for operation
+0--1 E-machine 1 ready for operation
+0-0- E-machine 2 not ready for operation
+0-1- E-machine 2 ready for operation
+1101 Reserved signal tag is not implemented.
+Note: Reserved for functional identifier signal tag.
+1110 Reserved signal tag is not implemented.
+Note: Reserved for functional identifier signal tag.
+1111 Signal_unfilled Transmission function not in operation";
 CM_ BO_ 691 "100ms";
 CM_ BO_ 969 "1s (Non periodic)";
-CM_ BO_ 1019 "1s";
+CM_ BO_ 1019 "1s - Data drive train 1";
+CM_ SG_ 1019 AIP_ENG_DRV "not used on i3";
+CM_ SG_ 1019 TAR_RPM_IDLG_DRV "not used on i3";
+CM_ SG_ 1019 ST_SW_WAUP_D "not used on i3";
+CM_ SG_ 1019 RDUC_DOCTR_RPM_D "not used on i3";
+CM_ SG_ 1019 RQ_SHPA_GRB_REGE_P "not used on i3";
+CM_ SG_ 1019 SLCTN_BUS_COMM_ENG_ "not used on i3";
+CM_ SG_ 1019 RQ_STASS_ENGMG "not used on i3";
+CM_ SG_ 1019 CTR_SLCK_DRV "not used on i3";
+CM_ SG_ 1019 ST_RTIR_DRV "not used on i3";
+CM_ SG_ 1019 ST_INFS_DRV "not used on i3";
+CM_ SG_ 1019 RQ_SHPA_GRB_CHGB_LC "not used on i3";
 CM_ SG_ 1019 ST_CAT_HT "status_CAT_heating";
 CM_ SG_ 1019 ST_RDI_DRVG "status_readiness_driving";
 CM_ SG_ 1019 TAR_RPM_IDLG_DRV_EXT "target_RPM_idling_drive_extended 0 ... 2540 1/min";
 CM_ BO_ 1020 "5s - Data drive train 3";
+CM_ SG_ 1020 ALIV_DT_PT_3 "Goes from 0..14";
 CM_ SG_ 1020 TRNRAO_BAX "transmission-ratio_back-axle";
 CM_ SG_ 1020 RLS_PLK_VRFD "release_park-lock_verified";
 CM_ SG_ 1020 EXH_INSP_TST "exhaust_inspection_test";
@@ -863,8 +1057,19 @@ CM_ BO_ 702 "100ms";
 CM_ BO_ 714 "1s - On F10/F11 BMW this is (outside air temperature (Relayed from KOMBI))";
 CM_ BO_ 739 "100ms";
 CM_ BO_ 806 "500ms";
-CM_ BO_ 935 "1s";
-CM_ BO_ 970 "1s";
+CM_ BO_ 935 "1s - Driving dynamics switch configuration";
+CM_ SG_ 935 RQ_SU_SW_DRDY "request_setup_switch_driving-dynamics";
+CM_ BO_ 970 "1s - Forecast trip information";
+CM_ SG_ 970 FRC_AVR_HVSTO_PWR "forecast_average_high-voltage-storage_power";
+CM_ SG_ 970 SYNCN_FRC_RD_INFO "synchronization_forecast_ride_information";
+CM_ SG_ 970 MUX_FRC_RD_INFO "multiplexer_forecast_ride_information
+
+3 comfort
+4 sports
+5 Sports+
+7ECO Pro
+8ECO Pro+
+15 Signal invalid";
 CM_ BO_ 976 "1s";
 CM_ BO_ 1053 "1s - OBD request limitation torque";
 CM_ SG_ 1053 INQY_LOWLIM_TORQ "inquiry_lower-limit_torque Lower torque limit of the desired loading torque. The signal is not used for OBD purposes";
@@ -874,6 +1079,21 @@ CM_ BO_ 1301 "Stops after 5 messages sent (640ms)";
 CM_ BO_ 1306 "640ms";
 CM_ BO_ 1374 "Stops after 5 messages sent (640ms)";
 CM_ BO_ 1434 "100ms (Non periodic)";
+CM_ BO_ 891 "10s - Enable cooling of high-voltage storage";
+CM_ SG_ 891 RLS_COOL_HVSTO "release_cooling_high-voltage-storage";
+CM_ SG_ 891 RQ_PAIC "request_park-air-conditioning";
+CM_ SG_ 891 RQ_CSOV_HVSTO "request_cold-shut-off-valve_high-voltage-storage";
+CM_ SG_ 891 ST_FRT_AC "status_front_aircon";
+CM_ SG_ 891 AVL_I_EKK "actual-value_current_EKK";
+CM_ BO_ 996 "10s - Electric water heater data";
+CM_ SG_ 996 AVL_I_EL_GEY "actual-value_current_electric_geyser";
+CM_ BO_ 411 "200ms - Control Crash";
+CM_ SG_ 411 ST_EXCE_ACLN_THRV "status_exceeding_acceleration_threshold-value";
+CM_ SG_ 411 CTR_PHTR_CR "control_park-heater_crash";
+CM_ SG_ 411 CTR_PCSH_MST "control_precrash_maste";
+CM_ SG_ 411 CTR_HAZW_CR "control_hazard-warning_crash";
+CM_ SG_ 411 CTR_SWO_EKP_CR "control_switch-off_EKP_crash";
+CM_ SG_ 411 CTR_CLSY_CR "control_central-locking-system_crash";
 VAL_ 274 RQ_OPN_DCSW_HVSTO_ILY 0 "No statement possible" 1 "not active" 2 "active" 3 "Signal invalid" ;
 VAL_ 274 RQ_OPC_CHG_HVSTO 0 "No statement possible. Diagnosis not yet completed" 1 "not active" 2 "active" 3 "Signal invalid" ;
 VAL_ 274 RQ_OPN_DCSW_HVSTO_FAST 0 "No statement possible. Diagnosis not yet completed" 1 "not active" 2 "active" 3 "Signal invalid" ;

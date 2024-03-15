@@ -324,6 +324,8 @@ BO_ 407 UnknownMsg197: 4 EDME
  SG_ counter_197 : 8|4@1+ (1,0) [0|14] "" Vector__XXX
 
 BO_ 1290 UnknownMsg50A: 8 Vector__XXX
+ SG_ NM2_AUTOSAR_RES_ACAN_50A : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NM2_USR_DT_ACAN_50A : 32|32@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 748 UnknownMsg2EC: 2 Vector__XXX
 
@@ -492,7 +494,7 @@ BO_ 1306 UnknownMsg51A: 8 Vector__XXX
 
 BO_ 1374 UnknownMsg55E: 8 Vector__XXX
 
-BO_ 1434 UnknownMsg59A: 8 Vector__XXX
+BO_ 1434 AEMsg59A: 8 Vector__XXX
 
 BO_ 891 IHKAMsg37B: 6 Vector__XXX
  SG_ RLS_COOL_HVSTO : 0|2@1+ (1,0) [0|3] "" Vector__XXX
@@ -515,6 +517,35 @@ BO_ 411 ACSMMsg19B: 8 Vector__XXX
  SG_ CTR_HAZW_CR : 20|2@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CTR_SWO_EKP_CR : 22|2@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CTR_CLSY_CR : 24|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 965 UCXMsg3C5: 8 Vector__XXX
+ SG_ ALIV_ST_DIAG_OBD_5_PT : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ST_DIAG_OBD_5_PT_MAX_MUX : 4|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ST_DIAG_OBD_5_PT_IMME_MUX : 10|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIAG_ST_OBD_5_PT_1 : 16|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIAG_ST_OBD_5_PT_2 : 22|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIAG_ST_OBD_5_PT_3 : 28|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIAG_ST_OBD_5_PT_4 : 34|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIAG_ST_OBD_5_PT_5 : 40|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIAG_ST_OBD_5_PT_6 : 46|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIAG_ST_OBD_5_PT_7 : 52|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DIAG_ST_OBD_5_PT_8 : 58|6@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 779 EDMEMsg30B: 8 EDME
+ SG_ CRC_30B : 0|8@1+ (1,0) [0|255] "CRC" Vector__XXX
+ SG_ ALIV_ST_ENG_STA_AUTO : 8|4@1+ (1,0) [0|14] "counter" Vector__XXX
+ SG_ SPEC_TYP_ENGSTA : 32|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 928 ZGWMsg3A0: 8 Vector__XXX
+ SG_ ST_ENERG_FZM : 16|4@1+ (1,0) [0|15] "status" Vector__XXX
+ SG_ ST_BT_PROTE_WUP : 20|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ ST_ILK_ERRM_FZM : 56|2@1+ (1,0) [0|3] "status" Vector__XXX
+
+BO_ 1426 EDMEMsg592: 8 EDME
+
+BO_ 1062 SMEMsg426: 8 Vector__XXX
+ SG_ ID_U_CELL_HVSTO M : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DT_U_CELL : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
@@ -833,7 +864,9 @@ CM_ BO_ 668 "100ms";
 CM_ BO_ 669 "100ms";
 CM_ BO_ 407 "30ms - Status gear selector switch (Relayed from GWS on i8)";
 CM_ SG_ 407 counter_197 "0-E increments each message";
-CM_ BO_ 1290 "650ms";
+CM_ BO_ 1290 "640ms - Network management-2 A-CAN";
+CM_ SG_ 1290 NM2_AUTOSAR_RES_ACAN_50A "NM2_AUTOSAR_reserved_A-CAN";
+CM_ SG_ 1290 NM2_USR_DT_ACAN_50A "NM2_user_data_A-CAN";
 CM_ BO_ 748 "2s";
 CM_ BO_ 1289 "Stops after 5 messages sent (640ms)";
 CM_ BO_ 1075 "1s - High-voltage storage specification (Relayed from EME on i8)";
@@ -1026,7 +1059,7 @@ Note: Reserved for functional identifier signal tag.
 1110 Reserved signal tag is not implemented.
 Note: Reserved for functional identifier signal tag.
 1111 Signal_unfilled Transmission function not in operation";
-CM_ BO_ 691 "100ms";
+CM_ BO_ 691 "100ms - Status start power drive";
 CM_ BO_ 969 "1s (Non periodic)";
 CM_ BO_ 1019 "1s - Data drive train 1";
 CM_ SG_ 1019 AIP_ENG_DRV "not used on i3";
@@ -1077,8 +1110,8 @@ CM_ SG_ 1053 INQY_UPLIM_TORQ "inquiry_upper-limit_torque Upper torque limit of t
 CM_ SG_ 1053 ACTVN_OBD_LIM_TORQ "Not used on i3";
 CM_ BO_ 1301 "Stops after 5 messages sent (640ms)";
 CM_ BO_ 1306 "640ms";
-CM_ BO_ 1374 "Stops after 5 messages sent (640ms)";
-CM_ BO_ 1434 "100ms (Non periodic)";
+CM_ BO_ 1374 "Stops after 5 messages sent (640ms) - Networkmanagement-2 A-CAN";
+CM_ BO_ 1434 "- Services";
 CM_ BO_ 891 "10s - Enable cooling of high-voltage storage";
 CM_ SG_ 891 RLS_COOL_HVSTO "release_cooling_high-voltage-storage";
 CM_ SG_ 891 RQ_PAIC "request_park-air-conditioning";
@@ -1087,6 +1120,7 @@ CM_ SG_ 891 ST_FRT_AC "status_front_aircon";
 CM_ SG_ 891 AVL_I_EKK "actual-value_current_EKK";
 CM_ BO_ 996 "10s - Electric water heater data";
 CM_ SG_ 996 AVL_I_EL_GEY "actual-value_current_electric_geyser";
+CM_ BO_ 1528 " - Services";
 CM_ BO_ 411 "200ms - Control Crash";
 CM_ SG_ 411 ST_EXCE_ACLN_THRV "status_exceeding_acceleration_threshold-value";
 CM_ SG_ 411 CTR_PHTR_CR "control_park-heater_crash";
@@ -1094,6 +1128,47 @@ CM_ SG_ 411 CTR_PCSH_MST "control_precrash_maste";
 CM_ SG_ 411 CTR_HAZW_CR "control_hazard-warning_crash";
 CM_ SG_ 411 CTR_SWO_EKP_CR "control_switch-off_EKP_crash";
 CM_ SG_ 411 CTR_CLSY_CR "control_central-locking-system_crash";
+CM_ BO_ 965 " - Status diagnostics OBD 5 powertrain
+
+Before SP2015: the first message is sent 500ms after terminal 15 is closed
+take place.
+From SP2015: the first message is sent 500ms after the message is ready to send
+control unit and set active condition.
+The 500ms is determined according to the internal time measurement.
+Debounce time: tmin = 160.0 ms
+Active condition = KL_15
+Send condition = SIGNALCHANGE";
+CM_ BO_ 779 "500ms - Status Motor Start Auto";
+CM_ SG_ 779 ALIV_ST_ENG_STA_AUTO "alive_status_engine_start_AUTO counter 0...14";
+CM_ SG_ 779 SPEC_TYP_ENGSTA "
+specification_type_engine-start
+0 No engine start requested
+1 Start only by SGR SGR = starter generator
+2 Start only by EM EM = E-machine
+3 Start by SGR and EM SGR = starter generator
+EM = electric machine
+4 Start only by RS RS = pinion starter
+5 Start only through ZaSta, ZuRS or similar change of mind capable
+starter
+ZaSta = timing belt starter
+ZuRS= more startable
+Pinion starter
+15 Signal invalid";
+CM_ BO_ 928 "5s - Vehicle condition";
+CM_ SG_ 928 ST_ENERG_FZM "status_Energy_FZM
+0 ENSTATE_GOOD
+1 ENSTATE_OK
+2 ENSTATE_SHORTAGE
+3 ENSTATE_SEVERE_SHORTAGE
+15 Signal invalid";
+CM_ SG_ 928 ST_ILK_ERRM_FZM "status_interlock_error-memory_FZM
+
+00 Error memory release Entry of errors without restrictions
+01 Error memory lock The network error area must be locked
+10 Reserve reserved for future expansion
+11 Signal invalid";
+CM_ BO_ 1426 "- Services";
+CM_ BO_ 1062 "Polled message? Cellvoltages";
 VAL_ 274 RQ_OPN_DCSW_HVSTO_ILY 0 "No statement possible" 1 "not active" 2 "active" 3 "Signal invalid" ;
 VAL_ 274 RQ_OPC_CHG_HVSTO 0 "No statement possible. Diagnosis not yet completed" 1 "not active" 2 "active" 3 "Signal invalid" ;
 VAL_ 274 RQ_OPN_DCSW_HVSTO_FAST 0 "No statement possible. Diagnosis not yet completed" 1 "not active" 2 "active" 3 "Signal invalid" ;
@@ -1148,4 +1223,5 @@ VAL_ 1019 ST_CAT_HT 0 "Cat does not heat actively" 1 "Cat heater with traction a
 VAL_ 1019 ST_RDI_DRVG 0 "Not ready to drive" 1 "Ready to drive" 3 "Value not valid" ;
 VAL_ 1020 RLS_PLK_VRFD 0 "No statement" 1 "Release not granted" 2 "Release granted" 3 "Signal invalid" ;
 VAL_ 1020 EXH_INSP_TST 0 "Test not active" 1 "Test active" 3 "Signal invalid" ;
+VAL_ 1062 ID_U_CELL_HVSTO 0 "Voltages 1" 2 "Voltages 2" 3 "Voltages 3" 4 "Voltages 4" 5 "Voltages 5" 6 "Voltages 6" 7 "Voltages 7" 8 "Voltages 8" 9 "Voltages 9" 10 "Voltages 10" 11 "Voltages 11" 12 "Voltages 12" 13 "Voltages 13" 14 "Voltages 14" ;
 

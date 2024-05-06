@@ -113,7 +113,7 @@ BO_ 274 BMSMsg112: 8 SME
  SG_ Battery_Volts : 16|16@1+ (0.1,0) [0|819] "Volts" Vector__XXX
  SG_ DC_link : 56|8@1+ (4,0) [0|820] "Volts" Vector__XXX
  SG_ RQ_OPN_DCSW_HVSTO_ILY : 48|2@1+ (1,0) [0|16] "" Vector__XXX
- SG_ Battery_Current : 0|16@1+ (0.1,-819.2) [0|819] "Amps" Vector__XXX
+ SG_ Battery_Current : 0|16@1+ (0.1,-819.2) [0|819.2] "Amps" Vector__XXX
  SG_ HVBatt_SOC : 32|12@1+ (0.1,0) [0|100] "%" Vector__XXX
  SG_ LDST_HVSTO : 44|2@1+ (1,0) [0|0] "" Vector__XXX
  SG_ RQ_OPC_CHG_HVSTO : 46|2@1+ (1,0) [0|0] "" Vector__XXX
@@ -569,6 +569,8 @@ CM_ SG_ 3221225472 TemperatureMaxMaybe "Temperature might reside here";
 CM_ BO_ 274 "10ms - Status Of High-Voltage Battery 2";
 CM_ SG_ 274 DC_link "actual-value_voltage_Link";
 CM_ SG_ 274 RQ_OPN_DCSW_HVSTO_ILY "request_open_disconnecting-switch_high-voltage-storage_instantl";
+CM_ SG_ 274 Battery_Current "-819.2 ... 819 A
+(PH) = 0.1 * (HEX) - 819.2 [A]";
 CM_ SG_ 274 HVBatt_SOC "charging-condition_high-voltage-storage";
 CM_ SG_ 274 LDST_HVSTO "Not used";
 CM_ SG_ 274 RQ_OPC_CHG_HVSTO "request_open-circuit_charge_high-voltage-storage";

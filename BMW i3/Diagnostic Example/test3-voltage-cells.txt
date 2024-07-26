@@ -1,0 +1,130 @@
+Test file : C:\EDIABAS\ECU\TEST.TST
+Start     : 15.07.2024 10:35:46,8
+Nr 1(  1) : 15.07.2024 10:35:47,0
+apiJob("SME_I1","steuern_routine","ARG;ZELLSPANNUNG_LESEN;STR;1","")
+  _REQUEST                        = 5 Bytes
+    0000 : 31 01 AD 6E 01                                     1.­n. 0x6F1 // SME ID
+  _RESPONSE                       = 4 Bytes
+    0000 : 71 01 AD 6E                                        q.­n
+  JOB_STATUS                      = OKAY        
+Nr 2(  1) : 15.07.2024 10:35:47,2
+apiJob("SME_I1","steuern_routine","ARG;ZELLSPANNUNG_LESEN;RRR","")
+  _REQUEST                        = 4 Bytes
+    0000 : 31 03 AD 6E                                        1.­n
+  _RESPONSE                       = 6 Bytes
+    0000 : 71 03 AD 6E 0E C2                                  q.­n.Â
+  JOB_STATUS                      = OKAY        
+  STAT_ZELLSPANNUNG_EINH          = V           
+  STAT_ZELLSPANNUNG_INFO          = aktuell gemessener Spannungswert der Zelle x
+  STAT_ZELLSPANNUNG_WERT          = 3.778000E+000
+Nr 3(  1) : 15.07.2024 10:35:47,5
+apiJob("SME_I1","steuern_routine","ARG;ZELLSPANNUNG_LESEN;STR;22","")
+  _REQUEST                        = 5 Bytes
+    0000 : 31 01 AD 6E 16                                     1.­n.
+  _RESPONSE                       = 4 Bytes
+    0000 : 71 01 AD 6E                                        q.­n
+  JOB_STATUS                      = OKAY        
+Nr 4(  1) : 15.07.2024 10:35:47,7
+apiJob("SME_I1","steuern_routine","ARG;ZELLSPANNUNG_LESEN;RRR","")
+  _REQUEST                        = 4 Bytes
+    0000 : 31 03 AD 6E                                        1.­n
+  _RESPONSE                       = 6 Bytes
+    0000 : 71 03 AD 6E 0E C2                                  q.­n.Â
+  JOB_STATUS                      = OKAY        
+  STAT_ZELLSPANNUNG_EINH          = V           
+  STAT_ZELLSPANNUNG_INFO          = aktuell gemessener Spannungswert der Zelle x
+  STAT_ZELLSPANNUNG_WERT          = 3.778000E+000
+Nr 5(  1) : 15.07.2024 10:35:47,9
+apiJob("SME_I1","steuern_routine","ARG;ZELLSPANNUNG_LESEN;STR;33","")
+  _REQUEST                        = 5 Bytes
+    0000 : 31 01 AD 6E 21                                     1.­n!
+  _RESPONSE                       = 4 Bytes
+    0000 : 71 01 AD 6E                                        q.­n
+  JOB_STATUS                      = OKAY        
+Nr 6(  1) : 15.07.2024 10:35:48,1
+apiJob("SME_I1","steuern_routine","ARG;ZELLSPANNUNG_LESEN;RRR","")
+  _REQUEST                        = 4 Bytes
+    0000 : 31 03 AD 6E                                        1.­n
+  _RESPONSE                       = 6 Bytes
+    0000 : 71 03 AD 6E 0E C2                                  q.­n.Â
+  JOB_STATUS                      = OKAY        
+  STAT_ZELLSPANNUNG_EINH          = V           
+  STAT_ZELLSPANNUNG_INFO          = aktuell gemessener Spannungswert der Zelle x
+  STAT_ZELLSPANNUNG_WERT          = 3.778000E+000
+Nr 7(  1) : 15.07.2024 10:35:48,4
+apiJob("SME_I1","steuern_routine","ARG;ZELLSPANNUNG_LESEN;STR;44","")
+  _REQUEST                        = 5 Bytes
+    0000 : 31 01 AD 6E 2C                                     1.­n,
+  _RESPONSE                       = 4 Bytes
+    0000 : 71 01 AD 6E                                        q.­n
+  JOB_STATUS                      = OKAY        
+Nr 8(  1) : 15.07.2024 10:35:48,7
+apiJob("SME_I1","steuern_routine","ARG;ZELLSPANNUNG_LESEN;RRR","")
+  _REQUEST                        = 4 Bytes
+    0000 : 31 03 AD 6E                                        1.­n
+  _RESPONSE                       = 6 Bytes
+    0000 : 71 03 AD 6E 0E C1                                  q.­n.Á
+  JOB_STATUS                      = OKAY        
+  STAT_ZELLSPANNUNG_EINH          = V           
+  STAT_ZELLSPANNUNG_INFO          = aktuell gemessener Spannungswert der Zelle x
+  STAT_ZELLSPANNUNG_WERT          = 3.777000E+000
+Nr 9(  1) : 15.07.2024 10:35:49,0
+apiJob("SME_I1","steuern_routine","ARG;ZELLSPANNUNG_LESEN;STR;55","")
+  _REQUEST                        = 5 Bytes
+    0000 : 31 01 AD 6E 37                                     1.­n7
+  _RESPONSE                       = 4 Bytes
+    0000 : 71 01 AD 6E                                        q.­n
+  JOB_STATUS                      = OKAY        
+Nr10(  1) : 15.07.2024 10:35:49,2
+apiJob("SME_I1","steuern_routine","ARG;ZELLSPANNUNG_LESEN;RRR","")
+  _REQUEST                        = 4 Bytes
+    0000 : 31 03 AD 6E                                        1.­n
+  _RESPONSE                       = 6 Bytes
+    0000 : 71 03 AD 6E 0E C1                                  q.­n.Á
+  JOB_STATUS                      = OKAY        
+  STAT_ZELLSPANNUNG_EINH          = V           
+  STAT_ZELLSPANNUNG_INFO          = aktuell gemessener Spannungswert der Zelle x
+  STAT_ZELLSPANNUNG_WERT          = 3.777000E+000
+Nr11(  1) : 15.07.2024 10:35:49,5
+apiJob("SME_I1","steuern_routine","ARG;ZELLSPANNUNG_LESEN;STR;66","")
+  _REQUEST                        = 5 Bytes
+    0000 : 31 01 AD 6E 42                                     1.­nB
+  _RESPONSE                       = 4 Bytes
+    0000 : 71 01 AD 6E                                        q.­n
+  JOB_STATUS                      = OKAY        
+Nr12(  1) : 15.07.2024 10:35:49,7
+apiJob("SME_I1","steuern_routine","ARG;ZELLSPANNUNG_LESEN;RRR","")
+  _REQUEST                        = 4 Bytes
+    0000 : 31 03 AD 6E                                        1.­n
+  _RESPONSE                       = 6 Bytes
+    0000 : 71 03 AD 6E 0E C4                                  q.­n.Ä
+  JOB_STATUS                      = OKAY        
+  STAT_ZELLSPANNUNG_EINH          = V           
+  STAT_ZELLSPANNUNG_INFO          = aktuell gemessener Spannungswert der Zelle x
+  STAT_ZELLSPANNUNG_WERT          = 3.780000E+000
+Nr13(  1) : 15.07.2024 10:35:50,0
+apiJob("SME_I1","steuern_routine","ARG;ZELLSPANNUNG_LESEN;STR;77","")
+  _REQUEST                        = 5 Bytes
+    0000 : 31 01 AD 6E 4D                                     1.­nM
+  _RESPONSE                       = 4 Bytes
+    0000 : 71 01 AD 6E                                        q.­n
+  JOB_STATUS                      = OKAY        
+Nr14(  1) : 15.07.2024 10:35:50,2
+apiJob("SME_I1","steuern_routine","ARG;ZELLSPANNUNG_LESEN;RRR","")
+  _REQUEST                        = 4 Bytes
+    0000 : 31 03 AD 6E                                        1.­n
+  _RESPONSE                       = 6 Bytes
+    0000 : 71 03 AD 6E 0E C1                                  q.­n.Á
+  JOB_STATUS                      = OKAY        
+  STAT_ZELLSPANNUNG_EINH          = V           
+  STAT_ZELLSPANNUNG_INFO          = aktuell gemessener Spannungswert der Zelle x
+  STAT_ZELLSPANNUNG_WERT          = 3.777000E+000
+Nr15(  1) : 15.07.2024 10:35:50,5
+apiJob("SME_I1","steuern_routine","ARG;ZELLSPANNUNG_LESEN;STR;88","")
+  _REQUEST                        = 5 Bytes
+    0000 : 31 01 AD 6E 58                                     1.­nX
+  _RESPONSE                       = 4 Bytes
+    0000 : 71 01 AD 6E                                        q.­n
+  JOB_STATUS                      = OKAY        
+Stop      : 15.07.2024 10:35:50,7
+Dauer     : 3,8 s

@@ -1,0 +1,331 @@
+Test file : C:\EDIABAS\ECU\BATT-VIN.TST
+Start     : 15.07.2024 10:38:03,6
+Nr 1(  1) : 15.07.2024 10:38:03,8
+apiJob("SME_I1","status_lesen","ARG;VIN","")
+  _REQUEST                        = 3 Bytes
+    0000 : 22 F1 90                                           "ñ
+  _RESPONSE                       = 20 Bytes
+    0000 : 62 F1 90 57 42 59 31 5A   32 31 30 30 30 56 33 31  bñWBY1Z  21000V31
+    0010 : 30 30 34 32                                        0042
+  JOB_STATUS                      = OKAY        
+  STAT_FGNR17_EINH                = TEXT        
+  STAT_FGNR17_INFO                = 17-Stellige Fahrgestellnummer '00000000000000000' wenn keine Fahrgestellnummer vorhanden (jungfräuliches Steuergerät). Hinweis: Der Resultwert '00000000000000000' wird zurückgeliefert, falls das CAS 0xFF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF im Antworttelegramm liefert.
+  STAT_FGNR17_TEXT                = WBY1Z21000V310042
+Nr 2(  1) : 15.07.2024 10:38:03,9
+apiJob("SME_I1","cps_lesen","","")
+  CPS                             = V310042     
+  _REQUEST                        = 3 Bytes
+    0000 : 22 37 FE                                           "7þ
+  CPS_VIN7                        = V310042     
+  _RESPONSE                       = 10 Bytes
+    0000 : 62 37 FE 56 33 31 30 30   34 32                    b7þV3100  42
+  JOB_STATUS                      = OKAY        
+Nr 3(  1) : 15.07.2024 10:38:04,0
+apiJob("SME_I1","seriennummer_lesen","","")
+  _REQUEST                        = 3 Bytes
+    0000 : 22 F1 8C                                           "ñ?
+  _RESPONSE                       = 13 Bytes
+    0000 : 62 F1 8C 30 31 35 31 38   39 30 30 34 35           bñ?01518  90045
+  JOB_STATUS                      = OKAY        
+  SERIENNUMMER                    = 0151890045  
+Nr 4(  1) : 15.07.2024 10:38:04,2
+apiJob("SME_I1","status_lesen","ARG;ZELLSPANNUNGEN_MIN_MAX","")
+  _REQUEST                        = 3 Bytes
+    0000 : 22 DD BF                                           "Ý¿
+  _RESPONSE                       = 7 Bytes
+    0000 : 62 DD BF 0E BF 0E C2                               bÝ¿.¿.Â
+  JOB_STATUS                      = OKAY        
+  STAT_UCELL_MAX_EINH             = V           
+  STAT_UCELL_MAX_INFO             = maximale Einzelzellspannung aller Einzelzellen
+  STAT_UCELL_MAX_WERT             = 3.778000E+000
+  STAT_UCELL_MIN_EINH             = V           
+  STAT_UCELL_MIN_INFO             = minimale Einzelzellspannung aller Einzelzellen
+  STAT_UCELL_MIN_WERT             = 3.775000E+000
+Nr 5(  1) : 15.07.2024 10:38:04,5
+apiJob("SME_I1","status_lesen","ARG;ZUSTAND_SPEICHER","")
+  _REQUEST                        = 3 Bytes
+    0000 : 22 DF A0                                           "ß 
+  _RESPONSE                       = 41 Bytes
+    0000 : 62 DF A0 FF FF FF FF FF   FF 93 7C 93 97 93 8B 07  bß ÿÿÿÿÿ  ÿ?|????.
+    0010 : D0 08 34 07 DC FF FF FF   FF 31 83 07 DF 07 FC 07  Ð.4.Üÿÿÿ  ÿ1?.ß.ü.
+    0020 : ED FF FF FF FF FF FF 31   83                       íÿÿÿÿÿÿ1  ?
+  JOB_STATUS                      = OKAY        
+  STAT_ZELLOCV_MAX_EINH           = V           
+  STAT_ZELLOCV_MAX_INFO           = Ausgabe der aktuellen maximalen im letzten Ruhezustand gemessenen OCV aller Zellen in V
+  STAT_ZELLOCV_MAX_WERT           = 6.553500E+000
+  STAT_ZELLOCV_MIN_EINH           = V           
+  STAT_ZELLOCV_MIN_INFO           = Ausgabe der aktuellen minimalen im letzten Ruhezustand gemessenen OCV aller Zellen in V
+  STAT_ZELLOCV_MIN_WERT           = 6.553500E+000
+  STAT_ZELLSOC_MAX_EINH           = %           
+  STAT_ZELLSOC_MAX_INFO           = Ausgabe des aktuellen maximalen gemessenen SoC aller Zellen in %
+  STAT_ZELLSOC_MAX_WERT           = 2.044000E+001
+  STAT_ZELLSOC_MIN_EINH           = %           
+  STAT_ZELLSOC_MIN_INFO           = Ausgabe des aktuellen minimalen gemessenen SoC aller Zellen in %
+  STAT_ZELLSOC_MIN_WERT           = 2.015000E+001
+  STAT_ZELLOCV_MEAN_EINH          = V           
+  STAT_ZELLOCV_MEAN_INFO          = Ausgabe der aktuellen mittleren im letzten Ruhezustand gemessenen OCV aller Zellen in V
+  STAT_ZELLOCV_MEAN_WERT          = 6.553500E+000
+  STAT_ZELLSOC_MEAN_EINH          = %           
+  STAT_ZELLSOC_MEAN_INFO          = Ausgabe des aktuellen mittleren gemessenen SoC aller Zellen in %
+  STAT_ZELLSOC_MEAN_WERT          = 2.029000E+001
+  STAT_ZELLSPANNUNG_MAX_EINH      = V           
+  STAT_ZELLSPANNUNG_MAX_INFO      = Ausgabe der aktuellen maximalen gemessenen Zellspannung aller Zellen in V
+  STAT_ZELLSPANNUNG_MAX_WERT      = 3.778300E+000
+  STAT_ZELLSPANNUNG_MIN_EINH      = V           
+  STAT_ZELLSPANNUNG_MIN_INFO      = Ausgabe der aktuellen minimalen gemessenen Zellspannung aller Zellen in V
+  STAT_ZELLSPANNUNG_MIN_WERT      = 3.775600E+000
+  STAT_ZELLSPANNUNG_MEAN_EINH     = V           
+  STAT_ZELLSPANNUNG_MEAN_INFO     = Ausgabe der aktuellen mittleren gemessenen Zellspannung aller Zellen in V
+  STAT_ZELLSPANNUNG_MEAN_WERT     = 3.777100E+000
+  STAT_ZELLKAPAZITAET_MAX_EINH    = Ah          
+  STAT_ZELLKAPAZITAET_MAX_INFO    = Ausgabe der aktuellen maximalen gemessenen Zellkapazität aller Zellen in Ah
+  STAT_ZELLKAPAZITAET_MAX_WERT    = 6.553500E+002
+  STAT_ZELLKAPAZITAET_MIN_EINH    = Ah          
+  STAT_ZELLKAPAZITAET_MIN_INFO    = Ausgabe der aktuellen minimalen gemessenen Zellkapazität aller Zellen in Ah
+  STAT_ZELLKAPAZITAET_MIN_WERT    = 6.553500E+002
+  STAT_ZELLTEMPERATUR_MAX_EINH    = °C          
+  STAT_ZELLTEMPERATUR_MAX_INFO    = Ausgabe der aktuellen maximalen gemessenen Zelltemperatur aller Zellen in °C
+  STAT_ZELLTEMPERATUR_MAX_WERT    = 2.100000E+001
+  STAT_ZELLTEMPERATUR_MIN_EINH    = °C          
+  STAT_ZELLTEMPERATUR_MIN_INFO    = Ausgabe der aktuellen minimalen gemessenen Zelltemperatur aller Zellen in °C
+  STAT_ZELLTEMPERATUR_MIN_WERT    = 2.000000E+001
+  STAT_ZELLKAPAZITAET_MEAN_EINH   = Ah          
+  STAT_ZELLKAPAZITAET_MEAN_INFO   = Ausgabe der aktuellen mittleren gemessenen Zellkapazität gemittelt über alle Zellen in Ah
+  STAT_ZELLKAPAZITAET_MEAN_WERT   = 6.553500E+002
+  STAT_ZELLTEMPERATUR_MEAN_EINH   = °C          
+  STAT_ZELLTEMPERATUR_MEAN_INFO   = Ausgabe der aktuellen mittleren gemessenen Zelltemperatur aller Zellen in °C
+  STAT_ZELLTEMPERATUR_MEAN_WERT   = 2.012000E+001
+  STAT_ZELLWIDERSTANDSFAKTOR_MAX_EINH = -           
+  STAT_ZELLWIDERSTANDSFAKTOR_MAX_INFO = Ausgabe des aktuellen maximalen gemessenen Widerstandsfaktors aller Zellen
+  STAT_ZELLWIDERSTANDSFAKTOR_MAX_WERT = 6.553500E+000
+  STAT_ZELLWIDERSTANDSFAKTOR_MIN_EINH = -           
+  STAT_ZELLWIDERSTANDSFAKTOR_MIN_INFO = Ausgabe des aktuellen minimalen gemessenen Widerstandsfaktors aller Zellen
+  STAT_ZELLWIDERSTANDSFAKTOR_MIN_WERT = 6.553500E+000
+  STAT_IMPEDANCE_ESTIMATION_ALPHA_EINH = -           
+  STAT_IMPEDANCE_ESTIMATION_ALPHA_INFO = Aktueller Alterungsfaktor des seriellen und parallelen ohmschen Wider aktuellenstands sowie der parallelen Kapazität (1,5 = Eröhung des aktuellen Wider aktuellenstands um 50%)
+  STAT_IMPEDANCE_ESTIMATION_ALPHA_WERT = 1.267500E+000
+  STAT_ZELLWIDERSTANDSFAKTOR_MEAN_EINH = -           
+  STAT_ZELLWIDERSTANDSFAKTOR_MEAN_INFO = Ausgabe des aktuellen mittleren gemessenen Widerstandsfaktors aller Zellen
+  STAT_ZELLWIDERSTANDSFAKTOR_MEAN_WERT = 1.267500E+000
+Nr 6(  1) : 15.07.2024 10:38:04,8
+apiJob("SME_I1","status_lesen","ARG;ISO_ERR_STD_FZ1_2","")
+  _REQUEST                        = 3 Bytes
+    0000 : 22 D6 CB                                           "ÖË
+  _RESPONSE                       = 55 Bytes
+    0000 : 62 D6 CB 00 00 00 00 00   00 00 00 00 00 00 00 00  bÖË.....  ........
+    0010 : 00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 00  ........  ........
+    0020 : 00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 00  ........  ........
+    0030 : 00 00 00 00 00 00 00                               .......
+  JOB_STATUS                      = OKAY        
+  STAT_FEHLERZAEHLER_STD_EINH     = -           
+  STAT_FEHLERZAEHLER_STD_INFO     = LI: Zähler aller aufgetretenen Fehler der Standardmessung
+  STAT_FEHLERZAEHLER_STD_WERT     = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_01_EINH  = V           
+  STAT_INPUT_ISO_STD_FZ1_01_INFO  = LI: erstmaliger Fehlerzeitpunkt Ubat01 [V]
+  STAT_INPUT_ISO_STD_FZ1_01_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_02_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ1_02_INFO  = LI: erstmaliger Fehlerzeitpunkt Ubat01_QUAL
+  STAT_INPUT_ISO_STD_FZ1_02_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_03_EINH  = V           
+  STAT_INPUT_ISO_STD_FZ1_03_INFO  = LI: erstmaliger Fehlerzeitpunkt Ubat02 [V]
+  STAT_INPUT_ISO_STD_FZ1_03_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_04_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ1_04_INFO  = LI: erstmaliger Fehlerzeitpunkt Ubat02_QUAL
+  STAT_INPUT_ISO_STD_FZ1_04_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_05_EINH  = V           
+  STAT_INPUT_ISO_STD_FZ1_05_INFO  = LI: erstmaliger Fehlerzeitpunkt Uiso01 [V]
+  STAT_INPUT_ISO_STD_FZ1_05_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_06_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ1_06_INFO  = LI: erstmaliger Fehlerzeitpunkt Uiso01_QUAL
+  STAT_INPUT_ISO_STD_FZ1_06_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_07_EINH  = V           
+  STAT_INPUT_ISO_STD_FZ1_07_INFO  = LI: erstmaliger Fehlerzeitpunkt Uiso02 [V]
+  STAT_INPUT_ISO_STD_FZ1_07_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_08_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ1_08_INFO  = LI: erstmaliger Fehlerzeitpunkt Uiso02_QUAL
+  STAT_INPUT_ISO_STD_FZ1_08_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_09_EINH  = V           
+  STAT_INPUT_ISO_STD_FZ1_09_INFO  = LI: erstmaliger Fehlerzeitpunkt Uoffset [V]
+  STAT_INPUT_ISO_STD_FZ1_09_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_10_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ1_10_INFO  = LI: erstmaliger Fehlerzeitpunkt Uoffset_QUAL
+  STAT_INPUT_ISO_STD_FZ1_10_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_11_EINH  = kOhm        
+  STAT_INPUT_ISO_STD_FZ1_11_INFO  = LI: erstmaliger Fehlerzeitpunkt R_iso_ges [kOhm]
+  STAT_INPUT_ISO_STD_FZ1_11_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_12_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ1_12_INFO  = LI: erstmaliger Fehlerzeitpunkt R_iso_gesQUAL
+  STAT_INPUT_ISO_STD_FZ1_12_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_13_EINH  = kOhm        
+  STAT_INPUT_ISO_STD_FZ1_13_INFO  = LI: erstmaliger Fehlerzeitpunkt R_iso_plus [kOhm]
+  STAT_INPUT_ISO_STD_FZ1_13_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_14_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ1_14_INFO  = LI: erstmaliger Fehlerzeitpunkt R_iso_plus_QUAL
+  STAT_INPUT_ISO_STD_FZ1_14_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_15_EINH  = kOhm        
+  STAT_INPUT_ISO_STD_FZ1_15_INFO  = LI: erstmaliger Fehlerzeitpunkt R_iso_minus [kOhm]
+  STAT_INPUT_ISO_STD_FZ1_15_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ1_16_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ1_16_INFO  = LI: erstmaliger Fehlerzeitpunkt R_iso_minus_QUAL
+  STAT_INPUT_ISO_STD_FZ1_16_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_01_EINH  = V           
+  STAT_INPUT_ISO_STD_FZ2_01_INFO  = LI: letztmaliger Fehlerzeitpunkt Ubat01 [V]
+  STAT_INPUT_ISO_STD_FZ2_01_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_02_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ2_02_INFO  = LI: letztmaliger Fehlerzeitpunkt Ubat01_QUAL
+  STAT_INPUT_ISO_STD_FZ2_02_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_03_EINH  = V           
+  STAT_INPUT_ISO_STD_FZ2_03_INFO  = LI: letztmaliger Fehlerzeitpunkt Ubat02 [V]
+  STAT_INPUT_ISO_STD_FZ2_03_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_04_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ2_04_INFO  = LI: letztmaliger Fehlerzeitpunkt Ubat02_QUAL
+  STAT_INPUT_ISO_STD_FZ2_04_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_05_EINH  = V           
+  STAT_INPUT_ISO_STD_FZ2_05_INFO  = LI: letztmaliger Fehlerzeitpunkt Uiso01 [V]
+  STAT_INPUT_ISO_STD_FZ2_05_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_06_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ2_06_INFO  = LI: letztmaliger Fehlerzeitpunkt Uiso01_QUAL
+  STAT_INPUT_ISO_STD_FZ2_06_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_07_EINH  = V           
+  STAT_INPUT_ISO_STD_FZ2_07_INFO  = LI: letztmaliger Fehlerzeitpunkt Uiso02 [V]
+  STAT_INPUT_ISO_STD_FZ2_07_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_08_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ2_08_INFO  = LI: letztmaliger Fehlerzeitpunkt Uiso02_QUAL
+  STAT_INPUT_ISO_STD_FZ2_08_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_09_EINH  = V           
+  STAT_INPUT_ISO_STD_FZ2_09_INFO  = LI: letztmaliger Fehlerzeitpunkt Uoffset [V]
+  STAT_INPUT_ISO_STD_FZ2_09_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_10_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ2_10_INFO  = LI: letztmaliger Fehlerzeitpunkt Uoffset_QUAL
+  STAT_INPUT_ISO_STD_FZ2_10_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_11_EINH  = kOhm        
+  STAT_INPUT_ISO_STD_FZ2_11_INFO  = LI: letztmaliger Fehlerzeitpunkt R_iso_ges [kOhm]
+  STAT_INPUT_ISO_STD_FZ2_11_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_12_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ2_12_INFO  = LI: letztmaliger Fehlerzeitpunkt R_iso_gesQUAL
+  STAT_INPUT_ISO_STD_FZ2_12_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_13_EINH  = kOhm        
+  STAT_INPUT_ISO_STD_FZ2_13_INFO  = LI: letztmaliger Fehlerzeitpunkt R_iso_plus [kOhm]
+  STAT_INPUT_ISO_STD_FZ2_13_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_14_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ2_14_INFO  = LI: letztmaliger Fehlerzeitpunkt R_iso_plus_QUAL
+  STAT_INPUT_ISO_STD_FZ2_14_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_15_EINH  = kOhm        
+  STAT_INPUT_ISO_STD_FZ2_15_INFO  = LI: letztmaliger Fehlerzeitpunkt R_iso_minus [kOhm]
+  STAT_INPUT_ISO_STD_FZ2_15_WERT  = 0.000000E+000
+  STAT_INPUT_ISO_STD_FZ2_16_EINH  = -           
+  STAT_INPUT_ISO_STD_FZ2_16_INFO  = LI: letztmaliger Fehlerzeitpunkt R_iso_minus_QUAL
+  STAT_INPUT_ISO_STD_FZ2_16_WERT  = 0.000000E+000
+Nr 7(  1) : 15.07.2024 10:38:05,1
+apiJob("SME_I1","status_lesen","ARG;ISOLATIONSWIDERSTAND","")
+  _REQUEST                        = 3 Bytes
+    0000 : 22 DD 6A                                           "Ýj
+  _RESPONSE                       = 12 Bytes
+    0000 : 62 DD 6A 0D 09 0D 1B 00   00 01 01 00              bÝj.....  ....
+  JOB_STATUS                      = OKAY        
+  STAT_ISOWIDERSTAND_INT_EINH     = kOhm        
+  STAT_ISOWIDERSTAND_INT_INFO     = Ermittelter interner Isowiderstand (offene Schütze); wird nur auf Anfrage per Service-Routine STEUERN_ISOLATION bei offenen Schützen gemessen
+  STAT_ISOWIDERSTAND_INT_WERT     = 0.000000E+000
+  STAT_ISOWIDERSTAND_INT_PLAUS    = 0            00 00 00 00  ....    
+  STAT_ISOWIDERSTAND_EXT_STD_EINH = kOhm        
+  STAT_ISOWIDERSTAND_EXT_STD_INFO = Ermittelter Isowiderstand vom Gesamtsystem im Betrieb (geschlossene Schütze)
+  STAT_ISOWIDERSTAND_EXT_STD_WERT = 3.355000E+003
+  STAT_ISOWIDERSTAND_EXT_TRG_EINH = kOhm        
+  STAT_ISOWIDERSTAND_EXT_TRG_INFO = Ermittelter Isowiderstand vom Gesamtsystem im Nachlauf (geschlossene Schütze)
+  STAT_ISOWIDERSTAND_EXT_TRG_WERT = 3.337000E+003
+  STAT_ISOWIDERSTAND_EXT_STD_PLAUS = 1            00 00 00 01  ....    
+  STAT_ISOWIDERSTAND_EXT_TRG_PLAUS = 1            00 00 00 01  ....    
+  STAT_ISOWIDERSTAND_INT_PLAUS_INFO = Intern: 0 = Isolationswiderstand nicht plausibel, 1 = Isolationswiderstand plausibel; wird nur auf Anfrage per Service-Routine STEUERN_ISOLATION bei offenen Schützen gemessen
+  STAT_ISOWIDERSTAND_EXT_STD_PLAUS_INFO = Gesamtsystem im Betrieb: 0 = Isolationswiderstand nicht plausibel, 1 = Isolationswiderstand plausibel
+  STAT_ISOWIDERSTAND_EXT_TRG_PLAUS_INFO = Gesamtsystem im Nachlauf: 0 = Isolationswiderstand nicht plausibel, 1 = Isolationswiderstand plausibel
+Nr 8(  1) : 15.07.2024 10:38:05,3
+apiJob("SME_I1","status_lesen","ARG;TEMPERATUREN","")
+  _REQUEST                        = 3 Bytes
+    0000 : 22 DD C0                                           "ÝÀ
+  _RESPONSE                       = 9 Bytes
+    0000 : 62 DD C0 07 D0 08 34 07   DC                       bÝÀ.Ð.4.  Ü
+  JOB_STATUS                      = OKAY        
+  STAT_TCORE_MAX_EINH             = °C          
+  STAT_TCORE_MAX_INFO             = Ausgabe der berechneten maximalen Zellkerntemperaturen
+  STAT_TCORE_MAX_WERT             = 2.100000E+001
+  STAT_TCORE_MIN_EINH             = °C          
+  STAT_TCORE_MIN_INFO             = Ausgabe der berechneten minimalen Zellkerntemperaturen
+  STAT_TCORE_MIN_WERT             = 2.000000E+001
+  STAT_TCORE_MEAN_EINH            = °C          
+  STAT_TCORE_MEAN_INFO            = Ausgabe der berechneten durchschnittlichen Zellkerntemperaturen
+  STAT_TCORE_MEAN_WERT            = 2.012000E+001
+Nr 9(  1) : 15.07.2024 10:38:05,5
+apiJob("SME_I1","status_lesen","ARG;ALTERUNG_INNENWIDERSTAND","")
+  _REQUEST                        = 3 Bytes
+    0000 : 22 DD B6                                           "Ý¶
+  _RESPONSE                       = 5 Bytes
+    0000 : 62 DD B6 03 55                                     bÝ¶.U
+  JOB_STATUS                      = OKAY        
+  STAT_ALTERUNG_INNENWIDERSTAND_EINH = %           
+  STAT_ALTERUNG_INNENWIDERSTAND_INFO = Alterung des Innenwiderstands in Prozent: Innenwiderstand des Speichers im Neuzustand auf den aktuellen Wert des Innenwiderstands bezogen  (R_neu /R_akt) *100   (100% = Neuzustand, sinkt mit Alterung)
+  STAT_ALTERUNG_INNENWIDERSTAND_WERT = 8.530000E+001
+Nr10(  1) : 15.07.2024 10:38:05,7
+apiJob("SME_I1","status_lesen","ARG;ALTERUNG_KAPAZITAET","")
+  _REQUEST                        = 3 Bytes
+    0000 : 22 DD 7B                                           "Ý{
+  _RESPONSE                       = 4 Bytes
+    0000 : 62 DD 7B 4D                                        bÝ{M
+  JOB_STATUS                      = OKAY        
+  STAT_KAPAZITAET_EINH            = %           
+  STAT_KAPAZITAET_INFO            = Auslesen der Justierung Kapazität Batterie
+  STAT_KAPAZITAET_WERT            = 7.700000E+001
+Nr11(  1) : 15.07.2024 10:38:05,9
+apiJob("SME_I1","status_lesen","ARG;CUMULATIVE_ENTLADUNG","")
+  _REQUEST                        = 3 Bytes
+    0000 : 22 DD 74                                           "Ýt
+  _RESPONSE                       = 7 Bytes
+    0000 : 62 DD 74 C5 55 BF 1D                               bÝtÅU¿.
+  JOB_STATUS                      = OKAY        
+  STAT_ENTLADUNG_AMP_STUNDEN_EINH = Ah          
+  STAT_ENTLADUNG_AMP_STUNDEN_INFO = Die kumulierte Ladung für Entladevorgänge in Ah
+  STAT_ENTLADUNG_AMP_STUNDEN_WERT = 1.386329E+005
+Nr12(  1) : 15.07.2024 10:38:06,1
+apiJob("SME_I1","status_lesen","ARG;STATUS_MIN_KAPAZITAET_MOD","")
+  _REQUEST                        = 3 Bytes
+    0000 : 22 D6 81                                           "Ö
+  _RESPONSE                       = 15 Bytes
+    0000 : 62 D6 81 4D 4D 4D 4D 4D   4D 4D 4D FF FF FF FF     bÖMMMMM  MMMÿÿÿÿ
+  JOB_STATUS                      = OKAY        
+  STAT_MIN_KAPA_MOD_01_EINH       = %           
+  STAT_MIN_KAPA_MOD_01_INFO       = Minimale Kapazität in Prozent von MODUL 01
+  STAT_MIN_KAPA_MOD_01_WERT       = 7.700000E+001
+  STAT_MIN_KAPA_MOD_02_EINH       = %           
+  STAT_MIN_KAPA_MOD_02_INFO       = Minimale Kapazität in Prozent von MODUL 02
+  STAT_MIN_KAPA_MOD_02_WERT       = 7.700000E+001
+  STAT_MIN_KAPA_MOD_03_EINH       = %           
+  STAT_MIN_KAPA_MOD_03_INFO       = Minimale Kapazität in Prozent von MODUL 03
+  STAT_MIN_KAPA_MOD_03_WERT       = 7.700000E+001
+  STAT_MIN_KAPA_MOD_04_EINH       = %           
+  STAT_MIN_KAPA_MOD_04_INFO       = Minimale Kapazität in Prozent von MODUL 04
+  STAT_MIN_KAPA_MOD_04_WERT       = 7.700000E+001
+  STAT_MIN_KAPA_MOD_05_EINH       = %           
+  STAT_MIN_KAPA_MOD_05_INFO       = Minimale Kapazität in Prozent von MODUL 05
+  STAT_MIN_KAPA_MOD_05_WERT       = 7.700000E+001
+  STAT_MIN_KAPA_MOD_06_EINH       = %           
+  STAT_MIN_KAPA_MOD_06_INFO       = Minimale Kapazität in Prozent von MODUL 06
+  STAT_MIN_KAPA_MOD_06_WERT       = 7.700000E+001
+  STAT_MIN_KAPA_MOD_07_EINH       = %           
+  STAT_MIN_KAPA_MOD_07_INFO       = Minimale Kapazität in Prozent von MODUL 07
+  STAT_MIN_KAPA_MOD_07_WERT       = 7.700000E+001
+  STAT_MIN_KAPA_MOD_08_EINH       = %           
+  STAT_MIN_KAPA_MOD_08_INFO       = Minimale Kapazität in Prozent von MODUL 08
+  STAT_MIN_KAPA_MOD_08_WERT       = 7.700000E+001
+  STAT_MIN_KAPA_MOD_09_EINH       = %           
+  STAT_MIN_KAPA_MOD_09_INFO       = Minimale Kapazität in Prozent von MODUL 09
+  STAT_MIN_KAPA_MOD_09_WERT       = 2.550000E+002
+  STAT_MIN_KAPA_MOD_10_EINH       = %           
+  STAT_MIN_KAPA_MOD_10_INFO       = Minimale Kapazität in Prozent von MODUL 10
+  STAT_MIN_KAPA_MOD_10_WERT       = 2.550000E+002
+  STAT_MIN_KAPA_MOD_11_EINH       = %           
+  STAT_MIN_KAPA_MOD_11_INFO       = Minimale Kapazität in Prozent von MODUL 11
+  STAT_MIN_KAPA_MOD_11_WERT       = 2.550000E+002
+  STAT_MIN_KAPA_MOD_12_EINH       = %           
+  STAT_MIN_KAPA_MOD_12_INFO       = Minimale Kapazität in Prozent von MODUL 12
+  STAT_MIN_KAPA_MOD_12_WERT       = 2.550000E+002
+Stop      : 15.07.2024 10:38:06,5
+Dauer     : 2,9 s

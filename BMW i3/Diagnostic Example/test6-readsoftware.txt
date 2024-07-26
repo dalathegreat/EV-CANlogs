@@ -1,0 +1,75 @@
+apiJob("SME_I1","svk_lesen","","")
+
+Satz : 0
+  OBJECT                          = sme_i1
+  SAETZE                          = 8
+  JOBNAME                         = svk_lesen
+  VARIANTE                        = SME_I1
+  JOBSTATUS                       = 
+  UBATTCURRENT                    = -1
+  UBATTHISTORY                    = -1
+  IGNITIONCURRENT                 = -1
+  IGNITIONHISTORY                 = -1
+Satz : 1
+  PROG_TEST                       = 1                 00 01  ..                    
+  PROZESSKLASSE_WERT              = 1                 00 01  ..                    
+  PROZESSKLASSE_TEXT              = Hardware (Elektronik)
+  PROZESSKLASSE_KURZTEXT          = HWEL
+  SGBM_IDENTIFIER                 = 00000FAD
+  VERSION                         = 002.019.001
+  SGBM_ID                         = HWEL-00000FAD-002.019.001
+Satz : 2
+  PROZESSKLASSE_WERT              = 6                 00 06  ..                    
+  PROZESSKLASSE_TEXT              = Bootloader
+  PROZESSKLASSE_KURZTEXT          = BTLD
+  SGBM_IDENTIFIER                 = 00001EB9
+  VERSION                         = 002.029.001
+  SGBM_ID                         = BTLD-00001EB9-002.029.001
+Satz : 3
+  PROZESSKLASSE_WERT              = 8                 00 08  ..                    
+  PROZESSKLASSE_TEXT              = Software ECU Speicherimage
+  PROZESSKLASSE_KURZTEXT          = SWFL
+  SGBM_IDENTIFIER                 = 00001EBB
+  VERSION                         = 249.009.024
+  SGBM_ID                         = SWFL-00001EBB-249.009.024
+Satz : 4
+  PROZESSKLASSE_WERT              = 8                 00 08  ..                    
+  PROZESSKLASSE_TEXT              = Software ECU Speicherimage
+  PROZESSKLASSE_KURZTEXT          = SWFL
+  SGBM_IDENTIFIER                 = 00001EBC
+  VERSION                         = 249.009.122
+  SGBM_ID                         = SWFL-00001EBC-249.009.122
+Satz : 5
+  PROZESSKLASSE_WERT              = 8                 00 08  ..                    
+  PROZESSKLASSE_TEXT              = Software ECU Speicherimage
+  PROZESSKLASSE_KURZTEXT          = SWFL
+  SGBM_IDENTIFIER                 = 00001EBE
+  VERSION                         = 059.002.061
+  SGBM_ID                         = SWFL-00001EBE-059.002.061
+Satz : 6
+  PROZESSKLASSE_WERT              = 8                 00 08  ..                    
+  PROZESSKLASSE_TEXT              = Software ECU Speicherimage
+  PROZESSKLASSE_KURZTEXT          = SWFL
+  SGBM_IDENTIFIER                 = 00001EBD
+  VERSION                         = 059.001.043
+  SGBM_ID                         = SWFL-00001EBD-059.001.043
+Satz : 7
+  PROZESSKLASSE_WERT              = 5                 00 05  ..                    
+  PROZESSKLASSE_TEXT              = Codierdaten
+  PROZESSKLASSE_KURZTEXT          = CAFD
+  SGBM_IDENTIFIER                 = 00001EBF
+  VERSION                         = 010.005.001
+  SGBM_ID                         = CAFD-00001EBF-010.005.001
+Satz : 8
+  ANZAHL_EINHEITEN                = 7                 00 07  ..                    
+  PROG_DATUM                      = 14.10.22
+  PROG_KM                         = 78620       00 01 33 1C  ..3.                  
+  JOB_STATUS                      = OKAY
+  _REQUEST                        = 3 Bytes
+    0000 : 22 F1 01                                           "ñ.
+  _RESPONSE                       = 76 Bytes
+    0000 : 62 F1 01 01 01 00 07 22   10 14 8F 04 D2 01 00 00  bñ....."  ...Ò...
+    0010 : 10 00 1E B6 01 00 00 0F   AD 02 13 01 06 00 00 1E  ...¶....  ­.......
+    0020 : B9 02 1D 01 08 00 00 1E   BB F9 09 18 08 00 00 1E  ¹.......  »ù......
+    0030 : BC F9 09 7A 08 00 00 1E   BE 3B 02 3D 08 00 00 1E  ¼ù.z....  ¾;.=....
+    0040 : BD 3B 01 2B 05 00 00 1E   BF 0A 05 01              ½;.+....  ¿...

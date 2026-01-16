@@ -1,0 +1,194 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BMS DIAG
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ NewSignal_0005 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 96 MotorB: 8 Vector__XXX
+
+BO_ 342 MotorA: 8 Vector__XXX
+
+BO_ 1334 NewMessage_0003: 8 Vector__XXX
+
+BO_ 83 NewMessage_0004: 8 BMS
+
+BO_ 321 NewMessage_0005: 8 BMS
+ SG_ counter_141 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CRC_141 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 320 NewMessage_0006: 8 BMS
+
+BO_ 322 BMS_voltages: 8 BMS
+ SG_ mux_142 M : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ pack_voltage m0 : 31|16@0+ (1,0) [0|0] "V+1" Vector__XXX
+ SG_ cell_max_voltage m1 : 31|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ cell_min_voltage m2 : 31|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ cellvoltages m3 : 31|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ cellvoltage_number m3 : 23|8@0+ (1,0) [0|255] "number" Vector__XXX
+
+BO_ 1589 UDS_Reply: 8 BMS
+
+BO_ 323 NewMessage_0009: 8 BMS
+
+BO_ 325 NewMessage_0010: 8 BMS
+
+BO_ 373 NewMessage_0011: 8 BMS
+
+BO_ 379 NewMessage_0012: 8 BMS
+
+BO_ 376 NewMessage_0013: 8 BMS
+
+BO_ 386 NewMessage_0014: 8 BMS
+
+BO_ 387 NewMessage_0015: 8 BMS
+
+BO_ 394 NewMessage_0016: 8 BMS
+
+BO_ 646 NewMessage_0017: 8 BMS
+
+BO_ 648 NewMessage_0018: 8 BMS
+
+BO_ 656 NewMessage_0019: 8 BMS
+
+BO_ 659 NewMessage_0020: 8 BMS
+
+BO_ 661 NewMessage_0021: 8 BMS
+
+BO_ 662 NewMessage_0022: 8 BMS
+
+BO_ 664 NewMessage_0023: 8 BMS
+
+BO_ 769 NewMessage_0024: 8 BMS
+
+BO_ 770 NewMessage_0025: 8 BMS
+
+BO_ 777 NewMessage_0026: 8 BMS
+
+BO_ 787 NewMessage_0027: 8 BMS
+
+BO_ 789 NewMessage_0028: 8 BMS
+
+BO_ 790 NewMessage_0029: 8 BMS
+
+BO_ 817 NewMessage_0030: 8 BMS
+
+BO_ 833 NewMessage_0031: 8 BMS
+
+BO_ 834 NewMessage_0032: 8 BMS
+
+BO_ 837 NewMessage_0033: 8 BMS
+
+BO_ 838 NewMessage_0034: 8 BMS
+
+BO_ 839 NewMessage_0035: 8 BMS
+
+BO_ 1144 NewMessage_0036: 8 BMS
+
+BO_ 1145 NewMessage_0037: 8 BMS
+
+BO_ 1161 NewMessage_0038: 8 BMS
+
+BO_ 1171 NewMessage_0039: 8 BMS
+
+BO_ 1172 NewMessage_0040: 8 BMS
+
+BO_ 1177 NewMessage_0041: 8 BMS
+
+BO_ 1180 NewMessage_0042: 8 BMS
+
+BO_ 1305 NewMessage_0043: 8 BMS
+
+BO_ 1472 NewMessage_0044: 8 BMS
+
+BO_ 1473 NewMessage_0045: 8 BMS
+
+BO_ 1488 NewMessage_0046: 8 BMS
+
+BO_ 1489 NewMessage_0047: 8 BMS
+
+BO_ 1845 UDS_Request: 8 DIAG
+
+
+
+CM_ BO_ 96 "Motor B (100ms)";
+CM_ BO_ 342 "Motor A (100ms)";
+CM_ BO_ 1334 "Netowrk Management Frame";
+CM_ BO_ 83 "100ms";
+CM_ BO_ 321 "20ms";
+CM_ BO_ 320 "20ms EX30 only";
+CM_ BO_ 322 "20ms";
+CM_ SG_ 322 cellvoltages "All cellvoltages are shown here, each has its own mux (3-4-5-6...)";
+CM_ BO_ 1589 "Diagnostic Reply";
+CM_ BO_ 386 "Zeekr only";
+CM_ BO_ 387 "EX30 only";
+CM_ BO_ 648 "";
+CM_ BO_ 656 "";
+CM_ BO_ 659 "";
+CM_ BO_ 661 "Zeekr only";
+CM_ BO_ 662 "Zeekr only";
+CM_ BO_ 664 "Zeekr only";
+CM_ BO_ 769 "Zeekr only";
+CM_ BO_ 770 "EX30 only";
+CM_ BO_ 777 "EX30 only";
+CM_ BO_ 787 "EX30 only";
+CM_ BO_ 789 "";
+CM_ BO_ 790 "Zeekr only";
+CM_ BO_ 817 "Zeekr only";
+CM_ BO_ 833 "Zeekr only";
+CM_ BO_ 834 "Zeekr only";
+CM_ BO_ 837 "Zeekr only";
+CM_ BO_ 838 "Zeekr only";
+CM_ BO_ 839 "Zeekr only";
+CM_ BO_ 1144 "Zeekr only";
+CM_ BO_ 1145 "Zeekr only";
+CM_ BO_ 1161 "Zeekr only";
+CM_ BO_ 1171 "Zeekr only";
+CM_ BO_ 1172 "Zeekr only";
+CM_ BO_ 1177 "Zeekr only";
+CM_ BO_ 1180 "Zeekr only";
+CM_ BO_ 1305 "Zeekr only";
+CM_ BO_ 1472 "Zeekr only";
+CM_ BO_ 1473 "Zeekr only";
+CM_ BO_ 1488 "Zeekr only";
+CM_ BO_ 1489 "Zeekr only";
+CM_ BO_ 1845 "UDS Request BMS
+
+.data = {0x04, 0x14, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00}};  //Global DTC erase
+.data = {0x02, 0x19, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00}};  //DTC request frame
+.data = {0x02, 0x11, 0x81, 0x00, 0x00, 0x00, 0x00, 0x00}};  //BECM ECU reset command (reboot/powercycle BECM)";
+

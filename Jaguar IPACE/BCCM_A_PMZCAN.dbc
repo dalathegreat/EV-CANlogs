@@ -1,0 +1,609 @@
+// *************************************************************************** *
+// *                                                                           *
+// *                                                                           *
+// *                                                                           *
+// *                                                                           *
+// *************************************************************************** *
+// *                                                                           *
+// * Description:         Partial CANDB File (for BCCM Node)                   *
+// * Generated at:        2016-06-22 13:33:46                                  *
+// * Node                 BCCM                                                 *
+// *                                                                           *
+// *************************************************************************** *
+// *                                                                           *
+// *             THIS CONFIGURATION MIGHT CONTAIN SOME ERRORS                  *
+// *              IF THE INPUT MODEL WAS NOT PROPERLY FORMED!                  *
+// *                    Do Not Use this File directly!                         *
+// *                                                                           *
+// *************************************************************************** *
+
+
+VERSION "BCCM"
+
+NS_:
+
+BS_:
+
+BU_: BCCM Vector_XXX
+
+BO_ 1311 BCCM_NM51F: 8 BCCM
+ SG_ NMmessageBCCM : 7|64@0+ (1,0) [0|18446744073709551615] "" Vector_XXX
+
+BO_ 395 BCCM_PMZ_A: 8 BCCM
+ SG_ ACDCChargerGpCounter : 31|4@0+ (1.0, 0.0) [0.0|15.0] "N = E (modulo 16)" Vector_XXX
+ SG_ ACDCChargerGpCS : 63|8@0+ (1.0, 0.0) [0.0|255.0] "n/a" Vector_XXX
+ SG_ ChargePlugDiscAlarmReq : 46|1@0+ (1,0) [0|1] "" Vector_XXX
+ SG_ ChargePowerAvailable : 26|11@0+ (0.1, -42.2) [-42.2|162.5] "kW" Vector_XXX
+ SG_ ChargerDCVoltActual : 41|10@0+ (1.0, 0.0) [0.0|1023.0] "Volts" Vector_XXX
+ SG_ ChargerDCVoltActual_UB : 47|1@0+ (1,0) [0|1] "" Vector_XXX
+ SG_ ChargerRequestWakeUp : 44|1@0+ (1,0) [0|1] "" Vector_XXX
+ SG_ ChargerRequestWakeUp_UB : 45|1@0+ (1,0) [0|1] "" Vector_XXX
+ SG_ HVIsolationTestRequest : 27|1@0+ (1,0) [0|1] "" Vector_XXX
+ SG_ WiredConnectAliveCounter : 19|4@0+ (1.0, 0.0) [0.0|15.0] "N = E (modulo 16). One increment for every signal group update. " Vector_XXX
+ SG_ WiredConnectStatus : 43|2@0+ (1,0) [0|3] "" Vector_XXX
+
+BO_ 552 BCCM_PMZ_B: 8 BCCM
+ SG_ ChargerACCurrActual : 17|10@0+ (0.1, 0.0) [0.0|102.3] "Amps" Vector_XXX
+ SG_ ChargerACVoltActual : 33|10@0+ (1.0, 0.0) [0.0|1023.0] "Volts" Vector_XXX
+ SG_ ChargerDCCurrActual : 49|10@0+ (0.1, 0.0) [0.0|102.3] "Amps" Vector_XXX
+ SG_ ChargerTemperature : 15|8@0+ (1.0, -40.0) [-40.0|215.0] "Deg C" Vector_XXX
+ SG_ ChargerWeldCheckStatus : 51|1@0+ (1,0) [0|1] "" Vector_XXX
+ SG_ ChargerWeldCheckStatus_UB : 52|1@0+ (1,0) [0|1] "" Vector_XXX
+ SG_ ChargerWeldCheckStComp : 53|1@0+ (1,0) [0|1] "" Vector_XXX
+ SG_ ChargingModeChoice : 50|1@0+ (1,0) [0|1] "" Vector_XXX
+
+BO_ 2029 TST_PhysicalRespBCCM_PMZCAN: 8 BCCM
+ SG_ TesterPhysicalResBCCM : 7|64@0+ (1,0) [0|18446744073709551615] "" Vector_XXX
+
+BO_ 18 BCM_PMZ_A: 8 Vector_XXX
+ SG_ CarModeHS : 3|4@0+ (1.0, 0.0) [6.0|15.0] "Unused" BCCM
+ SG_ CarModeHS_UB : 15|1@0+ (1,0) [0|1] "" BCCM
+ SG_ PowerMode : 44|5@0+ (1.0, 0.0) [10.0|31.0] "Not Used" BCCM
+ SG_ PowerMode_UB : 33|1@0+ (1,0) [0|1] "" BCCM
+
+BO_ 1056 BCM_PMZ_I: 8 Vector_XXX
+ SG_ AlarmModeHS : 1|2@0+ (1,0) [0|3] "" BCCM
+ SG_ AlarmModeHS_UB : 11|1@0+ (1,0) [0|1] "" BCCM
+
+BO_ 388 BCM_PMZ_K_Hybrid: 8 Vector_XXX
+ SG_ CentralLockStatus : 7|3@0+ (1.0, 0.0) [5.0|7.0] "Unused (Undefined)" BCCM
+ SG_ CLockCmd_2 : 15|8@0+ (1.0, 0.0) [0.0|255.0] "See Description for encoding" BCCM
+ SG_ CLockCmd_2_UB : 1|1@0+ (1,0) [0|1] "" BCCM
+
+BO_ 1124 BECM_PMZ_A: 8 Vector_XXX
+ SG_ HVBattTotalCapacity : 51|12@0+ (0.1, 0.0) [0.0|409.5] "Kwh" BCCM
+
+BO_ 1096 BECM_PMZ_B: 8 Vector_XXX
+ SG_ HVBattCellTempColdest : 15|8@0+ (0.5, -40.0) [-40.0|87.5] "deg C" BCCM
+ SG_ HVBattCellTempHottest : 23|8@0+ (0.5, -40.0) [-40.0|87.5] "deg C" BCCM
+
+BO_ 1060 BECM_PMZ_C: 8 Vector_XXX
+ SG_ HVBattCellVoltageMax : 36|13@0+ (0.001, 0.0) [0.0|8.191] "Volts" BCCM
+
+BO_ 266 BECM_PMZ_E: 8 Vector_XXX
+ SG_ HVBattChgContPwrLmt : 7|16@0+ (0.01, -655.35) [-655.35|0.0] "kW" BCCM
+ SG_ HVBattChgExtGpCounter : 47|4@0+ (1.0, 0.0) [0.0|15.0] "Counter value" BCCM
+ SG_ HVBattChgExtGpCS : 39|8@0+ (1.0, 0.0) [0.0|255.0] "checksum" BCCM
+ SG_ HVBattChgPowerLimitExt : 23|16@0+ (0.01, -655.35) [-655.35|0.0] "kW" BCCM
+ SG_ HVBattChgVoltageLimit : 49|10@0+ (1.0, 0.0) [0.0|1023.0] "Volts" BCCM
+
+BO_ 258 BECM_PMZ_F: 8 Vector_XXX
+ SG_ HVBattCurrentExt : 47|24@0+ (1,0) [0|16777215] "" BCCM
+ SG_ HVBattPwrGpCounter : 13|4@0+ (1.0, 0.0) [0.0|15.0] "N = E (modulo 16). One increment for every signal group update. " BCCM
+ SG_ HVBattPwrGpCS : 7|8@0+ (1.0, 0.0) [0.0|255.0] "checksum" BCCM
+ SG_ HVBattVoltageBus : 25|10@0+ (1.0, 0.0) [0.0|1023.0] "Volts" BCCM
+ SG_ HVBattVoltageExt : 9|10@0+ (1.0, 0.0) [0.0|1023.0] "Volts" BCCM
+
+BO_ 128 BECM_PMZ_I: 8 Vector_XXX
+ SG_ HVBattHVILStatus : 6|1@0+ (1,0) [0|1] "" BCCM
+ SG_ HVBattIsolationStatus : 5|1@0+ (1,0) [0|1] "" BCCM
+
+BO_ 260 BECM_PMZ_M: 8 Vector_XXX
+ SG_ HVBattChgCurrentLimit : 49|10@0+ (1.0, -1023.0) [-1023.0|0.0] "Amps" BCCM
+ SG_ HVBattVoltageOC : 17|10@0+ (1.0, 0.0) [0.0|1023.0] "Volts" BCCM
+ SG_ HVIsolationTestStatus : 20|1@0+ (1,0) [0|1] "" BCCM
+
+BO_ 408 BECM_PMZ_N: 8 Vector_XXX
+ SG_ HVBattCCCVChargeMode : 55|1@0+ (1,0) [0|1] "" BCCM
+ SG_ HVBattCellVoltUpLimit : 52|13@0+ (0.001, 0.0) [0.0|8.191] "Volts" BCCM
+ SG_ HVBattCellVoltWarning : 54|2@0+ (1,0) [0|3] "" BCCM
+ SG_ HVBattCurrentWarning : 33|2@0+ (1,0) [0|3] "" BCCM
+ SG_ HVBattTempUpLimit : 47|8@0+ (0.5, -40.0) [-40.0|87.5] "deg C" BCCM
+ SG_ HVBattTempWarning : 35|2@0+ (1,0) [0|3] "" BCCM
+
+BO_ 144 GWM_PMZ_C: 8 Vector_XXX
+ SG_ BulkSoCSingleUseDisp : 1|10@0+ (0.1, 0.0) [0.0|102.3] "%" BCCM
+
+BO_ 264 GWM_PMZ_D: 8 Vector_XXX
+ SG_ TCMPositionDisplay : 39|16@0+ (1,0) [0|65535] "" BCCM
+ SG_ TCMPositionDisplay_UB : 7|1@0+ (1,0) [0|1] "" BCCM
+
+BO_ 397 GWM_PMZ_V_Hybrid: 8 Vector_XXX
+ SG_ BulkSoCTargetDisp : 33|10@0+ (0.1, 0.0) [0.0|102.3] "%" BCCM
+ SG_ PEChargingInletLockCmd : 54|1@0+ (1,0) [0|1] "" BCCM
+
+BO_ 692 GWM_PMZ_X_Hybrid: 8 Vector_XXX
+ SG_ ChargingModeChcToLatch : 38|1@0+ (1,0) [0|1] "" BCCM
+ SG_ ChargingModeChcToLatch_UB : 37|1@0+ (1,0) [0|1] "" BCCM
+
+BO_ 386 PCM_PMZ_B_Hybrid: 8 Vector_XXX
+ SG_ ChargingStatusDisp : 54|3@0+ (1,0) [0|7] "" BCCM
+
+BO_ 48 PCM_PMZ_C_Hybrid: 8 Vector_XXX
+ SG_ ChargePowerRequest : 50|11@0+ (0.1, -42.2) [-42.2|162.5] "kW" BCCM
+
+BO_ 448 PCM_PMZ_H_Hybrid: 8 Vector_XXX
+ SG_ ChargerWakeUpAllowed : 39|1@0+ (1,0) [0|1] "" BCCM
+ SG_ HVBattChrgeRateSOCDisp : 34|11@0+ (0.1, 0.0) [0.0|204.7] "%" BCCM
+ SG_ HVBatteryUsableSOCDisp : 14|7@0+ (1.0, 0.0) [0.0|100.0] "%" BCCM
+ SG_ HVBatteryUsableSOCDisp_UB : 15|1@0+ (1,0) [0|1] "" BCCM
+
+BO_ 331 PCM_PMZ_Q_Hybrid: 8 Vector_XXX
+ SG_ TimeToBulkSoCHoursDisp : 5|6@0+ (1.0, 0.0) [0.0|59.0] "" BCCM
+ SG_ TimeToBulkSoCMinsDisp : 13|6@0+ (1.0, 0.0) [0.0|59.0] "" BCCM
+ SG_ TimeToFullSoCHoursDisp : 21|6@0+ (1.0, 0.0) [0.0|59.0] "" BCCM
+ SG_ TimeToFullSoCMinsDisp : 29|6@0+ (1.0, 0.0) [0.0|59.0] "" BCCM
+
+BO_ 2015 TST_FunctionalReq_PMZBus: 8 Vector_XXX
+ SG_ TesterFunctionalReq : 7|64@0+ (1,0) [0|18446744073709551615] "" BCCM
+
+BO_ 2021 TST_PhysicalReqBCCM_PMZCAN: 8 Vector_XXX
+ SG_ TesterPhysicalReqBCCM : 7|64@0+ (1,0) [0|18446744073709551615] "" BCCM
+
+BO_ 1024 VEHCONFIG_400PMZ: 8 Vector_XXX
+ SG_ VehicleConfParameters : 7|64@0+ (1,0) [0|18446744073709551615] "" BCCM
+
+BO_ 1029 VIP_405PMZ: 8 Vector_XXX
+ SG_ VehicleInfoParametersPMZ : 7|64@0+ (1,0) [0|18446744073709551615] "" BCCM
+
+
+// Comments
+CM_ SG_ 1311 NMmessageBCCM "Network Management Signal. This signal contains Network Management Data. This data includes the DA (Destination Address), CF (Control Field) and up to 6 data bytes of user defined data. 
+
+The MSB of the signal must be written to the COM layer first (with an offset of zero in wr_bytes() ) and therefore transmitted on the bus first.
+Similarly, subscribing modules will receive the MSB of the signal when they call rd_bytes(0).
+
+E.g. wr_bytes(0) = published_signal_MSB;
+
+Subscribed_Signal_MSB = rd_bytes(0);
+";
+CM_ SG_ 395 ACDCChargerGpCounter "Used to ensure that the BCCM is still in active communications with its Micro controller.Value to increment with each new message sent.Value initialises at 0 and Increases to 15 at which point the signal is reset to 0 and begins counting up again.Value initialises to 0.Stuck count also indicates a fault.";
+CM_ SG_ 395 ACDCChargerGpCS "Signals contained in SAE J1850 CRC8 Checksum: ChargerDCVoltActual, ACDCChargerGpCounter. 
+The calculation method is specified in STJLR 18.036.
+
+The Data Segment Polynomial shall be assembled as follows, with offsets in Motorola Backwards notation :-
+Byte 1 is the leftmost byte in SAEJ1850 Table 1.
+
+Signals used in the calculation must be in the same message frame.
+Byte 1
+Signal marker                  Signal name	                                           Offset
+===========	               ==========                                                           =====
+A                                       ChargerDCVoltActual (most significant 2 bits) 0
+B                                       ACDCChargerGpCounter                                       2
+0                                       Two padding bits of zero                                       6
+
+Byte 2
+Signal marker                   Signal name                                                           Offset
+===========                   ==========                                                           =====
+C                                        ChargerDCVoltActual (least significant 8 bits)   0
+
+Graphical representation of Data Segment Polynomial
+Byte 1         Byte 2 
+00BBBBAA CCCCCCCC
+";
+CM_ SG_ 395 ChargePlugDiscAlarmReq "Request the alarm to be triggered if a plug is disconnected whilst locked in the vehicle inlet.";
+CM_ SG_ 395 ChargePowerAvailable "Indicates the available Power from the Source (eg. Grid).
+positive - from charger to HV bus
+negative - from HV bus to charger";
+CM_ SG_ 395 ChargerDCVoltActual "This signal indicates the amount of DC voltage present at the output of the charger.";
+CM_ SG_ 395 ChargerRequestWakeUp "Signal used to request the vehicle to wake-up if the plug is detected in the vehicle inlet of a plug-in vehicle.";
+CM_ SG_ 395 HVIsolationTestRequest "DC charging request for vehicle HV isolation monitoring.";
+CM_ SG_ 395 WiredConnectAliveCounter "Alive Counter - Used to ensure that the BCCM is still in active communications with it's Micro controller.
+
+This alive counter needs to be in the same frame with WiredConnectStatus signal
+
+Value to increment with each new message sent.
+
+Value initialises at 0 and Increases to 15 at which point the signal is reset to 0 and begins counting up again.
+
+Value initialises to 0.";
+CM_ SG_ 395 WiredConnectStatus "Indicates the status of the wired connection between the vehicle and the charging plug";
+CM_ SG_ 552 ChargerACCurrActual "AC Input Current to the On Board Charger from the Grid";
+CM_ SG_ 552 ChargerACVoltActual "AC Input Voltage to the On Board Charger from the Grid";
+CM_ SG_ 552 ChargerDCCurrActual "This signal indicates the amount of DC Current delivered to battery/load.";
+CM_ SG_ 552 ChargerWeldCheckStatus "Status of the weld check performed on the DC Charger contactors
+";
+CM_ SG_ 552 ChargerWeldCheckStComp "Complimentary message to ChargerWeldCheckStatus
+";
+CM_ SG_ 552 ChargingModeChoice "Indicate the vehicle user preferences in terms of charging";
+CM_ SG_ 2029 TesterPhysicalResBCCM "Diagnostic Physically Addressed Response from BCCM.
+
+The MSB of the signal must be written to the COM layer first (with an offset of zero in wr_bytes() ) and therefore transmitted on the bus first.
+Similarly, subscribing modules will receive the MSB of the signal when they call rd_bytes(0).
+
+E.g. wr_bytes(0) = published_signal_MSB;
+
+Subscribed_Signal_MSB = rd_bytes(0);
+
+EuCD signal name
+
+";
+CM_ SG_ 18 CarModeHS "Information about which Carmode the vehicle is in i.e. Normal, factory etc.
+";
+CM_ SG_ 18 PowerMode "Information of current PowerMode, reflects the current  state of the Power Mode Superviser
+
+
+For L538:
+The signals PowerModeHS, PowerModeHSQF & PowerModeComp are all with the group PowerModeGrpHS. This grouping is to ensure that the signals are packed within the same frame, they are not treated as a group within the BCM. ";
+CM_ SG_ 1056 AlarmModeHS "Vehicle Alarm Mode";
+CM_ SG_ 388 CentralLockStatus "Provides status information for the central locking.";
+CM_ SG_ 388 CLockCmd_2 "Central Locking command to control the latch actuators.
+
+Bitcoded:
+CentralLock                   0000 0001
+CentralUnlock                0000 0010
+CentralDL                       0000 0011
+CentralUnlockDL           0000 0100
+TrunkLock                     0000 0101
+TrunkUnlock                  0000 0110
+DDUnlock                      xxx1 1111
+PDUnlock                      xx1x 1111
+LRUnlock                      x1xx 1111
+RRUnlock                      1xxx 1111
+DDLock                         xxx1 0000
+PDLock                         xx1x 0000
+LRLock                         x1xx 0000
+RRLock                         1xxx 0000
+CrashUnlock                  0000 1000 ";
+CM_ SG_ 1124 HVBattTotalCapacity "Total Battery capacity in Kwh. This will reduce over the lifetime of the HV Battery. 
+";
+CM_ SG_ 1096 HVBattCellTempColdest "Minimum cell temperature of the HV battery";
+CM_ SG_ 1096 HVBattCellTempHottest "Temperature of the hottest cell in the HV battery";
+CM_ SG_ 1060 HVBattCellVoltageMax "Voltage of the HV battery cell with the highest voltage.";
+CM_ SG_ 266 HVBattChgContPwrLmt "The HV battery charge power limit for the plug-in charger to honour when charging the battery.";
+CM_ SG_ 266 HVBattChgExtGpCS "Signals contained in SAE J1850 CRC8 Checksum: HVBattChgPowerLimitExt,HVBattChgCurrentLimit , HVBattChgVoltageLimit, HVBattChgContPwrLmt, HVBattChgExtGpCounter 
+
+The calculation method is specified in STJLR 18.036.
+Signals used in the calculation must be in the same message frame.
+The Data Segment Polynomial shall be assembled as follows, with offsets in Motorola Backwards
+notation :-
+
+Byte 1 is the leftmost byte in SAEJ1850 Table 1.
+
+Byte 1
+Signal marker          Signal name                                                          Offset
+===========         ==========                                                         =====
+A                            HVBattChgPowerLimitExt (Most signifiant 8 bits)   0
+
+Byte 2
+Signal marker         Signal name                                                          Offset
+===========        ==========                                                         =====
+B             HVBattChgPowerLimitExt (Least signifiant 8 bits)                0
+
+Byte 3
+Signal marker         Signal name                                                          Offset
+===========        ==========                                                         =====
+C            HVBattChgVoltageLimit (most significant 2 bits)                   0
+0            Two padding bits of zero                                                        2
+D             HVBattChgExtGpCounter                                                     4
+
+Byte 4
+Signal marker         Signal name                                                          Offset
+===========        ==========                                                         =====
+E            HVBattChgVoltageLimit (least significant 8 bits)                    0
+
+Byte 5
+Signal marker         Signal name                                                          Offset
+===========        ==========                                                         =====
+F            HVBattChgContPwrLmt (most significant 8 bits)                    0
+
+Byte 6
+Signal marker         Signal name                                                          Offset
+===========        ==========                                                         =====
+G            HVBattChgContPwrLmt (least significant 8 bits)                    0
+
+Graphical representation of Data Segment Polynomial
+=======================================================================
+Byte 1          Byte 2          Byte 3          Byte 4          Byte 5         Byte 6
+AAAAAAAA BBBBBBBB DDDD00CC EEEEEEEE FFFFFFFF GGGGGGGG ";
+CM_ SG_ 266 HVBattChgPowerLimitExt "Power limit at which the HV battery can be charged. Note that charging current and power are represented as negative values, and discharging current and power are represented as positive values. Therefore this signal will always be less than or equal to zero.";
+CM_ SG_ 266 HVBattChgVoltageLimit "Max voltage limit during generating mode i.e during charging of the HV Battery.  ";
+CM_ SG_ 258 HVBattCurrentExt "HV Battery Current used on 18MY PHEV and future Hybrid programs.
+Positive - Current taken from the battery (Motoring Mode)
+Negative - Current going to the battery (Generating Mode)
+
+
+Physical Range (0 - 16777215) 
+Scaling: 0.025 
+Offset: -209715.175
+Units: Amps";
+CM_ SG_ 258 HVBattPwrGpCS "Signals contained in SAE J1850 CRC8 Checksum: HVBattCurrentExt, HVBattVoltageExt, HVBattVoltageBus, HVBattPwrGpCounter.
+The calculation method is specified in STJLR 18.036.
+Signals used in the calculation must be in the same message frame.
+The Data Segment Polynomial shall be assembled as follows, with offsets in Motorola Backwards
+notation :-
+Byte 1 is the leftmost byte in SAEJ1850 Table 1.						
+
+Byte 1						
+Signal marker Signal name Offset						
+=========== ========== =====						
+A HVBattCurrentExt (Most significant 8 bits) 0						
+						
+Byte 2						
+Signal marker Signal name Offset						
+=========== ========== =====						
+B HVBattCurrentExt (Middle 8 bits) 0						
+						
+Byte 3						
+Signal marker Signal name Offset						
+=========== ========== =====						
+C HVBattCurrentExt (Least significant 8 bits) 0						
+						
+Byte 4						
+Signal marker Signal name Offset						
+=========== ========== =====						
+D HVBattVoltageExt (Most significant 2 bits) 0						
+E HVBattPwrGpCounter 2						
+0 2 padding bits of zero 6						
+						
+Byte 5						
+Signal marker Signal name Offset						
+=========== ========== =====						
+F HVBattVoltageExt (least significant 8 bits) 0						
+						
+Byte 6						
+Signal marker Signal name Offset						
+=========== ========== =====						
+G HVBattVoltageBus (most significant 2 bits) 0						
+0 6 padding bits of zero 2						
+						
+Byte 7						
+Signal marker Signal name Offset						
+=========== ========== =====						
+H HVBattVoltageBus (least significant 8 bits)						
+						
+Graphical representation of Data Segment Polynomial						
+=======================================================================				
+Byte 1	 Byte 2	  Byte 3   Byte 4   Byte 5   Byte 6   Byte 7
+AAAAAAAA BBBBBBBB CCCCCCCC 00EEEEDD FFFFFFFF 000000GG HHHHHHHH";
+CM_ SG_ 258 HVBattVoltageBus "The voltage on the high-voltage DC bus measured on the vehicle-side of the high-voltage contactors by the HV battery.";
+CM_ SG_ 258 HVBattVoltageExt "Voltage of the HV Battery";
+CM_ SG_ 128 HVBattHVILStatus "HV Battery Hazardous Voltage Interlock Loop Status";
+CM_ SG_ 128 HVBattIsolationStatus "Status of the HV Battery isolation";
+CM_ SG_ 260 HVBattChgCurrentLimit "Maximum current that can be transferred into the HV Battery during generating mode i.e during charging. Charging is neagtive and discharging is positive. ";
+CM_ SG_ 260 HVBattVoltageOC "The instantaneous equivalent open-circuit voltage of the high voltage battery.
+
+This is used by the high-voltage inverter in power prediction and derating calculations.";
+CM_ SG_ 260 HVIsolationTestStatus "Vehicle HV isolation monitoring test status";
+CM_ SG_ 408 HVBattCCCVChargeMode "Indication of active charging mode.
+For use wth EVSE charging.";
+CM_ SG_ 408 HVBattCellVoltUpLimit "Upper cell voltage limit.
+For use wth EVSE charging.";
+CM_ SG_ 408 HVBattCellVoltWarning "Flag indicating cell over/under voltage condition is present.
+For use wth EVSE charging.";
+CM_ SG_ 408 HVBattCurrentWarning "Flag indicating battery over current condition is present. 
+For use wth EVSE charging.";
+CM_ SG_ 408 HVBattTempUpLimit "Upper temperature limit.
+For use wth EVSE charging.";
+CM_ SG_ 408 HVBattTempWarning "Flag indicating battery over / under temperature condition is present. 
+For use wth EVSE charging.";
+CM_ SG_ 144 BulkSoCSingleUseDisp "The target Bulk SoC target that the vehicle will charge to for one charge only, referenced in customer visible SoC %.
+";
+CM_ SG_ 264 TCMPositionDisplay "Message used by IPK and ETS to display selected gear information.TCM will set multiple bits when e.g in Drive 5th gear and in Sport. The Signal TCMDrivingModeDisplay can be used for gear 1-8 display when in manual mode.
+
+Init: Blank ETS display and Blank IPK display. Bit 14 and 15 set to 1, all other bits set to 0 (49152 decimal)
+
+Bits 0 - 5: Gear Selection
+000000 = Auto selection
+000001 = 1st Gear
+000010 = 2nd Gear
+000100 = 3rd Gear
+001000 = 4th Gear
+010000 = 5th Gear
+100000 = 6th Gear
+100001 = 7th Gear
+100010 = 8th Gear
+100100 = 9th Gear
+
+Bits 6 - 11: Gear Mode
+000001 = Fault
+000010 = Park  Position
+000100 = Reverse Position
+001000 = Neutral Position
+010000 = Drive Position
+100000 = Sport Position 
+
+Bits 12 - 13: Flash Display
+x1 = FLASH ETS Display
+1x = FLASH IPK Display
+
+Bits 14 - 15: Blank Display
+x1 = Blank ETS Display
+1x = Blank IPK Display
+
+
+On Electronic Shifter installations, the TCMPositionDisplay CAN message will indicate Park as follows:      - at ignition on the signal will indicate 'in Park' (128) if park is selected regardless of parklock status     - after ignition off the signal will indicate 'in Park' (128) if park is selected and parklock is confirmed, after ignition off the signal will indicate 'flash' and 'in Park' (not 128) if Park is selected but the Parklock is not confirmed for any reason. This is to communicate Parklock status to the BCM for Rollaway warnings. Please note that Park will not be engaged unless the vehicle speed is less than 2kph.
+";
+CM_ SG_ 397 BulkSoCTargetDisp "The target Bulk SoC target that the vehicle will charge to, referenced in customer visible SoC %.";
+CM_ SG_ 397 PEChargingInletLockCmd "Passive Entry unlock request for the Plug-In Charging Socket.";
+CM_ SG_ 692 ChargingModeChcToLatch "Indicate the vehicle user preferences in terms of charging (ie. time charging On/Off)";
+CM_ SG_ 386 ChargingStatusDisp "Confirmation of vehicle charging status.";
+CM_ SG_ 48 ChargePowerRequest "Request charger power output
+positive - from charger to HV bus
+negative - from HV bus to charger";
+CM_ SG_ 448 ChargerWakeUpAllowed "This signal authorises or not the charger to request a vehicle wake-up event whilst in PowerMode 0.";
+CM_ SG_ 448 HVBattChrgeRateSOCDisp "Charge rate of the HV Battery in % per hour, referenced in customer visible SoC %.";
+CM_ SG_ 448 HVBatteryUsableSOCDisp "Current hybrid battery usable state of charge, referenced in customer visible SoC%";
+CM_ SG_ 331 TimeToBulkSoCHoursDisp "The calculated integer number of hours until the HV Battery reaches bulk charge. Does not include any remaining minutes, these are included in TimeToBulkSoCMinsDisp.
+
+Note: Bulk charge is defined as the Customer sSelectable SoC which can be selected from a calibrateable minimum to 100% user displayed SoC.";
+CM_ SG_ 331 TimeToBulkSoCMinsDisp "The calculated integer number of minutes until the HV Battery reaches bulk charge. Does not include any remaining hours, these are included in TimeToBulkSoCHoursDisp.
+
+Note: Bulk charge is defined as the Customer Selectable SoC which can be selected from a calibrateable minimum to 100% user displayed SoC.";
+CM_ SG_ 331 TimeToFullSoCHoursDisp "The calculated integer number of hours until the HV Battery reaches full charge. Does not include any remaining minutes, these are included in TimeToFullMinsDisp";
+CM_ SG_ 331 TimeToFullSoCMinsDisp "The calculated integer number of minutes until the HV Battery reaches full charge. Does not include any remaining hours, these are included in TimeToFullHoursDisp";
+CM_ SG_ 2015 TesterFunctionalReq "Scan Tool Functionally Addressed Request for legislated emissions related diagnostics on CAN. This signal shall always be packaged in CANID 0x7DF.
+
+The MSB of the signal must be written to the COM layer first (with an offset of zero in wr_bytes() ) and therefore transmitted on the bus first.
+Similarly, subscribing modules will receive the MSB of the signal when they call rd_bytes(0).
+
+E.g. wr_bytes(0) = published_signal_MSB;
+
+Subscribed_Signal_MSB = rd_bytes(0);
+
+
+";
+CM_ SG_ 2021 TesterPhysicalReqBCCM "Diagnostic Physically Addressed Request of BCCM by tester.
+
+The MSB of the signal must be written to the COM layer first (with an offset of zero in wr_bytes() ) and therefore transmitted on the bus first.
+Similarly, subscribing modules will receive the MSB of the signal when they call rd_bytes(0).
+
+E.g. wr_bytes(0) = published_signal_MSB;
+
+Subscribed_Signal_MSB = rd_bytes(0);
+
+EuCD signal name
+
+";
+CM_ SG_ 1024 VehicleConfParameters "This signal contains EuCD Configuration Parameters in accordance with the Car Configuration EuCD - Vehicle Information Parameters Specification 31812330.
+
+The MSB of the signal must be written to the COM layer first (with an offset of zero in wr_bytes() ) and therefore transmitted on the bus first.
+Similarly, subscribing modules will receive the MSB of the signal when they call rd_bytes(0).
+
+E.g. wr_bytes(0) = published_signal_MSB;
+
+Subscribed_Signal_MSB = rd_bytes(0);
+
+Common signal publishes by BCM XCL, replacing the individual MS and HS version";
+CM_ SG_ 1029 VehicleInfoParametersPMZ "This signal contains HYSignalConfigID and GGDS Snapshot Data for the HY-HSCAN Network. This signal is compiled in accordance with the Car Configuration EuCD - Vehicle Information Parameters Specification 31812331.
+
+The Publisher of this signal shall read its local constant HYSignalConfigID and shall copy the value to the correct Block and Offset of VehicleInfoParameters that carries HYSignalConfigID [Block 01h, Bytes 7-8].
+
+The Publisher of this signal shall subscribe to various Source Signals from the Network that shall be used to compile the GGDS Global Snapshot data within VehicleInfoParametersHY. The Source Signals that shall be used to compile the GGDS Global Snapshot data are defined in the Network Specific Requirements document.
+
+The MSB of the signal must be written to the COM layer first (with an offset of zero in wr_bytes() ) and therefore transmitted on the bus first.
+Similarly, subscribing modules will receive the MSB of the signal when they call rd_bytes(0).
+
+E.g. wr_bytes(0) = published_signal_MSB;
+
+Subscribed_Signal_MSB = rd_bytes(0);";
+
+// Attribute definitions
+BA_DEF_  "BaudRate" FLOAT 1000 1000000; // [bps]
+BA_DEF_ BO_ "GenMsgSendType" ENUM "cyclic","spontaneous","cyclicIfActive","spontaneousWithDelay","cyclicAndSpontaneous","cyclicAndSpontaneousWithDelay","not_used","not_used","not_used","cyclicWithRepeatOnDemand";
+BA_DEF_ BO_ "GenMsgCycleTime" FLOAT 0 300000; // [ms]
+BA_DEF_ BO_ "GenMsgStartDelayTime" FLOAT 0 300000; // [ms]
+BA_DEF_ BO_ "GenMsgDelayTime" FLOAT 0 300000; // [ms]
+BA_DEF_ BO_ "GenMsgNrOfRepetition" INT 0 100000;
+BA_DEF_ SG_ "GenSigSendType" ENUM "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_ "GenSigStartValue" FLOAT -1.7976931348623157E308 18446744073709551615;
+
+BA_DEF_DEF_ "GenSigStartValue" 0;
+// Network
+BA_ "BaudRate"  500000;
+// Frame: BCCM_NM51F
+BA_ "GenMsgSendType" BO_ 1311 1;
+BA_ "GenMsgDelayTime" BO_ 1311 100.000;
+BA_ "GenSigSendType" SG_ 1311 NMmessageBCCM 1;
+// Frame: BCCM_PMZ_A
+BA_ "GenMsgSendType" BO_ 395 0;
+BA_ "GenMsgCycleTime" BO_ 395 50.000;
+BA_ "GenSigSendType" SG_ 395 ACDCChargerGpCounter 0;
+BA_ "GenSigSendType" SG_ 395 ACDCChargerGpCS 0;
+BA_ "GenSigSendType" SG_ 395 ChargePlugDiscAlarmReq 0;
+BA_ "GenSigStartValue" SG_ 395 ChargePowerAvailable 422;
+BA_ "GenSigSendType" SG_ 395 ChargePowerAvailable 0;
+BA_ "GenSigSendType" SG_ 395 ChargerDCVoltActual 0;
+BA_ "GenSigSendType" SG_ 395 ChargerRequestWakeUp 0;
+BA_ "GenSigSendType" SG_ 395 HVIsolationTestRequest 0;
+BA_ "GenSigSendType" SG_ 395 WiredConnectAliveCounter 0;
+BA_ "GenSigSendType" SG_ 395 WiredConnectStatus 0;
+// Frame: BCCM_PMZ_B
+BA_ "GenMsgSendType" BO_ 552 0;
+BA_ "GenMsgCycleTime" BO_ 552 90.000;
+BA_ "GenSigSendType" SG_ 552 ChargerACCurrActual 0;
+BA_ "GenSigSendType" SG_ 552 ChargerACVoltActual 0;
+BA_ "GenSigSendType" SG_ 552 ChargerDCCurrActual 0;
+BA_ "GenSigSendType" SG_ 552 ChargerTemperature 0;
+BA_ "GenSigSendType" SG_ 552 ChargerWeldCheckStatus 0;
+BA_ "GenSigStartValue" SG_ 552 ChargerWeldCheckStComp 1;
+BA_ "GenSigSendType" SG_ 552 ChargerWeldCheckStComp 0;
+BA_ "GenSigSendType" SG_ 552 ChargingModeChoice 0;
+// Frame: TST_PhysicalRespBCCM_PMZCAN
+BA_ "GenSigSendType" SG_ 2029 TesterPhysicalResBCCM 1;
+// Frame: BCM_PMZ_A
+// Frame: BCM_PMZ_I
+BA_ "GenSigStartValue" SG_ 1056 AlarmModeHS 3;
+// Frame: BCM_PMZ_K_Hybrid
+// Frame: BECM_PMZ_A
+// Frame: BECM_PMZ_B
+BA_ "GenSigStartValue" SG_ 1096 HVBattCellTempColdest 80;
+BA_ "GenSigStartValue" SG_ 1096 HVBattCellTempHottest 80;
+// Frame: BECM_PMZ_C
+// Frame: BECM_PMZ_E
+BA_ "GenSigStartValue" SG_ 266 HVBattChgContPwrLmt 65535;
+BA_ "GenSigStartValue" SG_ 266 HVBattChgPowerLimitExt 65535;
+// Frame: BECM_PMZ_F
+BA_ "GenSigStartValue" SG_ 258 HVBattCurrentExt 8388607;
+// Frame: BECM_PMZ_I
+// Frame: BECM_PMZ_M
+// Frame: BECM_PMZ_N
+BA_ "GenSigStartValue" SG_ 408 HVBattTempUpLimit 80;
+// Frame: GWM_PMZ_C
+// Frame: GWM_PMZ_D
+BA_ "GenSigStartValue" SG_ 264 TCMPositionDisplay 49152;
+// Frame: GWM_PMZ_V_Hybrid
+// Frame: GWM_PMZ_X_Hybrid
+// Frame: PCM_PMZ_B_Hybrid
+// Frame: PCM_PMZ_C_Hybrid
+BA_ "GenSigStartValue" SG_ 48 ChargePowerRequest 422;
+// Frame: PCM_PMZ_H_Hybrid
+// Frame: PCM_PMZ_Q_Hybrid
+BA_ "GenSigStartValue" SG_ 331 TimeToBulkSoCHoursDisp 60;
+BA_ "GenSigStartValue" SG_ 331 TimeToBulkSoCMinsDisp 60;
+BA_ "GenSigStartValue" SG_ 331 TimeToFullSoCHoursDisp 60;
+BA_ "GenSigStartValue" SG_ 331 TimeToFullSoCMinsDisp 60;
+// Frame: TST_FunctionalReq_PMZBus
+// Frame: TST_PhysicalReqBCCM_PMZCAN
+// Frame: VEHCONFIG_400PMZ
+// Frame: VIP_405PMZ
+
+VAL_ 395 ChargePlugDiscAlarmReq 0 "alarm not requested" 1 "alarm requested due to plug disconnected whilst locked";
+VAL_ 395 ChargerRequestWakeUp 0 "Charger does NOT require the vehicle to wake up" 1 "Charger requires the vehicle to wake up";
+VAL_ 395 HVIsolationTestRequest 0 "Allow vehicle HV Isolation Test" 1 "Disable vehicle HV Isolation Test";
+VAL_ 395 WiredConnectStatus 0 "Wired Connection NOT Detected" 1 "Wired Connection Detected - Communication NOT Established" 2 "Wired Connection Detected - Communication Established" 3 "Not Used";
+VAL_ 552 ChargerWeldCheckStatus 0 "No Weld Detected" 1 "Weld Detected";
+VAL_ 552 ChargerWeldCheckStComp 0 "Weld Detected" 1 "No Weld Detected";
+VAL_ 552 ChargingModeChoice 0 "Charge Now" 1 "Timed charging";
+VAL_ 18 CarModeHS 0 "Normal" 1 "Factory" 2 "Unused" 3 "Transport" 4 "Unused" 5 "Crash";
+VAL_ 18 PowerMode 0 "KeyOut" 1 "KeyRecentlyOut" 2 "KeyApproved_0" 3 "PostAccessory_0" 4 "Accessory_1" 5 "PostIgnition_1" 6 "IgnitionOn_2" 7 "Running_2" 8 "(Not used)" 9 "Crank_3";
+VAL_ 1056 AlarmModeHS 0 "Set" 1 "Unset" 2 "Active" 3 "Ignore (Initial Value)";
+VAL_ 388 CentralLockStatus 0 "Unlocked" 1 "Part Locked" 2 "Central Locked" 3 "Double Locked" 4 "TP_NO_DL (TheftProtectNODoubleLock)";
+VAL_ 128 HVBattHVILStatus 0 "Ok" 1 "Not Ok";
+VAL_ 128 HVBattIsolationStatus 0 "Isolation OK" 1 "Isolation Not OK";
+VAL_ 260 HVIsolationTestStatus 0 "Vehicle HV Isolation Test running" 1 "Vehicle HV Isolation Test disabled";
+VAL_ 408 HVBattCCCVChargeMode 0 "Constant Current charging" 1 "Constant Voltage charging";
+VAL_ 408 HVBattCellVoltWarning 0 "Normal Condition, No Over/Under Voltage" 1 "Cell Overvoltage" 2 "Cell Undervoltage" 3 "Unused";
+VAL_ 408 HVBattCurrentWarning 0 "Normal Condition, No Over/Under Current" 1 "Cell Overcurrent" 2 "Cell Undercurrent" 3 "Unused";
+VAL_ 408 HVBattTempWarning 0 "Normal Condition, No Over/Under Temperature" 1 "Cell Overtemperature" 2 "Cell Undertemperature" 3 "Unused";
+VAL_ 397 PEChargingInletLockCmd 0 "No Request to Unlock Socket" 1 "Request to Unlock Socket";
+VAL_ 692 ChargingModeChcToLatch 0 "Charge Now" 1 "Timed charging";
+VAL_ 386 ChargingStatusDisp 0 "NO_MESSAGE" 1 "BATTERY_FULLY_CHARGED" 2 "BATTERY_BULK_CHARGED" 3 "CHARGING" 4 "WAITING_TO_CHARGE" 5 "FAULT" 6 "INITIALISATION" 7 "PAUSED";
+VAL_ 448 ChargerWakeUpAllowed 0 "Not allowed" 1 "Allowed";
+VAL_ 331 TimeToBulkSoCHoursDisp 60 "No value to display";
+VAL_ 331 TimeToBulkSoCMinsDisp 60 "No value to display";
+VAL_ 331 TimeToFullSoCHoursDisp 60 "No value to display";
+VAL_ 331 TimeToFullSoCMinsDisp 60 "No value to display";
+SIG_GROUP_ 395 ACDCChargerGp 1 : ACDCChargerGpCounter ACDCChargerGpCS ChargerDCVoltActual;
+SIG_GROUP_ 1311 BCCM_NM51F 1 : NMmessageBCCM;
+SIG_GROUP_ 552 ChargerWeldChkGp 1 : ChargerWeldCheckStatus ChargerWeldCheckStComp;
+SIG_GROUP_ 266 HVBattChgExtGp 1 : HVBattChgContPwrLmt HVBattChgExtGpCounter HVBattChgExtGpCS HVBattChgPowerLimitExt HVBattChgVoltageLimit;
+SIG_GROUP_ 258 HVBattPwrGp 1 : HVBattCurrentExt HVBattPwrGpCounter HVBattPwrGpCS HVBattVoltageBus HVBattVoltageExt;
+SIG_GROUP_ 331 TimeToBulkSoCGp 1 : TimeToBulkSoCHoursDisp TimeToBulkSoCMinsDisp;
+SIG_GROUP_ 331 TimeToFullSoCGp 1 : TimeToFullSoCHoursDisp TimeToFullSoCMinsDisp;
+SIG_GROUP_ 2015 TST_FunctionalReq 1 : TesterFunctionalReq;
+SIG_GROUP_ 2021 TST_PhysicalReqBCCM 1 : TesterPhysicalReqBCCM;
+SIG_GROUP_ 2029 TST_PhysicalRespBCCM 1 : TesterPhysicalResBCCM;
+SIG_GROUP_ 395 WiredConnectGrp 1 : WiredConnectAliveCounter WiredConnectStatus;
+
+

@@ -1,0 +1,185 @@
+// *************************************************************************** *
+// *                                                                           *
+// *                                                                           *
+// *                                                                           *
+// *                                                                           *
+// *************************************************************************** *
+// *                                                                           *
+// * Description:         Partial CANDB File (for EPICB Node)                  *
+// * Generated at:        2016-07-28 15:57:22                                  *
+// * Node                 EPICB                                                *
+// *                                                                           *
+// *************************************************************************** *
+// *                                                                           *
+// *             THIS CONFIGURATION MIGHT CONTAIN SOME ERRORS                  *
+// *              IF THE INPUT MODEL WAS NOT PROPERLY FORMED!                  *
+// *                    Do Not Use this File directly!                         *
+// *                                                                           *
+// *************************************************************************** *
+
+
+VERSION "EPICB"
+
+NS_:
+
+BS_:
+
+BU_: EPICB Vector_XXX
+
+BO_ 276 GWM_PMZ_AM_BEV: 8 EPICB
+ SG_ EMACOCMonitorStatusF : 55|1@0+ (1,0) [0|1] "" Vector_XXX
+ SG_ EMOperatingModeF : 35|4@0+ (1,0) [0|15] "" Vector_XXX
+ SG_ EMOpModeFGpCounter : 53|4@0+ (1.0, 0.0) [0.0|15.0] "Counter value" Vector_XXX
+ SG_ EMOpModeFGpCS : 47|8@0+ (1.0, 0.0) [0.0|255.0] "checksum" Vector_XXX
+ SG_ EMVoltageDCLinkF : 49|10@0+ (1.0, 0.0) [0.0|1023.0] "Volts" Vector_XXX
+ SG_ RapidDschrgDiagStatusF : 54|1@0+ (1,0) [0|1] "" Vector_XXX
+
+BO_ 17 GWM_PMZ_EPICBAuthDataTarget: 8 EPICB
+ SG_ EPICBAuthDataTarget : 7|64@0+ (1,0) [0|18446744073709551615] "" Vector_XXX
+
+BO_ 18 BCM_PMZ_A: 8 Vector_XXX
+ SG_ PowerMode : 44|5@0+ (1.0, 0.0) [10.0|31.0] "Not Used" EPICB
+ SG_ PowerMode_UB : 33|1@0+ (1,0) [0|1] "" EPICB
+
+BO_ 896 BCM_PMZ_F: 8 Vector_XXX
+ SG_ MinuteCounter : 7|32@0+ (1,0) [0|4294967295] "" EPICB
+ SG_ MinuteCounter_UB : 39|1@0+ (1,0) [0|1] "" EPICB
+
+BO_ 24 BCM_PMZ_J: 8 Vector_XXX
+ SG_ EPICBAuthDataControl : 7|64@0+ (1,0) [0|18446744073709551615] "" EPICB
+
+BO_ 128 BECM_PMZ_I: 8 Vector_XXX
+ SG_ HVBattContactorStatus : 7|1@0+ (1,0) [0|1] "" EPICB
+
+BO_ 260 BECM_PMZ_M: 8 Vector_XXX
+ SG_ HVBattContactorStatusT : 23|1@0+ (1,0) [0|1] "" EPICB
+
+BO_ 1099 PCM_PMZ_N_PHEV: 8 Vector_XXX
+ SG_ EngineOilTemp : 31|8@0+ (1.0, -60.0) [-60.0|195.0] "deg C" EPICB
+
+BO_ 576 PCM_PMZ_P_BEV: 8 Vector_XXX
+ SG_ EdrivecoolantTemp : 17|10@0+ (0.25, -128.0) [-128.0|127.75] "deg C" EPICB
+ SG_ EDriveEMPumpDiagStat : 15|1@0+ (1,0) [0|1] "" EPICB
+ SG_ EDriveEMPumpDutyStat : 14|7@0+ (1.0, 0.0) [0.0|100.0] "%" EPICB
+ SG_ EDriveEMPumpValveStat : 52|2@0+ (1,0) [0|3] "" EPICB
+
+BO_ 1438 PMZ_CAN_NodeGWM_NM: 8 Vector_XXX
+
+
+// Comments
+CM_ SG_ 276 EMACOCMonitorStatusF "The status of the Front EPIC's open circuit monitor for the Front HV AC Bus.";
+CM_ SG_ 276 EMOperatingModeF "Front Electrical Machine operating mode";
+CM_ SG_ 276 EMOpModeFGpCounter "Used to ensure that the Inverter is still in active communications with its Micro controller.
+
+Value to increment with each new message sent.
+
+Value initialises at 0 and increases to 15 at which point the signal is reset to 0 and begins counting up again.
+
+Value initialises to 0.
+
+Stuck count also indicates a fault.";
+CM_ SG_ 276 EMOpModeFGpCS "Signals contained in SAE J1850 CRC8 Checksum: EMOperatingModeF, EMVoltageDCLinkF, EMACOCMonitorStatusF, RapidDschrgDiagStatusF, EMOpModeFGpCounter.
+The calculation method is specified in STJLR 18.036. Signals used in the calculation must be in the same message frame. The Data Segment Polynomial shall be assembled as follows, with offsets in Motorola Backwards notation :-
+Byte 1 is the leftmost byte in SAEJ1850 Table 1.
+Byte 1 Signal marker Signal name Offset =========== ========== ===== A EMVoltageDCLinkF (Most significant 8 bits) 0
+Byte 2 Signal marker Signal name Offset =========== ========== ===== B RapidDschrgDiagStatusF 0 C EMACOCMonitorStatusF 1 D EMOpModeFGpCounter 2 E EMVoltageDCLinkF (least significant 2 bits) 6
+Byte 3 Signal marker Signal name Offset =========== ========== ===== F EMOperatingModeF (most significant 4 bits) 0 0 4 padding bits of zeros 4
+Graphical representation of Data Segment Polynomial ======================================================================= Byte 1 Byte 2 Byte 3 AAAAAAAA EEDDDDCB 0000FFFF";
+CM_ SG_ 276 EMVoltageDCLinkF "High Voltage DC Bus Voltage measured at the Front Electric Machine Inverter.";
+CM_ SG_ 276 RapidDschrgDiagStatusF "Status of the Front HV DC Traction bus rapid discharge mechanism";
+CM_ SG_ 17 EPICBAuthDataTarget "EPICBAuthDataTarget CAN signal transmitted by EPIC_B, covers the Authentication (Challenge Response Sequence) between the EPICB and BCM.
+
+Note: Same details as EPICAuthDataTarget as currently used, but concerns Secondary EPIC Module for full electric vehicle, hence the reference to EPICB 
+
+0x00 - Idle
+0x02 - Challenge
+0x04 - Status";
+CM_ SG_ 18 PowerMode "Information of current PowerMode, reflects the current  state of the Power Mode Superviser
+
+
+For L538:
+The signals PowerModeHS, PowerModeHSQF & PowerModeComp are all with the group PowerModeGrpHS. This grouping is to ensure that the signals are packed within the same frame, they are not treated as a group within the BCM. ";
+CM_ SG_ 896 MinuteCounter "This is a counter of time elapsed from the time that permanent battery power was applied to the instrument pack. 
+This signal is incremented every 100 ms, and has a scaling of 100 ms per bit with zero offset. 
+If power is removed, the previously-stored value will be retained. 
+At maximum value (FFFFFFFE), the counter will roll over to zero. FFFFFFFF is defined as 'Correct value not available' by the Generic Global Diagnostic Specification. 
+(This signal has to be read/written as bytes, because Volcano 5 does not support 32-bit unsigned values.) 
+Note, no encoding information is permitted for this signal because it is a 'bytes' type signal and cannot be directly interpreted as an integer.
+
+This signal shall be set as a Constant = 0xFFFFFFFF, whenever MinuteCounter is not available as a Network Signal.
+
+The MSB of the signal must be written to the COM layer first (with an offset of zero in wr_bytes() ) and therefore transmitted on the bus first.
+Similarly, subscribing modules will receive the MSB of the signal when they call rd_bytes(0).
+
+E.g. wr_bytes(0) = published_signal_MSB;
+
+Subscribed_Signal_MSB = rd_bytes(0);
+";
+CM_ SG_ 24 EPICBAuthDataControl "EPICBAuthDataControl:
+CAN signal transmitted by BCM to authenticate (Challenge/Response sequence) the EPIC_B module.
+
+Note: Same details as EPICAuthDataControl as currently used, but concerns Secondary EPIC Module for full electric vehicle, hence the reference to EPIC_B 
+
+0x00 - Idle
+0x01 - Key
+0x03 - Challenge Response
+0x05 - Terminate";
+CM_ SG_ 128 HVBattContactorStatus "Status of the HV Battery Contactor.
+
+For vehicle's with multiple HV Buses, this is the Status of the Auxiliary Bus Contactors.";
+CM_ SG_ 260 HVBattContactorStatusT "Status of the Traction Bus Contactor";
+CM_ SG_ 1099 EngineOilTemp "Measured engine oil temperature.";
+CM_ SG_ 576 EdrivecoolantTemp "E-drive Coolant Temperature Signal.";
+CM_ SG_ 576 EDriveEMPumpDiagStat "E-drive Coolant Pump Diagnostic Status";
+CM_ SG_ 576 EDriveEMPumpDutyStat "Status of Edrive Electric Pump Duty as set by the Thermal Management Feature in the PCM";
+CM_ SG_ 576 EDriveEMPumpValveStat "Status of the PCM request to control the coolant valve of the E-drive circuit";
+
+// Attribute definitions
+BA_DEF_  "BaudRate" FLOAT 1000 1000000; // [bps]
+BA_DEF_ BO_ "GenMsgSendType" ENUM "cyclic","spontaneous","cyclicIfActive","spontaneousWithDelay","cyclicAndSpontaneous","cyclicAndSpontaneousWithDelay","not_used","not_used","not_used","cyclicWithRepeatOnDemand";
+BA_DEF_ BO_ "GenMsgCycleTime" FLOAT 0 300000; // [ms]
+BA_DEF_ BO_ "GenMsgStartDelayTime" FLOAT 0 300000; // [ms]
+BA_DEF_ BO_ "GenMsgDelayTime" FLOAT 0 300000; // [ms]
+BA_DEF_ BO_ "GenMsgNrOfRepetition" INT 0 100000;
+BA_DEF_ SG_ "GenSigSendType" ENUM "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_ "GenSigStartValue" FLOAT -1.7976931348623157E308 18446744073709551615;
+
+BA_DEF_DEF_ "GenSigStartValue" 0;
+// Network
+BA_ "BaudRate"  500000;
+// Frame: GWM_PMZ_AM_BEV
+BA_ "GenMsgSendType" BO_ 276 0;
+BA_ "GenMsgCycleTime" BO_ 276 10.000;
+BA_ "GenSigSendType" SG_ 276 EMACOCMonitorStatusF 0;
+BA_ "GenSigStartValue" SG_ 276 EMOperatingModeF 14;
+BA_ "GenSigSendType" SG_ 276 EMOperatingModeF 0;
+BA_ "GenSigSendType" SG_ 276 EMOpModeFGpCounter 0;
+BA_ "GenSigSendType" SG_ 276 EMOpModeFGpCS 0;
+BA_ "GenSigSendType" SG_ 276 EMVoltageDCLinkF 0;
+BA_ "GenSigSendType" SG_ 276 RapidDschrgDiagStatusF 0;
+// Frame: GWM_PMZ_EPICBAuthDataTarget
+BA_ "GenMsgSendType" BO_ 17 1;
+BA_ "GenMsgDelayTime" BO_ 17 5.000;
+BA_ "GenSigSendType" SG_ 17 EPICBAuthDataTarget 1;
+// Frame: BCM_PMZ_A
+// Frame: BCM_PMZ_F
+// Frame: BCM_PMZ_J
+// Frame: BECM_PMZ_I
+// Frame: BECM_PMZ_M
+// Frame: PCM_PMZ_N_PHEV
+// Frame: PCM_PMZ_P_BEV
+BA_ "GenSigStartValue" SG_ 576 EdrivecoolantTemp 1023;
+BA_ "GenSigStartValue" SG_ 576 EDriveEMPumpDutyStat 11;
+// Frame: PMZ_CAN_NodeGWM_NM
+
+VAL_ 276 EMACOCMonitorStatusF 0 "Ok" 1 "Not Ok";
+VAL_ 276 EMOperatingModeF 0 "Standby" 1 "Torque Mode" 2 "Reserved (Speed Mode)" 3 "Voltage Mode" 4 "Bus Test Mode" 5 "Not Capable" 6 "Reserved (Calibration Mode)" 7 "Reserved (Bus Discharge Mode)" 8 "Life Saver Mode" 9 "Pre-Load Mode" 10 "Unused" 11 "Unused" 12 "Unused" 13 "Failure HV Not Allowed" 14 "Initialisation" 15 "Failure";
+VAL_ 276 RapidDschrgDiagStatusF 0 "Ok" 1 "Not Ok";
+VAL_ 18 PowerMode 0 "KeyOut" 1 "KeyRecentlyOut" 2 "KeyApproved_0" 3 "PostAccessory_0" 4 "Accessory_1" 5 "PostIgnition_1" 6 "IgnitionOn_2" 7 "Running_2" 8 "(Not used)" 9 "Crank_3";
+VAL_ 128 HVBattContactorStatus 0 "Open" 1 "Closed";
+VAL_ 260 HVBattContactorStatusT 0 "Open" 1 "Closed";
+VAL_ 576 EDriveEMPumpDiagStat 0 "Pump OK" 1 "Pump Not OK";
+VAL_ 576 EDriveEMPumpValveStat 0 "Fully Closed" 1 "Fully Open" 2 "Partially Open" 3 "Fault";
+SIG_GROUP_ 276 EMOpModeFGp 1 : EMACOCMonitorStatusF EMOperatingModeF EMOpModeFGpCounter EMOpModeFGpCS EMVoltageDCLinkF RapidDschrgDiagStatusF;
+
+
